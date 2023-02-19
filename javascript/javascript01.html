@@ -39,6 +39,7 @@
         <div class="container">
             <div class="main__menu">
                 <ul>
+                    <li><a href="#">00. 연산자</a></li>
                     <li><a href="#">01. 변수 : 데이터 저장</a></li>
                     <li><a href="#">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
                     <li><a href="#">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
@@ -58,6 +59,44 @@
                 </ul>
             </div>
             <div class="main__sample">
+                <div id="sample00" class="sample">
+                    <h3>00. 연산자</h3>
+                    <p>변수는 여러 연산자로 계산을 할 수 있다.</p>
+                    <div class="script">
+<pre><code>{
+    const a = 10000;
+    const b = 20000;
+
+    // 연산자
+    console.log(a + b);
+    console.log(a - b);
+    console.log(a > b);
+    console.log(a * b);
+    console.log(a / b);
+    console.log(a % b);   // 나머지
+
+    let c = 10;
+
+    c = 100;
+    c = 1000;
+    c += 1000;
+
+    console.log(c);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        30000<br>
+                        -10000<br>
+                        false<br>
+                        200000000<br>
+                        0.5<br>
+                        10000<br>
+                        2000<br>
+                    </div>
+                </div>
+                <!-- //sample00 -->
+
                 <div id="sample01" class="sample">
                     <h3>01.변수 : 데이터 저장</h3>
                     <p>변수는 데이터를 저장하는 저장소입니다.</p>
@@ -256,7 +295,10 @@
 
                 <div id="sample09" class="sample">
                     <h3>09. 객체 : 데이터 저장(키와값): 표현방법1</h3>
-                    <p>코멘트</p>
+                    <p>
+                        지금까지 배열은 아이템에대한 식별자로 숫자를 사용했다.<br>
+                        만약 인덱스로 문자를 사용하고 싶다면 객체(dictionary)를 사용해야한다.
+                    </p>
                     <div class="script">
 <pre><code>{
     const obj = new Object();
@@ -280,7 +322,7 @@
 
                 <div id="sample10" class="sample">
                     <h3>10. 객체 : 데이터 저장(키와값): 표현방법2</h3>
-                    <p>코멘트</p>
+                    <p>변수 선언은 보다 잛게 표현 할 수 있다.</p>
                     <div class="script">
 <pre><code>{
     const obj = new Object();
@@ -304,7 +346,7 @@
 
                 <div id="sample11" class="sample">
                     <h3>11. 객체 : 데이터 저장(키와값): 표현방법3</h3>
-                    <p>코멘트</p>
+                    <p>new Object를 사제하고 사용할수 있습니다.</p>
                     <div class="script">
 <pre><code>{
     const obj = {};
@@ -328,7 +370,7 @@
 
                 <div id="sample12" class="sample">
                     <h3>12. 객체 : 데이터 저장(키와값): 표현방법4</h3>
-                    <p>코멘트</p>
+                    <p>변수 선언을 없애고 객체 선언에 한번에 표현할 수 있습니다.</p>
                     <div class="script">
 <pre><code>{
     const obj = {a:100, b:200, c:"javascript"}
