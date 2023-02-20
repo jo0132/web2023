@@ -454,10 +454,17 @@
 
                 <div id="sample13" class="sample">
                     <h3>13. 객체 : 데이터 저장(키와값): 표현방법5</h3>
-                    <p>코멘트</p>
+                    <p>배열안에 객체를 넣을 수 있습니다.</p>
                     <div class="script">
 <pre><code>{
+    const obj = [
+        {a:100, b:200},
+        {c:"javascript"}
+    ];
 
+    console.log(obj[0].a);      //첫번째 배열에 a의 객체를 출력
+    console.log(obj[0].b);
+    console.log(obj[1].c);
 }
 </code></pre>
                     </div>
@@ -467,7 +474,7 @@
                             <div>
                                 100<br>
                                 200<br>
-                                 javascript
+                                javascript
                             </div>
                         </details>
                     </div>
@@ -476,10 +483,24 @@
                 
                 <div id="sample14" class="sample">
                     <h3>14. 객체 : 데이터 저장(키와값): 표현방법5</h3>
-                    <p>코멘트</p>
+                    <p>객체안에 배열을 넣어 표현할 수 있습니다.</p>
                     <div class="script">
 <pre><code>{
+    const obj = {
+        a: 100,
+        b: [200, 300],
+        c: {x: 400, y: 500},
+        d: "javascript"
+    }
 
+    console.log(obj.a);
+    console.log(obj.b[0]);      //두번째 객체에서 첫번째 배열
+    console.log(obj.b[1]);
+    console.log(obj.c.x);       //세번째 객체에서 첫번째 객체
+    console.log(obj.c.y);
+    console.log(obj.d);
+
+    //리엑트에서도 사용
 }
 </code></pre>
                     </div>
@@ -489,7 +510,10 @@
                             <div>
                                 100<br>
                                 200<br>
-                                 javascript
+                                300<br>
+                                400<br>
+                                500<br>
+                                javascript
                             </div>
                         </details>
                     </div>
@@ -498,10 +522,18 @@
                 
                 <div id="sample15" class="sample">
                     <h3>15. 객체 : 데이터 저장(키와값): 표현방법5</h3>
-                    <p>코멘트</p>
+                    <p>값 자체가 아닌 변수를 객체에 넣어 변수를 활용하여 출력할 수있습니다.</p>
                     <div class="script">
 <pre><code>{
+    const a = 100;
+    const b = 200;
+    const c = "javascript";
+    
+    const obj = {a,b,c};
 
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
 </code></pre>
                     </div>
@@ -511,7 +543,7 @@
                             <div>
                                 100<br>
                                 200<br>
-                                 javascript
+                                javascript
                             </div>
                         </details>
                     </div>
@@ -520,10 +552,26 @@
                 
                 <div id="sample16" class="sample">
                     <h3>16. 객체 : 데이터 저장(키와값): 표현방법5</h3>
-                    <p>코멘트</p>
+                    <p>함수를 활용하여 값을 출력할 수 있습니다.</p>
                     <div class="script">
 <pre><code>{
+    //함수 내용 포함
+    const obj = {
+        a: 100,
+        b: [100,300],
+        c: "javascript",
+        d: function(){
+            console.log("javascript가 실행되었습니다.")
+        }
+    }
 
+    console.log(obj.a);
+    console.log(obj.b[0]);
+    console.log(obj.b[1]);
+    // console.log(obj.b[2]);       //undefined뜸
+    console.log(obj.c);
+    // console.log(obj.d);      // ' document.~' 까지 전부다 문자로 인식
+    obj.d();        //객체를 출력
 }
 </code></pre>
                     </div>
@@ -532,8 +580,10 @@
                             <summary>결과 확인하기</summary>
                             <div>
                                 100<br>
-                                200<br>
-                                 javascript
+                                100<br>
+                                300<br>
+                                javascript<br>
+                                javascript가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -711,7 +761,7 @@
             // console.log(obj.b[2]); //undefined뜸
             console.log(obj.c);
             // console.log(obj.d); // ' document.~' 까지 전부다 문자로 인식
-            obj.d();
+            obj.d();        //객체를 출력
 
         }
         
