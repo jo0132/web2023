@@ -82,7 +82,7 @@
     console.log(a > b);
     console.log(a * b);
     console.log(a / b);
-    console.log(a % b);   // 나머지
+    console.log(a % b);     // 나머지
 
     let c = 10;
 
@@ -109,10 +109,10 @@
                         </details>
                     </div>
                     <div class="notice">
-                        <h4>연산자</h4>
+                        <h4>연산자을 익혀 둡시다.</h4>
                         <p>
-                            연산자의 종류에는 산술 연산자, 대입 연산자, 비교 연산자, 논리 연산자, 삼항 연산자등이 있습니다.
-
+                            연산자에는 여러 연산자가 있지만 기본으로 사용하는 산술 연산자와 비교 연산자를 알아두면 유용하게 사용할 수 있습니다.<br>
+                            사칙 연산과 수학에서 배운 비교를 떠올리면 편합니다.
                         </p>
                     </div>
                 </div>
@@ -123,9 +123,9 @@
                     <p>변수는 데이터를 저장하는 저장소입니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    var x = 100;             //변수 x에 숫자 100을 저장함
-    var y = 200;             //변수 y에 숫자 200을 저장함
-    var z = "javascript";    //변수 z에 문자 "javascript"를 저장함
+    var x = 100;                // 변수 x에 숫자 100을 저장함
+    var y = 200;                // 변수 y에 숫자 200을 저장함
+    var z = "javascript";      // 변수 z에 문자 "javascript"를 저장함
 
     console.log(x);
     console.log(y);
@@ -144,7 +144,11 @@
                         </details>
                     </div>
                     <div class="notice">
-                        정리할것 정리
+                        <h4>변수에 데이터를 저장합니다.</h4>
+                        <p>
+                            변수에 데이터를 저장하여 선언하면 변수를 통해 데이터를 출력하는 방식입니다.<br>
+                            'var x = 100;'은 변수 x에 숫자 100을 저장함을 'console.log(x)'는 x의 값을 console로 출력함을 의미합니다.
+                        </p>
                     </div>
                 </div>
                 <!-- //sample01 -->
@@ -179,7 +183,18 @@
                         </details>
                     </div>
                     <div class="notice">
-                        정리할것 정리
+                        <h4>변수는 데이터를 저장하고 변경이 가능합니다.</h4>
+                        <p>
+                            변수을 선언하고 변경할 수 있는데 이때 다시 변수를 선언하는 var나 let을 사용하지 않고 'x = 300;'으로 
+                            변수의 데이터를 변경할 수 있습니다. 변수를 다시 선언하게 되면 오류가 나기때문에 주의 해야합니다.<br>
+                        </p>
+                        <br>
+                        <h4>🤔var와 let의 차이</h4>
+                        <p>
+                            <strong>var</strong>는 데이터를 두번 저장되게되면 오류메세지 없이 출력이 됩니다.<br>
+                            하지만 <strong>let</strong>은 데이터를 두번 저장하게 되면 오류 메세지가 출력되는 것을 볼 수 있습니다.
+                        </p>
+                        
                     </div>
                 </div>
                 <!-- //sample02 -->
@@ -193,7 +208,7 @@
     let y = 200;
     let z = "javascript";
 
-    x += 300; // x = x + 300
+    x += 300;       // x = x + 300
     y += 400;
     z += "react";
 
@@ -214,8 +229,8 @@
                         </details>
                     </div>
                     <div class="notice">
-                        <h1>변수로 연산이 가능하다.</h1>
-                        <p>변수를 이용해서 연산이 가능하고, 연산에는 산술 연산자, 대입 연산자, 비교 연산자, 논리 연산자,비트 연산자, 삼항 연산자가 있음.</p>
+                        <h4>저장된 변수에 값을 추가 할 수있습니다.</h4>
+                        <p></p>
                     </div>
                 </div>
                 <!-- //sample03 -->
@@ -229,7 +244,7 @@
     const y = 200;
     const z = "javascript"
 
-    // x += 300;     // Assignment to constant variable.
+    // x += 300;        // Assignment to constant variable.
     // y += 400;
     // z += "react";
 
@@ -257,9 +272,9 @@
                     <div class="script">
 <pre><code>{
     const arr = new Array();
-    arr[0] = 100;           // 0은 인덱스, 100은 엘레멘트입니다.
-    arr[1] = 200;           // 1은 인덱스, 200은 엘레멘트입니다.
-    arr[2] = "javascript"   // 2은 인덱스, "javascript"은 엘레멘트입니다.
+    arr[0] = 100;                // 0은 인덱스, 100은 엘레멘트입니다.
+    arr[1] = 200;                // 1은 인덱스, 200은 엘레멘트입니다.
+    arr[2] = "javascript"      // 2은 인덱스, "javascript"은 엘레멘트입니다.
 
     console.log(arr[0]);
     console.log(arr[1]);
@@ -319,7 +334,6 @@
     console.log(arr[0]);
     console.log(arr[1]);
     console.log(arr[2]);
-
 }
 </code></pre>
                     </div>
@@ -343,9 +357,9 @@
 <pre><code>{
     const arr = [100, 200, "javascript"];
 
-            console.log(arr[0]);
-            console.log(arr[1]);
-            console.log(arr[2]);
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2]);
 }
 </code></pre>
                     </div>
@@ -457,7 +471,7 @@
                     <p>변수 선언을 없애고 객체 선언에 한번에 표현할 수 있습니다.</p>
                     <div class="script">
 <pre><code>{
-    const obj = {a:100, b:200, c:"javascript"}
+    const obj = {a: 100, b: 200, c: "javascript"}
 
     console.log(obj.a);
     console.log(obj.b);
@@ -484,11 +498,11 @@
                     <div class="script">
 <pre><code>{
     const obj = [
-        {a:100, b:200},
-        {c:"javascript"}
+        {a: 100, b: 200},
+        {c: "javascript"}
     ];
 
-    console.log(obj[0].a);      //첫번째 배열에 a의 객체를 출력
+    console.log(obj[0].a);      // 첫번째 배열에 a의 객체를 출력
     console.log(obj[0].b);
     console.log(obj[1].c);
 }
@@ -520,13 +534,11 @@
     }
 
     console.log(obj.a);
-    console.log(obj.b[0]);      //두번째 객체에서 첫번째 배열
+    console.log(obj.b[0]);      // 두번째 객체에서 첫번째 배열
     console.log(obj.b[1]);
-    console.log(obj.c.x);       //세번째 객체에서 첫번째 객체
+    console.log(obj.c.x);        // 세번째 객체에서 첫번째 객체
     console.log(obj.c.y);
     console.log(obj.d);
-
-    //리엑트에서도 사용
 }
 </code></pre>
                     </div>
@@ -555,7 +567,7 @@
     const b = 200;
     const c = "javascript";
     
-    const obj = {a,b,c};
+    const obj = {a, b, c};
 
     console.log(a);
     console.log(b);
@@ -587,17 +599,25 @@
         b: [100,300],
         c: "javascript",
         d: function(){
-            console.log("javascript가 실행되었습니다.")
+            console.log("javascript가 실행되었습니다.")    // 함수 출력1
+        },
+        e: function(){
+            console.log(obj.c+"가 실행되었습니다.")         // 함수 출력2
+        },
+        f: function(){
+            console.log(this.c+"가 실행되었습니다.")        // 함수 출력3
         }
     }
 
     console.log(obj.a);
     console.log(obj.b[0]);
     console.log(obj.b[1]);
-    // console.log(obj.b[2]);       //undefined뜸
+    // console.log(obj.b[2]);       // undefined뜸
     console.log(obj.c);
-    // console.log(obj.d);      // ' document.~' 까지 전부다 문자로 인식
-    obj.d();        //객체를 출력
+    // console.log(obj.d);          // ' document.~' 까지 전부다 문자로 인식
+    obj.d();                              // 객체를 출력
+    obj.e();
+    obj.f();
 }
 </code></pre>
                     </div>
@@ -609,6 +629,8 @@
                                 100<br>
                                 300<br>
                                 javascript<br>
+                                javascript가 실행되었습니다.<br>
+                                javascript가 실행되었습니다.<br>
                                 javascript가 실행되었습니다.
                             </div>
                         </details>
@@ -628,167 +650,11 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        // // 변수 복습
-        // // const x = 100;      //숫자, 문자, 블린(논리형),undefined, null, 객체, 심벌 --> 자료형(typeof)
-        // // const y = true;
-        // // const b = false;
-
-        // // const x = 100;
-        // // const y = 200;
-        // // const z = "javascript"
-        // // const x = 100, y = 200, z = "javascript";       // 약식
-
-        // let x = 100;
-        // let y = 200;
-        // let z = "javascript"
-
-        // x -= 1000;      // 100 - 1000 = -900
-        // x += 1000;      // -900 + 1000 = 100
-
-        // // document.write(x);
-        // console.log(x, y, z);         // console log 제일 많이 사용
-        // // alert(z);
-
-        // //배열 복습
-
-        // const brr = new Array();
-        // const crr = new Array(200, "react", false);
-        // const drr = [];
-        // const err = [300, "arrat", true]
         
-        // brr[0] = 100;
-        // brr[1] = "javascript";
-        // brr[2] =  true;
-        // drr[0] = 100;
-        // drr[1] = "javascript";
-        // drr[2] =  true;
-
-
-        // console.log(brr[0], brr[1], brr[2]);
-        // console.log(crr[0], crr[1], crr[2]);
-        // console.log(drr[0], drr[1], drr[2]);
-        // console.log(err[0], err[1], err[2]);
-
-        //객체 복습
-
-        //객체 : 데이터 저장(키와값): 표현방법1
-        {
-            const obj = new Object();
-
-            obj[0] = 100;
-            obj[1] = 200;
-            obj[2] = "javascript";
-
-            console.log(obj[0]);
-            console.log(obj[1]);
-            console.log(obj[2]);
-        }
-        //객체 : 데이터 저장(키와값): 표현방법2
-        {
-            const obj = new Object();
-
-            obj.a = 100;
-            obj.b = 200;
-            obj.c = "javascript";
-
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
-        }
-        //객체 : 데이터 저장(키와값): 표현방법3
-        {
-            const obj = {};
-
-            obj.a = 100;
-            obj.b = 200;
-            obj.c = "javascript";
-            
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);
-        }
-
-        //객체 : 데이터 저장(키와값): 표현방법4
-        {
-            const obj = {a:100, b:200, c:"javascript"}
-            
-            console.log(obj.a);
-            console.log(obj.b);
-            console.log(obj.c);     //회사마다 세미클론을 안 찍을 수 있음
-        }
-
-        //객체 : 데이터 저장(키와값): 표현방법5 : 배열 안에 객체
-        {
-            const obj = [
-                {a:100, b:200},
-                {c:"javascript"}
-            ];
-
-            console.log(obj[0].a);      //첫번째 배열에 a의 객체를 출력
-            console.log(obj[0].b);
-            console.log(obj[1].c);
-            
-            //중요!
-
-            //100
-            //200
-            //javascript
-
-        }
-
-        //객체 : 데이터 저장(키와값): 표현방법6 : 객체 안에 배열
-        {
-            const obj = {
-                a: 100,
-                b: [200, 300],
-                c: {x: 400, y: 500},
-                d: "javascript"
-            }
-
-            console.log(obj.a);
-            console.log(obj.b[0]);      //두번째 객체에서 첫번째 배열
-            console.log(obj.b[1]);
-            console.log(obj.c.x);       //세번째 객체에서 첫번째 객체
-            console.log(obj.c.y);
-            console.log(obj.d);
-
-            //리엑트에서도 사용
-
-        }
-
-        //객체 : 데이터 저장(키와값): 표현방법7
-        {
-            const a = 100;
-            const b = 200;
-            const c = "javascript";
-            
-            const obj = {a,b,c};
-
-            console.log(a);
-            console.log(b);
-            console.log(c);
-        }
         
         //객체 : 데이터 저장(키와값): 표현방법8
         {
-            //함수 내용 포함
-            const obj = {
-                a: 100,
-                b: [100,300],
-                c: "javascript",
-                d: function(){
-                    console.log("javascript가 실행되었습니다.")
-                }
-            }
-
-            console.log(obj.a);
-            console.log(obj.b[0]);
-            console.log(obj.b[1]);
-            // console.log(obj.b[2]); //undefined뜸
-            console.log(obj.c);
-            // console.log(obj.d); // ' document.~' 까지 전부다 문자로 인식
-            obj.d();        //객체를 출력
-
+            
         }
         
         //변수 : 저장문
