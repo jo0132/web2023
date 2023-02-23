@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레잉아웃 07 - float 반응형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #E8F5E9;
+        }
+        #wrap {
+            width: 1200px;
+            background-color: #E8F5E9;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #C8E6C9;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #A5D6A7;
+        }
+        #section {
+            overflow: hidden;
+        }
+        #aricle1 {
+            width: 30%;
+            height: 780px;
+            background-color: #81C784;
+            float: left;
+        }
+        #aricle2 {
+            width: 40%;
+            height: 780px;
+            background-color: #4CAF50;
+            float: left;
+        }
+        #aricle3 {
+            width: 30%;
+            height: 780px;
+            background-color: #66BB6A;
+            float: left;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #43A047;
+        }
+        @media (max-width: 1220px){
+            #wrap {
+                width: 96%;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+            #aricle1 {
+                width: 30%;
+                height: 630px;
+            }
+            #aricle2 {
+                width: 70%;
+                height: 630px;
+            }
+            #aricle3 {
+                width: 100%;
+                height: 630px;
+            }
+        }
+        @media (max-width: 600px){
+            #aricle1 {
+                width: 100%;
+                height: 200px;
+            }
+            #aricle2 {
+                width: 100%;
+                height: 430px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="section">
+            <div id="aricle1"></div>
+            <div id="aricle2"></div>
+            <div id="aricle3"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

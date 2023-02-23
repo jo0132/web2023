@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+    <script>
+        // 5*5 테이블
+        // {
+        //     let table = "<table border='1'>";
+            
+        //     for(let i = 1; i<=5; i++){
+        //         table +="<tr>";
+
+        //         for(let j = 1; j<=5; j++){
+        //             table += "<td>1</td>";
+        //         }
+
+        //         table +="</tr>";
+        //     }
+
+        //     table += "</table>";
+
+        //     document.write(table);
+        //}
+
+        // 10*10 테이블
+        // {
+        //     let table = "<table border='1'>";
+            
+        //     for(let i = 1; i<=5; i++){
+        //         table +="<tr>";
+
+        //         for(let j = 1; j<=5; j++){
+        //             table += "<td>1</td>";
+        //         }
+
+        //         table +="</tr>";
+        //     }
+
+        //     table += "</table>";
+
+        //     document.write(table);
+        // }
+       
+        //구구단
+        // {
+        //     for(let i=2; i<=9; i++){
+        //     document.write(i + "단","<br>");
+
+        //     for(let j=1; j<=9; j++){
+        //         document.write(i + "*" + j + "=" + i*j);
+        //         document.write("<br>");
+        //     }
+            
+        //     document.write("<br><br>");
+        //     }
+        // }
+
+        {
+            let table = "<table border='1'>";
+            
+            for(let i=1; i<=10; i++){
+                table += "<tr>";
+                
+                for(let j=1; j<=10; j++){
+                    table +="<td>1</td>";
+                }
+                
+                table += "</tr>";
+            }
+
+            table += "</table>"
+
+            document.write(table);
+        }
+
+        {
+            let table = "<table border = '1'>"
+
+            for(let i = 1; i<=10; i++){
+                table += "<tr>";
+
+                    for(let j = 1; j<=10; j++){
+                        table += "<td>" + j + "</td>";
+                    }
+
+                table += "</tr>";
+            }
+
+            table += "</table>";
+            document.write(table);
+        }
+
+        {
+            for(let i=2; i<10; i++){
+                document.write(i + "단<br>");
+                
+                for(let j=1; j<10; j++){
+                    document.write(i + "*" + j + "=" + i*j)
+                    document.write("<br>")
+                }
+
+                document.write("<br><br>")
+            }
+        }
+    </script>
+</body>
+</html>
