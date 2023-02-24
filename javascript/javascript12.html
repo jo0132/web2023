@@ -187,57 +187,7 @@ for(let i = 1; i&lt;=100; i++){
     <!-- //footer -->
     <script src="assets/js/prism.js"></script>
     <script>
-        // for문을 이용해서 1부터 99까지 출력
-        {
-            for( let i=1; i<100; i++){
-                // console.log(i);
-            }
-        }
-        // 05. 데이터 이펙트 : 1부터 100까지 짝수(파란색) 홀수(빨간색) 출력하기
-        {
-            for(let i=1; i<100; i++){
-                if(i % 2 == 0){
-                    console.log(i)
-                    document.write("<span style='color:blue'>" + i + "</span>")
-                }
-                if(i % 2 == 1){
-                    console.log(i)
-                    document.write("<span style='color:red'>" + i + "</span>")
-                }
-            }
-        }
-        // 06. 데이터 이팩트 : for()문을 이용해서 테이블 만들기
-        {
-            let table = "<table border='1'>";
-            
-            for(let i = 1; i<=5; i++){
-                table +="<tr>";
-
-                for(let j = 1; j<=5; j++){
-                    table += "<td>1</td>";
-                }
-
-                table +="</tr>";
-            }
-
-            table += "</table>";
-
-            document.write(table);
-        }
-
-        // 07. 데이터 이팩트 : 중첩 for()문을 이용해서 구구단 만들기
-        {
-            for(let i=2; i<=9; i++){
-            document.write(i + "단","<br>");
-
-            for(let j=1; j<=9; j++){
-                document.write(i + "*" + j + "=" + i*j);
-                document.write("<br>");
-            }
-            
-            document.write("<br><br>");
-        }
-        }
+        
     </script>
 </body>
 </html>
