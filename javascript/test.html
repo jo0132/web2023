@@ -4,146 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>grid layout</title>
+    <style>
+        #wrap {
+        display: grid;
+        grid-template-columns: 33% 34% 33%;
+        grid-template-rows: 100px 100px 100px;
+        margin: 2px; padding: 10px; font-size: 20px;
+        }
+        .grid1 { 
+            grid-column-start: 1; grid-column-end: 3; 
+            background: #579; 
+        }
+        .grid2 {
+            grid-column-start: 3; grid-column-end: 4;
+            background: #68a; 
+        }
+        .grid3 {
+            grid-column-start: 1; grid-column-end: 2;
+            grid-row-start: 2; grid-row-end: 4;
+            background: #79b 
+        }
+        .grid4 { 
+            grid-column-start: 2; grid-column-end: 4;
+            background: #8ac; 
+        }
+        .grid5 { 
+            grid-column-start: 2; grid-column-end: 3;
+            background: #9bd; 
+        }
+        .grid6 { 
+            grid-column-start: 3; grid-column-end: 4;
+            background: #ace;
+font-size: 1px; 
+font-weight: bold;
+font-weight: normal;
+font-style: italic;
+font-style: normal;
+font-variant: small-caps;
+font-variant: normal;
+line-height: 1.4;
+font-family: serif;
+font: 12px '굴림' gulim;
+color: orange;
+background: beige;
+border-color: tomato;
+color: hsl(250, 100%, 50%);
+text-shadow: hoff voff blur #000;
+
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-        </tr>
-    </table>
-    <script>
-        // 5*5 테이블
-        // {
-        //     let table = "<table border='1'>";
-            
-        //     for(let i = 1; i<=5; i++){
-        //         table +="<tr>";
-
-        //         for(let j = 1; j<=5; j++){
-        //             table += "<td>1</td>";
-        //         }
-
-        //         table +="</tr>";
-        //     }
-
-        //     table += "</table>";
-
-        //     document.write(table);
-        //}
-
-        // 10*10 테이블
-        // {
-        //     let table = "<table border='1'>";
-            
-        //     for(let i = 1; i<=5; i++){
-        //         table +="<tr>";
-
-        //         for(let j = 1; j<=5; j++){
-        //             table += "<td>1</td>";
-        //         }
-
-        //         table +="</tr>";
-        //     }
-
-        //     table += "</table>";
-
-        //     document.write(table);
-        // }
-       
-        //구구단
-        // {
-        //     for(let i=2; i<=9; i++){
-        //     document.write(i + "단","<br>");
-
-        //     for(let j=1; j<=9; j++){
-        //         document.write(i + "*" + j + "=" + i*j);
-        //         document.write("<br>");
-        //     }
-            
-        //     document.write("<br><br>");
-        //     }
-        // }
-
-        {
-            let table = "<table border='1'>";
-            
-            for(let i=1; i<=10; i++){
-                table += "<tr>";
-                
-                for(let j=1; j<=10; j++){
-                    table +="<td>1</td>";
-                }
-                
-                table += "</tr>";
-            }
-
-            table += "</table>"
-
-            document.write(table);
-        }
-
-        {
-            let table = "<table border = '1'>"
-
-            for(let i = 1; i<=10; i++){
-                table += "<tr>";
-
-                    for(let j = 1; j<=10; j++){
-                        table += "<td>" + j + "</td>";
-                    }
-
-                table += "</tr>";
-            }
-
-            table += "</table>";
-            document.write(table);
-        }
-
-        {
-            for(let i=2; i<10; i++){
-                document.write(i + "단<br>");
-                
-                for(let j=1; j<10; j++){
-                    document.write(i + "*" + j + "=" + i*j)
-                    document.write("<br>")
-                }
-
-                document.write("<br><br>")
-            }
-        }
-    </script>
+    <div id="wrap">
+        <div class="grid1">11111</div>
+        <div class="grid2">22222</div>
+        <div class="grid3">33333</div>
+        <div class="grid4">44444</div>
+        <div class="grid5">55555</div>
+        <div class="grid6">66666</div>
+    </div>
 </body>
 </html>
