@@ -426,6 +426,51 @@
                 </div>
                 <!-- //sample10 -->
 
+                <div id="sample11" class="sample">
+                    <h3>11. 배열 : 데이터 불러오기 : map()</h3>
+                    <p></p>
+                    <div class="script">
+<pre><code>{
+    const num = [100,200,300,400,500];
+
+    num.map(function(el, i, a){
+        console.log(el)
+        console.log(i)
+        console.log(a)
+    });
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100                             // 요소(값)<br>
+                                0                               // 인덱스<br>
+                                (5) [100, 200, 300, 400, 500]   // 배열<br>
+                                200<br>
+                                1<br>
+                                (5) [100, 200, 300, 400, 500]<br>
+                                300<br>
+                                2<br>
+                                (5) [100, 200, 300, 400, 500]<br>
+                                400<br>
+                                3<br>
+                                (5) [100, 200, 300, 400, 500]<br>
+                                500<br>
+                                4<br>
+                                (5) [100, 200, 300, 400, 500]
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4></h4>
+                        <p>
+                            
+                        </p>
+                    </div>
+                </div>
+                <!-- //sample11 -->
             </div>
         </div>
     </main>
@@ -441,27 +486,7 @@
     <script>
         // 변수, 상수, 배열, 객체
 
-        // 형변화
-        // {
-        //     let x= 100, y = "200", z= undefined;
-        //     const func = function(){}
-            
 
-        //     // document.write(x);
-        //     // document.write(typeof(x)); // 타입 판별
-
-        //     //*******데이터 저장하기에 
-        //     document.write(y);
-        //     document.write(typeof(y)); // 타입 판별
-        //     y= Number(y); // 타입 변경
-        //     document.write(typeof(y)); // 타입 판별
-            
-        //     // document.write(z);
-        //     // document.write(typeof(z)); // 타입 판별
-        //     // document.write(func);
-        //     // document.write(typeof(func)); // 타입 판별
-            
-        // }
 
         //배열
         // {
@@ -476,51 +501,6 @@
 
         //      //결과 : 10,20,30,40,50,60,70,80,90
         // }
-
-        //08. 배열 : 데이터 불러오기 : forEach()
-        {
-            // let arr = [10,20,30,40,50,60,70,80,90];
-
-            // arr.forEach(function(element){  // forEach는 메서드(방법,함수) // 콜백함수
-            //     document.write(element);    // forEach이 조건문을 대채할 수 있다
-            // }) 
-
-            // document.write("<br>")
-            // // 화살표 함수
-            // arr.forEach((element) => { 
-            //     document.write(element);
-            // })
-
-            // document.write("<br>")
-            // // 화살표 함수(변형)
-            // arr.forEach(el => { 
-            //     document.write(el);
-            // })
-
-            // document.write("<br>")
-            // // 화살표 함수(약식)
-            // arr.forEach(el => document.write(el));
-        }
-
-
-        document.write("<br>");
-
-        // 11. 배열 : 데이터 불러오기 : map()
-        {
-            const num = [100,200,300,400,500];
-
-            num.forEach(function(el, i, a){
-                console.log(el)
-                console.log(i)
-                console.log(a)
-            });
-
-            num.map(function(el, i, a){
-                console.log(el)
-                console.log(i)
-                console.log(a)
-            });
-        }
 
        
     </script>

@@ -734,6 +734,49 @@
                     </div>
                 </div>
                 <!-- //sample16 -->
+
+                <div id="sample001" class="sample">
+                    <h3>형변화, typeof()</h3>
+                    <p>데이터 형을 변형할 수 있습니다.</p>
+                    <div class="script">
+<pre><code>{
+    let x= 100, y = "200", z= undefined;
+    const func = function(){}
+    
+    document.write(x,"&lt;br&gt;");
+    document.write(typeof(x),"&lt;br&gt;"); // 타입 판별
+
+    //*******데이터 저장하기에 
+    document.write(y,"&lt;br&gt;");
+    document.write(typeof(y),"&lt;br&gt;"); // 타입 판별
+    y= Number(y,"&lt;br&gt;"); // 타입 변경
+    document.write(typeof(y),"&lt;br&gt;"); // 타입 판별
+    
+    document.write(z,"&lt;br&gt;");
+    document.write(typeof(z),"&lt;br&gt;"); // 타입 판별
+    document.write(func,"&lt;br&gt;");
+    document.write(typeof(func)); // 타입 판별
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100<br>
+                                number<br>
+                                200<br>
+                                string<br>
+                                number<br>
+                                undefined<br>
+                                undefined<br>
+                                function(){}<br>
+                                function
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample001 -->
             </div>
         </div>
     </main>
@@ -751,7 +794,7 @@
         
         //객체 : 데이터 저장(키와값): 표현방법8
         {
-            
+
         }
         
         //변수 : 저장문
