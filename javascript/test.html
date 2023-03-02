@@ -4,65 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>grid layout</title>
-    <style>
-        #wrap {
-        display: grid;
-        grid-template-columns: 33% 34% 33%;
-        grid-template-rows: 100px 100px 100px;
-        margin: 2px; padding: 10px; font-size: 20px;
-        }
-        .grid1 { 
-            grid-column-start: 1; grid-column-end: 3; 
-            background: #579; 
-        }
-        .grid2 {
-            grid-column-start: 3; grid-column-end: 4;
-            background: #68a; 
-        }
-        .grid3 {
-            grid-column-start: 1; grid-column-end: 2;
-            grid-row-start: 2; grid-row-end: 4;
-            background: #79b 
-        }
-        .grid4 { 
-            grid-column-start: 2; grid-column-end: 4;
-            background: #8ac; 
-        }
-        .grid5 { 
-            grid-column-start: 2; grid-column-end: 3;
-            background: #9bd; 
-        }
-        .grid6 { 
-            grid-column-start: 3; grid-column-end: 4;
-            background: #ace;
-font-size: 1px; 
-font-weight: bold;
-font-weight: normal;
-font-style: italic;
-font-style: normal;
-font-variant: small-caps;
-font-variant: normal;
-line-height: 1.4;
-font-family: serif;
-font: 12px '굴림' gulim;
-color: orange;
-background: beige;
-border-color: tomato;
-color: hsl(250, 100%, 50%);
-text-shadow: hoff voff blur #000;
-
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <div id="wrap">
-        <div class="grid1">11111</div>
-        <div class="grid2">22222</div>
-        <div class="grid3">33333</div>
-        <div class="grid4">44444</div>
-        <div class="grid5">55555</div>
-        <div class="grid6">66666</div>
-    </div>
+    <script>
+        //매개
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("실행");
+        }
+
+        //
+        {
+            function func(){
+                const str = "실행"
+                return str;
+            }
+            document.write(func())
+        }
+    </script>
 </body>
 </html>
