@@ -290,37 +290,37 @@
 
     // forEach
     num.forEach(function(el){ //element 약어
-        document.write(el,"<br>");
+        document.write(el,"&lt;br&gt;");
     });
     
-    document.write("<br><br>");
+    document.write("&lt;br&gt;&lt;br&gt;");
 
     // forEach : 화살표
-    num.forEach((el) => {
-        document.write(el,"<br>");
+    num.forEach((el) =&gt; {
+        document.write(el,"&lt;br&gt;");
     });
     
-    document.write("<br><br>");
+    document.write("&lt;br&gt;&lt;br&gt;");
 
 
     // forEach : 화살표 : 괄호 생략
-    num.forEach(el => {
-        document.write(el,"<br>");
+    num.forEach(el =&gt; {
+        document.write(el,"&lt;br&gt;");
     });
 
-    document.write("<br><br>");
+    document.write("&lt;br&gt;&lt;br&gt;");
 
 
     // forEach : 화살표 : 괄호 생략
-    num.forEach(el => document.write(el,"<br>"));
+    num.forEach(el =&gt; document.write(el,"&lt;br&gt;"));
 
-    document.write("<br><br>");
+    document.write("&lt;br&gt;&lt;br&gt;");
 
     // forEach(값, 인덱스, 배열)
     num.forEach(function(element, index, array){
-        document.write(element,"<br>");
-        document.write(index,"<br>");
-        document.write(array,"<br>");
+        document.write(element,"&lt;br&gt;");
+        document.write(index,"&lt;br&gt;");
+        document.write(array,"&lt;br&gt;");
     });
 
 }
@@ -401,7 +401,7 @@
         document.write(i); // 인덱스 값 출력
     };
     
-    document.write("<br>");
+    document.write("&lt;br&gt;");
 
     for(let i in arr){
         document.write(arr[i]); // 값 출력

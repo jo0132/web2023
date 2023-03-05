@@ -287,8 +287,8 @@
                     <p></p>
                     <div class="script">
 <pre><code>{
-    const func = () => {
-        document.write("실행되었습니다.<br>");
+    const func = () =&gt; {
+        document.write("실행되었습니다.&lt;br&gt;");
     }
     func();
 }
@@ -310,10 +310,10 @@
                     <p></p>
                     <div class="script">
 <pre><code>{
-    func = (str) => {
+    func = (str) =&gt; {
         document.write(str)
     }
-    func("실행되었습니다.<br>"); 
+    func("실행되었습니다.&lt;br&gt;"); 
 }
 </code></pre>
                     </div>
@@ -333,8 +333,8 @@
                     <p></p>
                     <div class="script">
 <pre><code>{
-    func = () => {
-        const str = "실행되었습니다.<br>";
+    func = () =&gt; {
+        const str = "실행되었습니다.&lt;br&gt;";
         return str;
     }
     document.write(func());
@@ -352,7 +352,96 @@
                 </div>
                 <!-- //sample08 -->
 
-                
+                <div id="sample09" class="sample">
+                    <h3>09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값</h3>
+                    <p></p>
+                    <div class="script">
+<pre><code>{
+    const func = (str) =&gt; {
+        return str;
+    }
+    document.write(func("실행되었습니다."));
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample09 -->
+                <div id="sample10" class="sample">
+                    <h3>10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략</h3>
+                    <p></p>
+                    <div class="script">
+<pre><code>{
+    const func = str =&gt; {
+        return str;
+    }
+    document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample10 -->
+
+                <div id="sample11" class="sample">
+                    <h3>11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                    <p></p>
+                    <div class="script">
+<pre><code>{
+    const func = str => str;
+
+    document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample11 -->
+
+                <div id="sample12" class="sample">
+                    <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
+                    <p></p>
+                    <div class="script">
+<pre><code>{
+    func = str => str;
+
+    document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
+    // this를 사용할 수 없다는 단점이있다.
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample12 -->
+
             </div>
         </div>
     </main>
@@ -410,25 +499,6 @@
 
             document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
             // this를 사용할 수 없다는 단점이있다.
-
-        }
-
-        {
-            // 최대공약수 : Greatest Common Divisor (GCD)
-
-            function getGCD(n, m) {
-            let max = n > m ? n : m; //n과 m을 비교하고 작은수를 맥스값으로 받습니다.
-            let GCD = 0;
-            for (let i = 1; i <= max; i++) {
-                if (n % i === 0 && m % i === 0) {
-                GCD = i;   // 최대공약수
-                }
-            }
-            return GCD;
-            }
-
-            console.log(`308과 20의 최대공약수 : ${getGCD(308, 20)}`);
-            console.log(`45과 38의 최대공약수 : ${getGCD(45, 38)}`);
 
         }
 
