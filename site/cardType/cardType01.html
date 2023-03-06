@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h5 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px; 
+            /* = p0-20 */
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section .center {
+            text-align: center;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* card__type */
+        .card__wrap {
+            height: 600px;
+            /* background-color: #ccc; */
+        }
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card__inner .card {
+            width: 32.3333%;
+            background-color: #f8f8f8;
+        }
+
+        .card__body {
+            padding: 24px;
+        }
+        .card__body .title {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .card__body .desc {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .card__body .btn {
+            padding-right: 40px;
+            background-image: url("data:image/svg+xml,%0A%3Csvg width='32' height='8' viewBox='0 0 32 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5V3.5ZM31.3536 4.35355C31.5488 4.15829 31.5488 3.84171 31.3536 3.64645L28.1716 0.464466C27.9763 0.269204 27.6597 0.269204 27.4645 0.464466C27.2692 0.659728 27.2692 0.976311 27.4645 1.17157L30.2929 4L27.4645 6.82843C27.2692 7.02369 27.2692 7.34027 27.4645 7.53553C27.6597 7.7308 27.9763 7.7308 28.1716 7.53553L31.3536 4.35355ZM1 4.5H31V3.5H1V4.5Z' fill='black'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="card__wrap section nexon">
+        <div class="container">
+            <h2 class="section__h2">아침이 주는 효과</h2>
+            <p class="section__desc">아침 식사는 우리의 몸과 뇌를 에너지로 충전하는 첫 번째 식사입니다. 아침에 적절한 양의 전압을 회수하면 하루가 점점 늘어나고 기억력이 좋아지고, 몸의 대사 기능도 빨라집니다.</p>
+            <div class="card__inner">
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="../asset/img/cardType01_01.jpg" alt="에너지 충전">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">에너지 충전</h3>
+                        <p class="desc">아침밥은 에너지를 공급하여 하루를 시작하는데 도움을 주고 아침에 적절한 양의 탄단지와 미네랄, 비타민 등을 함유한 식사를 섭취하면, 에너지를 빠르게 생성할 수 있습니다.</p>
+                        <a class="btn" href="#">자세히보기</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="../asset/img/cardType01_02.jpg" alt="집중력과 기억력 향상">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">집중력과 기억력 향상</h3>
+                        <p class="desc">아침밥을 먹는 것은 뇌 기능에도 긍정적인 영향을 줍니다. 적절한 양의 단백질, 비타민, 미네랄을 함유한 아침 식사는 집중력과 기억력을 향상시키는 데 도움이 됩니다.</p>
+                        <a class="btn" href="#">자세히보기</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <figure class="card__header">
+                        <img src="../asset/img/cardType01_03.jpg" alt="에너지 충전">
+                    </figure>
+                    <div class="card__body">
+                        <h3 class="title">대사 기능 향상</h3>
+                        <p class="desc">아침밥을 먹는 것은 대사 기능을 향상시키는 데 도움이 됩니다. 아침 식사를 거르면 혈당이 낮아지는 것을 방지하기 위해 체내에서 에너지를 생성하기 위한 대사 기능이 악화될 수 있습니다</p>
+                        <a class="btn" href="#">자세히보기</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
