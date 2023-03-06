@@ -402,7 +402,7 @@
                     <p></p>
                     <div class="script">
 <pre><code>{
-    const func = str => str;
+    const func = str =&gt; str;
 
     document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
 }
@@ -424,7 +424,7 @@
                     <p></p>
                     <div class="script">
 <pre><code>{
-    func = str => str;
+    func = str =&gt; str;
 
     document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
     // this를 사용할 수 없다는 단점이있다.
@@ -467,40 +467,6 @@
         //     document.write(d(1,2,3));
         // }
 
-
-        // 09. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값
-        {
-            const func = (str) => {
-                return str;
-            }
-            document.write(func("실행되었습니다."));
-        }
-
-        // 10. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략
-        {
-            const func = str => {
-                return str;
-            }
-            document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
-
-        }
-
-        // 11. 화살표 함수 : 익명 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
-        {
-            const func = str => str;
-
-            document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
-
-        }
-
-        // 12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략
-        {
-            func = str => str;
-
-            document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
-            // this를 사용할 수 없다는 단점이있다.
-
-        }
 
 
 
