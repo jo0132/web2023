@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형01</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+        
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0, 0, 0, 0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section__small {
+            font-size: 14px;
+            border-radius: 50px;
+            background-color: #17C37B;
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-size: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* text__wrap */
+
+        .text__inner {
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .text__inner .text {
+            width: 33.33333%;
+            border: 1px solid #F5F5F5;
+            border-radius: 10px;
+            padding: 90px 20px 20px 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .text__inner .text:hover {
+            background-color: #F5F5F5;
+        }
+        .text__inner .text::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: #AF2222;
+            background-image: url(../asset/img/textType01_01.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            border-radius: 50%;
+        }
+        .text__inner .text.t1::before {
+            background-image: url(../asset/img/textType01_01.png);
+            background-color: #E0FFDF;
+        }
+        .text__inner .text.t2::before {
+            background-image: url(../asset/img/textType01_02.png);
+            background-color: #DEFFFB;
+        }
+        .text__inner .text.t3::before {
+            background-image: url(../asset/img/textType01_03.png);
+            background-color: #E3E6FF;
+        }
+        .text__inner .text.t4::before {
+            background-image: url(../asset/img/textType01_04.png);
+            background-color: #FBE5FF;
+        }
+        .text__inner .text.t5::before {
+            background-image: url(../asset/img/textType01_05.png);
+            background-color: #FFFCE5;
+        }
+        .text__inner .text.t6::before {
+            background-image: url(../asset/img/textType01_06.png);
+            background-color: #FFE0E0;
+        }
+        .text__title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .text__desc {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .text__btn {
+            float: right;
+            position: relative;
+            padding-right: 20px;
+        }
+        .text__btn::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            background-image: url(../asset/img/icon__plus.svg);
+            transition: all 0.3s;
+        }
+        .text__btn:hover::before {
+            transform: rotate(360deg);
+        }
+
+    </style>
+</head>
+<body>
+    <section class="text__wrap section center nexon">
+        <div class="container">
+            <span class="section__small">NOTICE</span>
+            <h2 class="section__h2 mb70">아침밥 재료 선정 기준</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__title">영양성분</h3>
+                    <p class="text__desc">아침 식사는 우리의 몸과 뇌를 에너지로 충전하는 첫 번째 식사입니다. 아침에 적절한 양의 영양소를 섭취하면 하루 내내 집중력과 기억력이 좋아지고, 몸의 대사 기능도 원활해집니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">칼로리</h3>
+                    <p class="text__desc">아침밥은 하루 중 첫 식사이기 때문에 체중 증가나 소화 불량 등의 문제가 발생할 수 있습니다. 적당한 칼로리를 유지하면서 영양소를 고루 섭취할 수 있는 것이 좋습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">시간</h3>
+                    <p class="text__desc">아침은 일상 생활에서 가장 바쁜 시간 중 하나입니다. 따라서 아침밥은 간단하면서도 영양소가 풍부한 재료로 준비하는 것이 좋습니다. 또한 미리 재료를 준비해두면 시간을 절약할 수 있습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">개인 취향</h3>
+                    <p class="text__desc">아침밥은 개인의 취향에 따라 다양한 메뉴를 선택할 수 있습니다. 예를 들어, 샐러드나 샌드위치, 죽 등 다양한 옵션이 있습니다. 따라서 자신이 좋아하는 음식을 선택하여 즐기는 것이 좋습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">건강상태</h3>
+                    <p class="text__desc">개인의 건강 상태에 따라 아침밥의 재료를 선택하는 것이 중요합니다. 예를 들어, 당뇨병이나 고혈압 환자는 고당도, 고나트륨 식품을 피하고, 식이섬유가 풍부한 재료를 선택하는 것이 좋습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">가격</h3>
+                    <p class="text__desc">아침밥 재료를 선택할 때 가격도 중요한 요소 중 하나입니다. 비용 효율적인 식재료를 선택하여 더 많은 양을 준비하거나 다른 음식에 사용할 수 있습니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
