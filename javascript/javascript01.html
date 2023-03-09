@@ -67,7 +67,7 @@
                     <li><a href="#">16. 객체 : 데이터 저장(키와값): 표현방법7</a></li>
                     <li><a href="#">17. 객체 : 데이터 저장(키와값): 표현방법8</a></li>
                     <li><a href="#">++식별자, 예약자(x)-책보고 정리</a></li>
-                    <li><a href="#">++연산자(전치,후치)(x)</a></li>
+                    <li><a href="#">++연산자(전치,후치),비트연산자(x)</a></li>
                     <li><a href="#">++형변환 , typeof</a></li>                
                 </ul>
             </div>
@@ -808,10 +808,29 @@
 
                 <div id="sample002" class="sample">
                     <h3>++연산자(전치,후치)</h3>
-                    <p></p>
+                    <p>연산자의 위치에 따라 계산할때 받아드리는 것이 다릅니다.</p>
                     <div class="script">
 <pre><code>{
-    
+var score = 10;
+// ++score;             //11
+// score++;             //12 위에서부터 시작하게되면 이렇게 되는 것이 맞다
+var result = ++score    // ++score는 전치 증가 연산자로 score의 값을 증가시키고 증가된 값을 반환합니다. 결과값 : 11
+var result = score++    // score++는 후치 증가 연산자로 score의 값을 증가시키지만 증가되기전에 값을 반환합니다. : 11(위에서 받아온 값)
+
+
+console.log(result,score)   // result는 var로 새롭게 선언되었으며 마지막 증가 연산자인 score++를 연산하여 score로 반환되었으니 10이고 
+                            // score는 먼저 선언된 var result에서 받은 값인 11이 아래에서 그냥 score라는 변수에서 반환되었기때문에 score는 11입니다.
+
+
+let hap, j, k, l;
+j = k = l = 1;
+hap = ++j + k++ + ++l;
+///후면에 있으면 우선순위가 밀려서 ++가 앞에 있는 변수는 합에서 그래도 계산
+
+console.log(hap);
+console.log(j);
+console.log(k);
+console.log(l);
 }
 </code></pre>
                     </div>
@@ -819,7 +838,13 @@
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                
+                                result : 11
+                                score : 12
+
+                                hap : 5
+                                j : 2
+                                k : 2
+                                l : 2
                             </div>
                         </details>
                     </div>
@@ -827,8 +852,59 @@
                 <!-- //sample001 -->
 
                 <div id="sample003" class="sample">
+                    <h3>비트연산자</h3>
+                    <p>이진수로 표현된 숫자에 대해 수행되는 연산자입니다.</p>
+                    <div class="script">
+<pre><code>{
+    let a = 9;
+    let b = 11;
+    let c = a^b;
+
+    console.log(c);
+    // ^ 는 2진수로 변경 할때 서로 비교했을 때 다르면 1
+
+
+    let num1 = 16, num2 = 80;
+    let result1;
+    let result2;
+
+    result1 = num1 &gt; num2 ? num1 & num2 : num1 ^ num2 ; // 64
+    result2 = num1 &lt; num2 ? num1 & num2 : num1 ^ num2 ; // 16
+    // ^ : 서로 비교했을 때 다르면 1(xor 연산자)
+    // & : 서로 비교했을 때 같으면 그 값이 출력 다르면 출력하지 않음(and 연산자)
+
+    console.log(result1);
+    console.log(result2);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                c : 2<br>
+                                result1 : 64<br>
+                                result2 : 16<br>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>비트 연산자</h4>
+                        <p>
+                            &(and 연산자) : 두 수를 2진법으로 변경하여 비교했을때 두 수가 모두 똑같이 1이여야 1이 출력됩니다.<br>
+                            |(or 연산자) : 두 수를 2진법으로 변경하여 비교했을때 두 수가 하나라도 1이면 1이 출력됩니다.<br>
+                            ~(not 연산자) : 두 수의 결과 값에 반대의 부호를 사용합니다.(음수로 만듭니다.)<br>
+                            ^(xor 연산자) : 두 수를 2진법으로 변경하여 비교했을때 두 수가 달라야 1이 출력됩니다.(1=1,0=0 모두 0으로 출력)<br>
+                            &lt;&lt;(left shift) : 수를 전체적으로 왼쪽으로 이동합니다(1&lt;&lt;2 : 왼쪽으로 두칸이동)<br>
+                            &gt;&gt;(right shift) : 수를 전체적으로 오른쪽으로 이동합니다(1&gt;&gt;3 : 오른쪽으로 세칸이동) 
+                        </p>
+                    </div>
+                </div>
+                <!-- //sample001 -->
+
+                <div id="sample004" class="sample">
                     <h3>형변화, typeof()</h3>
-                    <p>데이터 형을 변형할 수 있습니다.</p>
+                    <p>데이터 형을 변형할 수도 판별할 수도 있습니다.</p>
                     <div class="script">
 <pre><code>{
     let x= 100, y = "200", z= undefined;
@@ -866,8 +942,15 @@
                             </div>
                         </details>
                     </div>
+                    <div class="notice">
+                        <h4>형변환과 typeof()</h4>
+                        <p>
+                           형변환에 앞서 typeof()는 형을 판별하는 함수로 여기서는 typeof()로 형을 판별 후 y= Number(y,"&lt;br&gt;")에서 Number()함수로 문자열을 숫자로 변환 하였습니다.<br>
+                           하지만 문자로된 문자열은 사용할 수 없습니다.
+                        </p>
+                    </div>
                 </div>
-                <!-- //sample001 -->
+                <!-- //sample004 -->
             </div>
         </div>
     </main>
@@ -896,26 +979,26 @@
         //함수 : 실행문
         //클래스 : 함수의 집합체
 
-        // var score = 10;
-        // // ++score;    //11
-        // // score++;    //12 위에서부터 시작하게되면 이렇게 되는 것이 맞다
-        // var result = ++score    // ++score는 전치 증가 연산자로 score의 값을 증가시키고 증가된 값을 반환합니다. 결과값 : 11
-        // var result = score++    // score++는 후치 증가 연산자로 score의 값을 증가시키지만 증가되기전에 값을 반환합니다. : 11(위에서 받아온 값)
+        var score = 10;
+        // ++score;    //11
+        // score++;    //12 위에서부터 시작하게되면 이렇게 되는 것이 맞다
+        var result = ++score    // ++score는 전치 증가 연산자로 score의 값을 증가시키고 증가된 값을 반환합니다. 결과값 : 11
+        var result = score++    // score++는 후치 증가 연산자로 score의 값을 증가시키지만 증가되기전에 값을 반환합니다. : 11(위에서 받아온 값)
   
 
-        // console.log(result,score)    // result는 var로 새롭게 선언되었으며 마지막 증가 연산자인 score++를 연산하여 score로 반환되었으니 10이고 
+        console.log(result,score)    // result는 var로 새롭게 선언되었으며 마지막 증가 연산자인 score++를 연산하여 score로 반환되었으니 10이고 
                                         // score는 먼저 선언된 var result에서 받은 값인 11이 아래에서 그냥 score라는 변수에서 반환되었기때문에 score는 11입니다.
 
 
-        // let hap, j, k, l;
-        // j = k = l = 1;
-        // hap = ++j + k++ + ++l;
-        // ///후면에 있으면 우선순위가 밀려서 ++가 앞에 있는 변수는 합에서 그래도 계산
+        let hap, j, k, l;
+        j = k = l = 1;
+        hap = ++j + k++ + ++l;
+        ///후면에 있으면 우선순위가 밀려서 ++가 앞에 있는 변수는 합에서 그래도 계산
 
-        // console.log(hap);
-        // console.log(j);
-        // console.log(k);
-        // console.log(l);
+        console.log(hap);
+        console.log(j);
+        console.log(k);
+        console.log(l);
 
 
         // let sum = 0;
