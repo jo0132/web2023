@@ -9,6 +9,8 @@
     margin-bottom: 100px;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
 }
 #header::before {
     content: '';
@@ -21,7 +23,7 @@
 }
 #header h1 {
     font-size: 28px;
-    padding: 0px 5px 5px 10px;
+    padding: 5px 5px 5px 10px;
     font-family: 'DungGeunMo';
     z-index: 10;
     position: relative;
@@ -32,6 +34,29 @@
 #header h1 em {
     font-size: 0.5em; /* em은 부모박스의 크기를 기준으로 1은 부모박스 크기 /rm은 루트 폴더기준 */
 }
+#header ul {
+    padding: 5px;
+}
+
+#header li {
+    display: inline;
+    z-index: 10;
+    position: relative;
+}
+
+#header li a {
+    color: #fff;
+    font-family: 'DungGeunMo';
+    border: 1px dashed #fff;
+    display: inline-block;
+    padding: 5px;
+}
+#header li.active a,
+#header li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 /* main */
 #main {
     padding: 100px 0;
@@ -45,6 +70,7 @@
     width: 100%;
     background-color: #262626;
     text-align: center;
+    border-top: 6px solid #cacaca;
 }
 footer a {
     color: #fff;
@@ -74,10 +100,9 @@ footer a {
     flex-wrap: wrap;
 }
 .quiz__wrap .quiz {
-    max-width: 500px;
+    width: 500px;
     background-color: #fff;
     border: 8px ridge #cacaca;
-    width: 100%;
 }
 .quiz__title {
     background: linear-gradient(to right, #2b32b2, #1488cc);
@@ -107,6 +132,7 @@ footer a {
     text-align: center;
     /* border-bottom: 6px ridge #cacaca; */
 }
+
 .quiz__answer .confirm {
     background-color: #cacaca;
     border: 6px ridge #cacaca;
@@ -123,11 +149,21 @@ footer a {
 }
 .quiz__answer .result {
     background-color: #fff;
+    border: 6px groove #cacaca;
+    width: 100%;
+    font-family: 'EliceDigitalBaeum';
+    padding: 10px 20px;
+    font-size: 22px;
+    /* display: none; */
+}
+.quiz__answer .input {
+    background-color: #fff;
     border: 6px ridge #cacaca;
     width: 100%;
     font-family: 'EliceDigitalBaeum';
     padding: 10px 20px;
     font-size: 22px;
+    margin-bottom: 10px;
     /* display: none; */
 }
 .quiz__view {
@@ -135,6 +171,20 @@ footer a {
     overflow: hidden;
 
 }
+.quiz__footer {
+    border-top: 6px ridge #cacaca;
+    padding: 20px;
+    font-family: 'EliceDigitalBaeum';
+    background-color: #f5f5f5;
+}
+.quiz__footer::before {
+    content: '😘Tip';
+}
+.quiz__desc {
+    padding-top: 5px;
+}
+
+
 /* dog__wrap */
 .dog .tail, 
 .dog .chin, 

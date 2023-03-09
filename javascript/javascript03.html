@@ -464,8 +464,8 @@
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                1. 함수가 실행되었습니다.
-                                2. 자바스크립트가 실행되었습니다.
+                                1. 함수가 실행되었습니다.<br>
+                                2. 자바스크립트가 실행되었습니다.<br>
                                 3. 리액트가 실행되었습니다.
                             </div>
                         </details>
@@ -480,11 +480,10 @@
                 <!-- //sample13 -->
 
                 <div id="sample14" class="sample">
-                    <h3></h3>
+                    <h3>14. 함수 유형 : 함수와 변수를 이용한 형태</h3>
                     <p></p>
                     <div class="script">
 <pre><code>{
-// 14. 함수 유형 : 함수와 변수를 이용한 형태
 {
     function func(num, str1, str2){
         document.write(num + ". " +str1 + "가 " + str2 + "되었습니다.<br>");
@@ -509,7 +508,9 @@ document.write("<br>")
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                
+                                1. 함수가 실행되었습니다.<br>
+                                2. 자바스크립트가 실행되었습니다.<br>
+                                3. 리액트가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -517,14 +518,20 @@ document.write("<br>")
                 <!-- //sample14 -->
 
                 <div id="sample15" class="sample">
-                    <h3></h3>
+                    <h3>15. 함수 유형 : 함수와 배열을 이용한 형태</h3>
                     <p></p>
                     <div class="script">
 <pre><code>{
-    func = str =&gt; str;
+    function func(num, str1, str2){
+        document.write(num + ". " +str1 + "가 " + str2 + "되었습니다.<br>");
+    }
+    
+    const num = [1,2,3]
+    const info = ["함수", "자바스크립트", "리액트", "실행"]
 
-    document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
-    // this를 사용할 수 없다는 단점이있다.
+    func(num[0],info[0],info[3]);
+    func(num[1],info[1],info[3]);
+    func(num[2],info[2],info[3]);
 }
 </code></pre>
                     </div>
@@ -532,7 +539,9 @@ document.write("<br>")
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                
+                                1. 함수가 실행되었습니다.<br>
+                                2. 자바스크립트가 실행되었습니다.<br>
+                                3. 리액트가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -540,14 +549,25 @@ document.write("<br>")
                 <!-- //sample15 -->
 
                 <div id="sample16" class="sample">
-                    <h3></h3>
+                    <h3>16. 함수 유형 : 함수와 객체를 이용한 형태</h3>
                     <p></p>
                     <div class="script">
 <pre><code>{
-    func = str =&gt; str;
-
-    document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
-    // this를 사용할 수 없다는 단점이있다.
+    function func(num, str1, str2){
+        document.write(num + ". " +str1 + "가 " + str2 + "되었습니다.<br>");
+    }
+    const info = {
+        num1 : 1,
+        name1 : "함수",
+        num2 : 2,
+        name2 : "자바스크립트",
+        num3 : 3,
+        name3 : "리액트",
+        word : "실행"
+    }
+    func(info.num1, info.name1, info.word);
+    func(info.num2, info.name2, info.word);
+    func(info.num3, info.name3, info.word);
 }
 </code></pre>
                     </div>
@@ -555,7 +575,9 @@ document.write("<br>")
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                실행되었습니다.
+                                1. 함수가 실행되었습니다.<br>
+                                2. 자바스크립트가 실행되었습니다.<br>
+                                3. 리액트가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -567,10 +589,28 @@ document.write("<br>")
                     <p></p>
                     <div class="script">
 <pre><code>{
-    func = str =&gt; str;
-
-    document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
-    // this를 사용할 수 없다는 단점이있다.
+    function func(num, str1, str2){
+        document.write(num + ". " +str1 + "가 " + str2 + "되었습니다.<br>");
+    }
+    const info = [
+        {
+            num : 1,
+            name : "함수",
+            word : "실행"
+        },{
+            num : 2,
+            name: "자바스크립트",
+            word : "실행"
+        },{
+            num : 3,
+            name: "리액트",
+            word : "실행"
+        }
+    ]
+    func(info[0].num,info[0].name,info[0].word);
+    func(info[1].num,info[1].name,info[1].word);
+    func(info[2].num,info[2].name,info[2].word);
+    // 필요한 값을 저장하기 위해 map을 사용하여 가져올수 있고 배열에 인덱스에 변수 i를 넣어 증가값으로 출력 
 }
 </code></pre>
                     </div>
@@ -578,7 +618,10 @@ document.write("<br>")
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                실행되었습니다.
+                                <div>
+                                    1. 함수가 실행되었습니다.<br>
+                                    2. 자바스크립트가 실행되었습니다.<br>
+                                    3. 리액트가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -586,14 +629,31 @@ document.write("<br>")
                 <!-- //sample17 -->
 
                 <div id="sample18" class="sample">
-                    <h3></h3>
+                    <h3>18. 함수 유형 : 객체안에 함수을 이용한 형태</h3>
                     <p></p>
                     <div class="script">
 <pre><code>{
-    func = str =&gt; str;
-
-    document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
-    // this를 사용할 수 없다는 단점이있다.
+    const info = {
+        num1 : 1,
+        name1 : "함수",
+        num2 : 2,
+        name2 : "자바스크립트",
+        num3 : 3,
+        name3 : "리액트",
+        word : "실행",
+        result1 : function(){
+            document.write(info.num1 + ". " + info.name1 + "가 " + info.word + "되었습니다.<br>");
+        },
+        result2 : function(){
+            document.write(info.num2 + ". " + info.name2 + "가 " + info.word + "되었습니다.<br>");
+        },
+        result3 : function(){
+            document.write(info.num3 + ". " + info.name3 + "가 " + info.word + "되었습니다.<br>");
+        }
+    }
+    info.result1();
+    info.result2();
+    info.result3();
 }
 </code></pre>
                     </div>
@@ -601,7 +661,9 @@ document.write("<br>")
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                실행되었습니다.
+                                1. 함수가 실행되었습니다.<br>
+                                2. 자바스크립트가 실행되었습니다.<br>
+                                3. 리액트가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -609,14 +671,28 @@ document.write("<br>")
                 <!-- //sample18 -->
 
                 <div id="sample19" class="sample">
-                    <h3></h3>
+                    <h3>19. 함수 유형 : 객체생성자 함수</h3>
                     <p></p>
                     <div class="script">
 <pre><code>{
-    func = str =&gt; str;
+    function func(num, name, word){
+        this.num = num;
+        this.name = name;
+        this.word = word;
 
-    document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
-    // this를 사용할 수 없다는 단점이있다.
+        this.result = function(){
+            document.write(this.num + ". " + this.name + "가 " + this.word + "되었습니다.<br>");
+        }
+    }
+
+    // 인스턴스 생성
+    const info1 = new func(1, "함수", "실행");
+    const info2 = new func(2, "자바스크립트", "실행");
+    const info3 = new func(3, "리액트", "실행");
+
+    info1.result();
+    info2.result();
+    info3.result();
 }
 </code></pre>
                     </div>
@@ -624,7 +700,9 @@ document.write("<br>")
                         <details>
                             <summary>결과 확인하기</summary>
                             <div>
-                                실행되었습니다.
+                                1. 함수가 실행되었습니다.<br>
+                                2. 자바스크립트가 실행되었습니다.<br>
+                                3. 리액트가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -632,14 +710,27 @@ document.write("<br>")
                 <!-- //sample19 -->
 
                 <div id="sample20" class="sample">
-                    <h3></h3>
+                    <h3>20. 함수 유형 : 프로토타입 함수</h3>
                     <p></p>
                     <div class="script">
 <pre><code>{
-    func = str =&gt; str;
+    function Func(num, name, word){
+        this.num = num;
+        this.name = name;
+        this.word = word;
+    }
+    Func.prototype.result = function(){
+        document.write(this.num + ". " + this.name + "가 " + this.word + "되었습니다.<br>");
+    }
+    
+    // 인스턴스 생성
+    const info1 = new Func(1, "함수", "실행");
+    const info2 = new Func(2, "자바스크립트", "실행");
+    const info3 = new Func(3, "리액트", "실행");
 
-    document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
-    // this를 사용할 수 없다는 단점이있다.
+    info1.result();
+    info2.result();
+    info3.result();
 }
 </code></pre>
                     </div>
@@ -653,29 +744,6 @@ document.write("<br>")
                     </div>
                 </div>
                 <!-- //sample20 -->
-
-                <div id="sample21" class="sample">
-                    <h3></h3>
-                    <p></p>
-                    <div class="script">
-<pre><code>{
-    func = str =&gt; str;
-
-    document.write(func("실행되었습니다.")); // 리액트나 뷰에 많이 사용
-    // this를 사용할 수 없다는 단점이있다.
-}
-</code></pre>
-                    </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                                실행되었습니다.
-                            </div>
-                        </details>
-                    </div>
-                </div>
-                <!-- //sample21 -->
             </div>
         </div>
     </main>
@@ -762,175 +830,7 @@ document.write("<br>")
         // }
 
 
-        // 13. 함수 유형 : 함수와 매개변수를 이용한 형태
-        {
-            function func(num, str1, str2){
-                document.write(num + ". " +str1 + "가 " + str2 + "되었습니다.<br>");
-            }
-            func("1","함수","실행");
-            func("2","자바스크립트","실행");
-            func("3","리액트","실행");
-        }
-        document.write("<br>")
-
-        // 14. 함수 유형 : 함수와 변수를 이용한 형태
-        {
-            function func(num, str1, str2){
-                document.write(num + ". " +str1 + "가 " + str2 + "되었습니다.<br>");
-            }
-            const youNum1 = 1;
-            const youNum2 = 2;
-            const youNum3 = 3;
-            const youstr1 = "함수";
-            const youstr2 = "자바스크립트";
-            const youstr3 = "리액스";
-            const yocom1 = "실행";
-
-            func(youNum1, youstr1, yocom1);     // 1. 함수가 실행되었습니다.
-            func(youNum2, youstr2, yocom1);     // 2. 자바스크립트가 실행되었습니다.
-            func(youNum3, youstr3, yocom1);     // 3. 리액스가 실행되었습니다.
-        }
-        document.write("<br>")
-
-        // // 15. 함수 유형 : 함수와 배열을 이용한 형태
-        // {
-        //     function func(num, str1, str2){
-        //         document.write(num + ". " +str1 + "가 " + str2 + "되었습니다.<br>");
-        //     }
-            
-        //     const num = [1,2,3]
-        //     const info = ["함수", "자바스크립트", "리액트", "실행"]
-
-        //     func(num[0],info[0],info[3]);
-        //     func(num[1],info[1],info[3]);
-        //     func(num[2],info[2],info[3]);
-
-        //     // 1. 함수가 실행되었습니다.
-        //     // 2. 자바스크립트가 실행되었습니다.
-        //     // 3. 리액스가 실행되었습니다.
-        // }
-        // document.write("<br>");
-
-        // // 16. 함수 유형 : 함수와 객체를 이용한 형태
-        // {
-        //     function func(num, str1, str2){
-        //         document.write(num + ". " +str1 + "가 " + str2 + "되었습니다.<br>");
-        //     }
-        //     const info = {
-        //         num1 : 1,
-        //         name1 : "함수",
-        //         num2 : 2,
-        //         name2 : "자바스크립트",
-        //         num3 : 3,
-        //         name3 : "리액트",
-        //         word : "실행"
-        //     }
-        //     func(info.num1, info.name1, info.word);
-        //     func(info.num2, info.name2, info.word);
-        //     func(info.num3, info.name3, info.word);
-
-        // }
-        // document.write("<br>");
-        
-
-        // // 17. 함수 유형 : 함수와 객체,배열을 이용한 형태
-        // {
-        //     function func(num, str1, str2){
-        //         document.write(num + ". " +str1 + "가 " + str2 + "되었습니다.<br>");
-        //     }
-        //     const info = [
-        //         {
-        //             num : 1,
-        //             name : "함수",
-        //             word : "실행"
-        //         },{
-        //             num : 2,
-        //             name: "자바스크립트",
-        //             word : "실행"
-        //         },{
-        //             num : 3,
-        //             name: "리액트",
-        //             word : "실행"
-        //         }
-        //     ]
-        //     func(info[0].num,info[0].name,info[0].word);
-        //     func(info[1].num,info[1].name,info[1].word);
-        //     func(info[2].num,info[2].name,info[2].word);
-        //     // 필요한 값을 저장하기 위해 map을 사용하여 가져올수 있고 배열에 인덱스에 변수 i를 넣어 증가값으로 출력 
-        // }
-
-        // // 18. 함수 유형 : 객체안에 함수을 이용한 형태
-        // {
-        //     const info = {
-        //         num1 : 1,
-        //         name1 : "함수",
-        //         num2 : 2,
-        //         name2 : "자바스크립트",
-        //         num3 : 3,
-        //         name3 : "리액트",
-        //         word : "실행",
-        //         result1 : function(){
-        //             document.write(info.num1 + ". " + info.name1 + "가 " + info.word + "되었습니다.<br>");
-        //         },
-        //         result2 : function(){
-        //             document.write(info.num2 + ". " + info.name2 + "가 " + info.word + "되었습니다.<br>");
-        //         },
-        //         result3 : function(){
-        //             document.write(info.num3 + ". " + info.name3 + "가 " + info.word + "되었습니다.<br>");
-        //         }
-        //     }
-        //     info.result1();
-        //     info.result2();
-        //     info.result3();
-        // }
-        // document.write("<br>");
-
-        // 19. 함수 유형 : 객체생성자 함수
-        // 단점 : 
-        {
-            function func(num, name, word){
-                this.num = num;
-                this.name = name;
-                this.word = word;
-
-                this.result = function(){
-                    document.write(this.num + ". " + this.name + "가 " + this.word + "되었습니다.<br>");
-                }
-            }
-
-            // 인스턴스 생성
-            const info1 = new func(1, "함수", "실행");
-            const info2 = new func(2, "자바스크립트", "실행");
-            const info3 = new func(3, "리액트", "실행");
-
-            info1.result();
-            info2.result();
-            info3.result();
-        }
-        document.write("<br>");
-
-        // 20. 함수 유형 : 프로토타입 함수
-        {
-            function Func(num, name, word){
-                this.num = num;
-                this.name = name;
-                this.word = word;
-            }
-            Func.prototype.result = function(){
-                document.write(this.num + ". " + this.name + "가 " + this.word + "되었습니다.<br>");
-            }
-            
-            // 인스턴스 생성
-            const info1 = new Func(1, "함수", "실행");
-            const info2 = new Func(2, "자바스크립트", "실행");
-            const info3 = new Func(3, "리액트", "실행");
-
-            info1.result();
-            info2.result();
-            info3.result();
-
-        }
-        // 함수명의 첫 문자를 대문자롤 표현합니다.
+       
     </script>
 </body>
 </html>

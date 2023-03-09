@@ -53,25 +53,22 @@
                     <li><a href="#">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
                     <li><a href="#">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
                     <li><a href="#">04. 변수 : 지역 변수 + 전역 변수 (스코프)</a></li>
-                    <li><a href="#">04. 상수 : 데이터 저장</a></li>
-                    <li><a href="#">05. 배열 : 데이터 저장(여러개): 표현방법1</a></li>
-                    <li><a href="#">06. 배열 : 데이터 저장(여러개): 표현방법2</a></li>
-                    <li><a href="#">07. 배열 : 데이터 저장(여러개): 표현방법3</a></li>
-                    <li><a href="#">08. 배열 : 데이터 저장(여러개): 표현방법4</a></li>
-                    <li><a href="#">09. 객체 : 데이터 저장(키와값): 표현방법1</a></li>
-                    <li><a href="#">10. 객체 : 데이터 저장(키와값): 표현방법2</a></li>
-                    <li><a href="#">11. 객체 : 데이터 저장(키와값): 표현방법3</a></li>
-                    <li><a href="#">12. 객체 : 데이터 저장(키와값): 표현방법4</a></li>
-                    <li><a href="#">13. 객체 : 데이터 저장(키와값): 표현방법5</a></li>
-                    <li><a href="#">14. 객체 : 데이터 저장(키와값): 표현방법6</a></li>
-                    <li><a href="#">15. 객체 : 데이터 저장(키와값): 표현방법7</a></li>
-                    <li><a href="#">16. 객체 : 데이터 저장(키와값): 표현방법8</a></li>
-                    <li><a href="#">식별자, 예약자(x)-책보고 정리</a></li>
-                    <li><a href="#">++ 연산자(전치,후치)(x)</a></li>
-                    <li><a href="#">++형변환 , typeof(x)</a></li>
-                </ul>
-                <ul>
-                    <li>형변화, typeof()</li>
+                    <li><a href="#">05. 상수 : 데이터 저장</a></li>
+                    <li><a href="#">06. 배열 : 데이터 저장(여러개): 표현방법1</a></li>
+                    <li><a href="#">07. 배열 : 데이터 저장(여러개): 표현방법2</a></li>
+                    <li><a href="#">08. 배열 : 데이터 저장(여러개): 표현방법3</a></li>
+                    <li><a href="#">09. 배열 : 데이터 저장(여러개): 표현방법4</a></li>
+                    <li><a href="#">10. 객체 : 데이터 저장(키와값): 표현방법1</a></li>
+                    <li><a href="#">11. 객체 : 데이터 저장(키와값): 표현방법2</a></li>
+                    <li><a href="#">12. 객체 : 데이터 저장(키와값): 표현방법3</a></li>
+                    <li><a href="#">13. 객체 : 데이터 저장(키와값): 표현방법4</a></li>
+                    <li><a href="#">14. 객체 : 데이터 저장(키와값): 표현방법5</a></li>
+                    <li><a href="#">15. 객체 : 데이터 저장(키와값): 표현방법6</a></li>
+                    <li><a href="#">16. 객체 : 데이터 저장(키와값): 표현방법7</a></li>
+                    <li><a href="#">17. 객체 : 데이터 저장(키와값): 표현방법8</a></li>
+                    <li><a href="#">++식별자, 예약자(x)-책보고 정리</a></li>
+                    <li><a href="#">++연산자(전치,후치)(x)</a></li>
+                    <li><a href="#">++형변환 , typeof</a></li>                
                 </ul>
             </div>
             <div class="main__sample">
@@ -247,8 +244,58 @@
                     </div>
                 </div>
                 <!-- //sample03 -->
-                
+
                 <div id="sample04" class="sample">
+                    <h3>04. 변수 : 지역 변수 + 전역 변수 (스코프)</h3>
+                    <p>변수는 위치에 따라서 영향을 줍니다.</p>
+                    <div class="script">
+<pre><code>{
+    let x = 100;    //전역 변수 : 함수와 다른 출력문에까지 영향을 수는 변수
+    let y = 200;    //전역 변수
+
+    function func(){
+        // x = 300;         // 전역 변수 변경 : 변수를 변경이 가능하지만 아무리 함수 안에 있어도 선언을 다시하지 않고 변경만 한다면 전역변수입니다.
+        let x = 300;        // 지역 변수 : 함수 안에 선언된 변수로 함수 밖에 영향울 주지 못한다.
+        let y = 400;
+        z = "javascript"    // 전역 변수입니다.: let같이 변수 선언이 없어도 생략으로 받아 드려 사용 가능하지만 전역 변수로 인식합니다.
+
+        console.log("함수안"+x);
+        console.log("함수안"+y);
+        console.log("함수안"+z);
+
+    };
+    func();
+
+    console.log("함수밖"+x);
+    console.log("함수밖"+y);
+    console.log("함수밖"+z);
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                함수안300
+                                함수안400
+                                함수안javascript
+                                함수밖100
+                                함수밖200
+                                함수밖javascript
+                            </div>
+                        </details>
+                    </div>
+                    <div class="notice">
+                        <h4>지역변수와 전역변수</h4>
+                        <p>
+                            😖지역 변수: 함수 내부에서 선언된 변수로, 해당 함수 내부에서만 사용할 수 있습니다. 함수 실행이 끝나면 지역 변수는 소멸되며, 다시 사용할 수 없습니다.<br>
+                            😖전역 변수: 함수 외부에서 선언된 변수로, 모든 함수에서 사용할 수 있습니다. 스크립트가 실행되면 생성되고, 스크립트가 종료될 때까지 유지됩니다. 전역 변수는 어디서든 접근할 수 있으므로, 변수 이름이 같은 경우 충돌이 발생할 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                <!-- //sample03 -->
+                
+                <div id="sample05" class="sample">
                     <h3>04. 상수 : 데이터 저장 + 데이터 변경(x)</h3>
                     <p>상수는 데이터 저장은 가능하나 변경은 불가능합니다.</p>
                     <div class="script">
@@ -287,7 +334,7 @@
                 </div>
                 <!-- //sample04 -->
 
-                <div id="sample05" class="sample">
+                <div id="sample06" class="sample">
                     <h3>05. 배열 : 데이터 저장(여러개): 표현방법1</h3>
                     <p>
                         배열은 데이터를 배열요소(element)로 저장하고 인덱스(index)로 찾아내는 정렬된 값의 집합입니다.<br>
@@ -325,7 +372,7 @@
                 </div>
                 <!-- //sample05 -->
 
-                <div id="sample06" class="sample">
+                <div id="sample07" class="sample">
                     <h3>06. 배열 : 데이터 저장(여러개): 표현방법2</h3>
                     <p>
                         자바스크립트에서는 중복되는 코드를 한줄로 줄이는 속기법들이 있습니다.<br>
@@ -361,7 +408,7 @@
                 </div>
                 <!-- //sample06 -->
 
-                <div id="sample07" class="sample">
+                <div id="sample08" class="sample">
                     <h3>07. 배열 : 데이터 저장(여러개): 표현방법3</h3>
                     <p>위 방법에서 new Array로 배열 선언하는 방법말고도 다른 방법이 있다.</p>
                     <div class="script">
@@ -396,7 +443,7 @@
                 </div>
                 <!-- //sample07 -->
 
-                <div id="sample08" class="sample">
+                <div id="sample09" class="sample">
                     <h3>08. 배열 : 데이터 저장(여러개): 표현방법4</h3>
                     <p>위 방법에서 중복되는 값 배정코드와 new Array로 배열 선언하는 코드를 줄여 한줄로 만들 수 있다.</p>
                     <div class="script">
@@ -428,7 +475,7 @@
                 </div>
                 <!-- //sample08 -->
 
-                <div id="sample09" class="sample">
+                <div id="sample10" class="sample">
                     <h3>09. 객체 : 데이터 저장(키와값): 표현방법1</h3>
                     <p>
                         지금까지 배열에서는 아이템에 대한 식별자(검색어)를 인덱스라고 했다면 객체에서의 식별자는 key라고 합니다.<br>
@@ -466,7 +513,7 @@
                 </div>
                 <!-- //sample09 -->
 
-                <div id="sample10" class="sample">
+                <div id="sample11" class="sample">
                     <h3>10. 객체 : 데이터 저장(키와값): 표현방법2</h3>
                     <p>객체에서의 변수 선언은 []을 사용하지만 []가 없이 선언하는방법도 있습니다.</p>
                     <div class="script">
@@ -501,7 +548,7 @@
                 </div>
                 <!-- //sample10 -->
 
-                <div id="sample11" class="sample">
+                <div id="sample12" class="sample">
                     <h3>11. 객체 : 데이터 저장(키와값): 표현방법3</h3>
                     <p>new Object를 사제하고 사용할수 있습니다.</p>
                     <div class="script">
@@ -536,7 +583,7 @@
                 </div>
                 <!-- //sample11 -->
 
-                <div id="sample12" class="sample">
+                <div id="sample13" class="sample">
                     <h3>12. 객체 : 데이터 저장(키와값): 표현방법4</h3>
                     <p>변수 선언을 없애고 객체 선언에 한번에 표현할 수 있습니다.</p>
                     <div class="script">
@@ -569,7 +616,7 @@
                 </div>
                 <!-- //sample12 -->
 
-                <div id="sample13" class="sample">
+                <div id="sample14" class="sample">
                     <h3>13. 객체 : 데이터 저장(키와값): 표현방법5</h3>
                     <p>배열안에 객체를 넣을 수 있습니다.</p>
                     <div class="script">
@@ -604,7 +651,7 @@
                 </div>
                 <!-- //sample13 -->
                 
-                <div id="sample14" class="sample">
+                <div id="sample15" class="sample">
                     <h3>14. 객체 : 데이터 저장(키와값): 표현방법6</h3>
                     <p>객체안에 배열을 넣어 표현할 수 있습니다.</p>
                     <div class="script">
@@ -647,7 +694,7 @@
                 </div>
                 <!-- //sample14 -->
                 
-                <div id="sample15" class="sample">
+                <div id="sample16" class="sample">
                     <h3>15. 객체 : 데이터 저장(키와값): 표현방법7</h3>
                     <p>값 자체가 아닌 변수를 객체에 넣어 변수를 활용하여 출력할 수있습니다.</p>
                     <div class="script">
@@ -683,7 +730,7 @@
                 </div>
                 <!-- //sample15 -->
                 
-                <div id="sample16" class="sample">
+                <div id="sample17" class="sample">
                     <h3>16. 객체 : 데이터 저장(키와값): 표현방법8</h3>
                     <p>함수를 활용하여 값을 출력할 수 있습니다.</p>
                     <div class="script">
@@ -740,6 +787,46 @@
                 <!-- //sample16 -->
 
                 <div id="sample001" class="sample">
+                    <h3>++식별자, 예약자</h3>
+                    <p></p>
+                    <div class="script">
+<pre><code>{
+    
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample001 -->
+
+                <div id="sample002" class="sample">
+                    <h3>++연산자(전치,후치)</h3>
+                    <p></p>
+                    <div class="script">
+<pre><code>{
+    
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample001 -->
+
+                <div id="sample003" class="sample">
                     <h3>형변화, typeof()</h3>
                     <p>데이터 형을 변형할 수 있습니다.</p>
                     <div class="script">
@@ -876,28 +963,6 @@
 
         // }
 
-        // 04. 변수 : 지역 변수 + 전역 변수 (스코프)
-        {
-            let x = 100;    //전역 변수 : 함수와 다른 출력문에까지 영향을 수는 변수
-            let y = 200;    //전역 변수
-
-            function func(){
-                // x = 300;         // 전역 변수 변경 : 변수를 변경이 가능하지만 아무리 함수 안에 있어도 선언을 다시하지 않고 변경만 한다면 전역변수입니다.
-                let x = 300;        // 지역 변수 : 함수 안에 선언된 변수로 함수 밖에 영향울 주지 못한다.
-                let y = 400;
-                z = "javascript"    // 전역 변수입니다.: let같이 변수 선언이 없어도 생략으로 받아 드려 사용 가능하지만 전역 변수로 인식합니다.
-
-                console.log("함수안"+x);
-                console.log("함수안"+y);
-                console.log("함수밖"+z);
-
-            };
-            func();
-
-            console.log("함수밖"+x);
-            console.log("함수밖"+y);
-            console.log("함수밖"+z);
-        }
 
 
     </script>

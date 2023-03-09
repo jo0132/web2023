@@ -28,7 +28,7 @@ em {
 }
 body {
     background:
-        radial-gradient(#2b32b2 3px, transparent 4px),
+        radial-gradient(#1488cc 3px, transparent 4px),
         radial-gradient(#1488cc 3px, transparent 4px),
         linear-gradient(#fff 4px, transparent 0),
         linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),

@@ -1,175 +1,52 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script>
-        //01 1-50까지 for문으로 출력
-        {
-            for(let i = 1; i <=50; i++){
-                document.write(i);
-            };
-        }
-        document.write("<br>");
-        //02 1-50까지 while문으로 출력
-        {
-            let i = 0;
-            while (i < 50) {
-                i++;
-                document.write(i);
-            }
+//1부터 1000까지 합
+{
+    let sum = 0
+    for(let i = 1; i <=1000; i++){
+        sum += i;
+    }
+    document.write(sum);
+}
+        //1부터 1000까지 3의 배수
+// {
+//     for(let i = 1; i <= 1000; i++){
+//         if(i % 3 == 0){
+//             document.write(i);
+//         }
+//     };
+// }
+{
+    let num1 = 16, num2 = 40;
+    let a = num1++;
+    let b = --num2;
 
-        }
-        document.write("<br>");
+    console.log(a+b);
+}
+{
+    let num1 = 16, num2 = 40;
+    let a = num1++;
+    let b = --num2;
 
-        {
-            let i = 1;
-            while (i <= 50) {
-                document.write(i);
-                i++;
-            }
+    console.log(a);
+}
+{
+    let a = 9;
+    let b = 11;
+    let c = a^b;
 
-        }
-        document.write("<br>");
+    console.log(c);
+    // 비트 연산자 : ^ 서로 비교했을 때 다르면 1
+    // 결과값 2
+}
+{
+    let num1 = 16, num2 = 80;
+    let result1;
+    let result2;
 
-        //03 1-100까지 짝수로 출력(if문 사용X)
-        {
-            for(let i = 1; i*2 <=100; i++){
-                document.write(i*2);
-            };
-        }
-        document.write("<br>");
+    result1 = num1 > num2 ? num1 & num2 : num1 ^ num2 ; // 64
+    result2 = num1 < num2 ? num1 & num2 : num1 ^ num2 ; // 16
+    // ^ : 서로 비교했을 때 다르면 1(xor 연산자)
+    // & : 서로 비교했을 때 같으면 그 값이 출력 다르면 출력하지 않음(and 연산자)
 
-        {
-            for(let i = 1; i*2 <=100; i++){
-                document.write(i);
-            };
-        }
-        document.write("<br>");
-
-        {
-            for(let i = 2; i <=100; i+=2){
-                document.write(i);
-            };
-        }
-        document.write("<br>");
-        //04 1-100까지 홀수로 출력(if문 사용)
-        {
-            for(let i = 1; i <=100; i++){
-                if(i % 2 ==1){
-                    document.write(i);
-                }
-            };
-        }
-        document.write("<br>");
-        //05 테이블 50칸 출력(1-50숫자 출력)
-        {
-            let table = "<table border='1'>";
-            let num = 0;
-            for(let i = 1; i <=10; i++){
-                table += "<tr>";
-                for(let j = 1; j <= 5; j++){
-                    num++;
-                    table += "<td>" + num + "</td>";
-                }
-                table += "</tr>";
-            };
-
-            table += "</table>";
-            document.write(table)
-        }
-        document.write("<br>");
-        //06 1-10까지 합 출력
-        {
-            let sum = 0;
-            for(let i = 1; i <=10; i++){
-                sum += i
-            };
-            document.write(sum)
-        }
-        document.write("<br>");
-        //07 구구단 출력
-        {
-            for(let i = 2; i <=9; i++){
-                document.write(i + "단<br>")
-                for(let j = 1; j <=9; j++){
-                    document.write(i+"*"+j+"="+ i*j+"<br>")
-                }
-
-            };
-        }
-        document.write("<br>");
-        //08 함수 유형 4가지 작성
-        {
-            //선언
-            {
-                function func(){
-                    document.write("실행<br>");
-                };
-                func();
-            }
-            //익명
-            {
-                const func = function(){
-                    document.write("실행<br>");
-                };
-                func();
-            }
-            //매개변수
-            {
-                function func(str){
-                    document.write(str);
-                };
-                func("실행<br>");
-            }
-            //리턴
-            {
-                function func(){
-                    const str = "실행<br>";
-                    return str;
-                }
-                document.write(func());
-            }
-        }
-        //09 화살표 함수유형 4가지 작성
-        {
-            //선언
-            {
-                func = () => {
-                    document.write("실행<br>");
-                };
-                func();
-            }
-            //익명
-            {
-                const func = () => {
-                    document.write("실행<br>");
-                };
-                func();
-            }
-            //매개변수
-            {
-                func = (str) => {
-                    document.write(str);
-                };
-                func("실행<br>");
-            }
-            //리턴
-            {
-                func = () => {
-                    const str = "실행";
-                    return str;
-                }
-                document.write(func());
-            }
-        }
-        //10 스크립트하면서 제일 어려운 부분과 이해 안되는 부분 서술
-
-
-    </script>
-</body>
-</html>
+    console.log(result1);
+    console.log(result2);
+}
