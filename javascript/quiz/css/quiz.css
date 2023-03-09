@@ -169,7 +169,6 @@ footer a {
 .quiz__view {
     border-bottom: 6px ridge #cacaca;
     overflow: hidden;
-
 }
 .quiz__footer {
     border-top: 6px ridge #cacaca;
@@ -179,6 +178,8 @@ footer a {
 }
 .quiz__footer::before {
     content: '😘Tip';
+    color: #F5534F;
+    font-weight: bold;
 }
 .quiz__desc {
     padding-top: 5px;
