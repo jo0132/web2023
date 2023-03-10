@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 0부터 100
+        {
+            for(let i = 0; i <=100; i++){
+                document.write(i);
+            }
+        }
+        document.write("<br>");
+
+        //100칸 테이블
+        {
+            let table = "<table border ='1'>"
+                for(let i = 1; i <= 10; i++){
+                    table += "<tr>"
+                        for(let j = 1; j <= 10; j++){
+                            table += "<td>"+i+"</td>"
+                        }
+                    table += "</tr>"
+                };
+            table += "</table>";
+            document.write(table);
+        }
+        document.write("<br>");
+        
+        //20단
+        {
+            let i = 20;
+            document.write(i,"단");
+            document.write("<br>");
+            for(let j = 1; j < 10; j++){
+                document.write(i + "*"+j+"="+i*j+"<br>");
+            };
+        }
+        document.write("<br>");
+
+        //0부터 100
+        {
+            let sum = 0;
+            for(let i = 0; i <=100; i+=2){
+                sum += i;
+            }
+            document.write(sum);
+        }
+        document.write("<br>");
+
+        //1-100까지 출력(짝수는 파란색 홀수는 빨간색)
+        {
+            for(let i = 1; i <=100; i++){
+                if(i % 2 == 1){
+                    document.write("<span style='color:red'>"+i+"</span>");
+                } else {
+                    document.write("<span style='color:blue'>"+i+"</span>");
+                }
+            }
+        }
+        document.write("<br>");
+        //배열안에 1-10까지 데이터가 있음 (forEach문을 통해 출력하시오)
+        {
+            const arr = [1,2,3,4,5,6,7,8,9,10];
+
+            arr.forEach(el => {
+                document.write(el);
+            });
+        }
+        document.write("<br>");
+        //함수의 유형 4가지
+        //선언
+        {
+            function func(){
+                document.write("실행");
+            };
+            func();
+        }
+        document.write("<br>");
+        
+        //익명
+        {
+            const func = function(){
+                document.write("실행");
+            }
+            func();
+        }
+        document.write("<br>");
+        
+        //매개변수
+        {
+            function func(a){
+                document.write(a)
+            }
+            func("실행");
+        }
+        document.write("<br>");
+        //리턴
+        {
+            function func(){
+                const str = "실행"
+                return str;
+            }
+            document.write(func());
+        }
+        document.write("<br>");
+        
+        //7번을 화살표 함수로
+        //선언
+        {
+            func = () => {
+                document.write("실행");
+            };
+            func();
+        }
+        document.write("<br>");
+
+        //익명
+        {
+            const func = () => {
+                document.write("실행");
+            }
+            func();
+        }
+        document.write("<br>");
+        
+        //매개변수
+        {
+            func = (a) => {
+                document.write(a)
+            }
+            func("실행");
+        }
+        document.write("<br>");
+        //리턴
+        {
+            func = () => {
+                const str = "실행"
+                return str;
+            }
+            document.write(func());
+        }
+    </script>
+</body>
+</html>
