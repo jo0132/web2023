@@ -15,6 +15,7 @@
         <ul>
             <li class="active"><a href="quizEffect01.html">1</a></li>
             <li><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
         </ul>
     </header>
     <!-- // header -->
@@ -58,9 +59,7 @@
                     <button class="confirm">정답 확인하기</button>
                     <div class="result"></div>
                 </div>
-                <div class="quiz__footer">
-                    <div class="quiz__desc"></div>
-                </div>
+                <div class="quiz__desc"></div>
             </div>
         </div>
     </main>
@@ -81,7 +80,6 @@
         const quizDesc = quizWrap.querySelector(".quiz__desc")
         const quizAnswerConfirm = quizWrap .querySelector(".quiz__answer .confirm");
         const quizAnswerResult = quizWrap .querySelector(".quiz__answer .result");
-        const quizFooter = quizWrap.querySelector(".quiz__footer")
         const dogwrap = quizWrap .querySelector(".dog__wrap");
 
 
@@ -104,14 +102,14 @@
 
         // 정답 숨기기
         quizAnswerResult.style.display = "none";
-        quizFooter.style.display = "none";
+        quizDesc.style.display = "none";
 
         // 정답 확인
         // 콜백함수는 두번 실행하는 함수
         quizAnswerConfirm.addEventListener("click", function(){
             quizAnswerResult.style.display = "block";
             quizAnswerConfirm.style.display = "none";
-            quizFooter.style.display = "block";
+            quizDesc.style.display = "block";
             dogwrap.classList.add("like")
         });
 
