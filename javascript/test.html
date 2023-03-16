@@ -1,52 +1,123 @@
-//1부터 1000까지 합
-{
-    let sum = 0
-    for(let i = 1; i <=1000; i++){
-        sum += i;
-    }
-    document.write(sum);
-}
-        //1부터 1000까지 3의 배수
-// {
-//     for(let i = 1; i <= 1000; i++){
-//         if(i % 3 == 0){
-//             document.write(i);
-//         }
-//     };
-// }
-{
-    let num1 = 16, num2 = 40;
-    let a = num1++;
-    let b = --num2;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //선언적 함수 
+        //함수가 실행되었습니다.1
+        {
+            function func(){
+                document.write("함수가 실행되었습니다.1<br>");
+            };
+            func();
+        }
 
-    console.log(a+b);
-}
-{
-    let num1 = 16, num2 = 40;
-    let a = num1++;
-    let b = --num2;
+        //익명 함수 
+        //함수가 실행되었습니다.2
+        {
+            const func = function(){
+                document.write("함수가 실행되었습니다.2<br>");
+            };
+            func();
+        }
 
-    console.log(a);
-}
-{
-    let a = 9;
-    let b = 11;
-    let c = a^b;
+        //매개변수 함수 
+        //함수가 실행되었습니다.3
+        {
+            function func(str){
+                document.write(str);
+            };
+            func("함수가 실행되었습니다.3<br>");
+        }
 
-    console.log(c);
-    // 비트 연산자 : ^ 서로 비교했을 때 다르면 1
-    // 결과값 2
-}
-{
-    let num1 = 16, num2 = 80;
-    let result1;
-    let result2;
+        //리턴값 함수 
+        //함수가 실행되었습니다.4
+        {
+            function func(){
+                const str = "함수가 실행되었습니다.4<br>";
+                return str;
+            };
+            document.write(func());
+        }
 
-    result1 = num1 > num2 ? num1 & num2 : num1 ^ num2 ; // 64
-    result2 = num1 < num2 ? num1 & num2 : num1 ^ num2 ; // 16
-    // ^ : 서로 비교했을 때 다르면 1(xor 연산자)
-    // & : 서로 비교했을 때 같으면 그 값이 출력 다르면 출력하지 않음(and 연산자)
+        //선언적 함수(화살표함수)
+        //함수가 실행되었습니다.1
+        {
+            func = () => {
+                document.write("함수가 실행되었습니다.5<br>");
+            };
+            func();
+        }
 
-    console.log(result1);
-    console.log(result2);
-}
+        //익명 함수(화살표함수)
+        //함수가 실행되었습니다.2
+        {
+            const func = () => {
+                document.write("함수가 실행되었습니다.6<br>");
+            };
+            func();
+        }
+
+        //매개변수 함수(화살표함수) 
+        //함수가 실행되었습니다.3
+        {
+            func = (str) => {
+                document.write(str);
+            };
+            func("함수가 실행되었습니다.7<br>");
+        }
+        //리턴값 함수(화살표함수)
+        //함수가 실행되었습니다.4
+        {
+            func = () => {
+                const str = "함수가 실행되었습니다.8<br>";
+                return str;
+            };
+            document.write(func());
+        }
+
+        //익명함수 + 매개변수 + 리턴값(화살표함수)
+        {
+            const func = (str) => {
+                return str;
+            };
+            document.write(func("함수가 실행되었습니다.9<br>"));
+            // func(document.write("함수가 실행되었습니다.9<br>"));
+        }
+
+        //익명함수 + 매개변수 + 리턴값 + 괄호 생략(화살표함수)
+        {
+            const func = str => {
+                return str;
+            };
+            document.write(func("함수가 실행되었습니다.10<br>"));
+            // func(document.write("함수가 실행되었습니다.10<br>"));
+        }
+
+        //익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략(화살표함수)
+        {
+            const func = str =>  str;
+
+            document.write(func("함수가 실행되었습니다.11<br>"))
+            // func(document.write("함수가 실행되었습니다.11<br>"));
+        }
+
+        //선언적함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴생략(화살표함수)
+        {
+            func = str =>  str;
+            
+            document.write(func("함수가 실행되었습니다.12<br>"))
+            // func(document.write("함수가 실행되었습니다.12<br>"));
+        }
+
+        //함수
+
+
+    </script>
+</body>
+</html>
