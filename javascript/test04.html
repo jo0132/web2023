@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1-10까지 for문
+        {
+            for(let i = 1; i<=10; i++){
+                document.write(i);
+            };
+        }
+        document.write("<br>");
+        //1-10까지 for문(짝수)
+        {
+            for(let i = 1; i<=10; i++){
+                if(i % 2 == 0){
+                    document.write(i);
+                };
+            };
+        }
+        document.write("<br>");
+        //1-10까지 for문(홀-빨 / 짝-파)
+        {
+            for(let i = 1; i<=10; i++){
+                if(i % 2 == 0){
+                    document.write("<span style='color:blue'>"+i+"</span>");
+                }else{
+                    document.write("<span style='color:red'>"+i+"</span>");
+                }
+            };
+        }
+        document.write("<br>");
+        //배열 100-900(for)
+        {
+            const num = [100,200,300,400,500,600,700,800,900]
+
+            for(let i = 0; i<num.length; i++){
+                document.write(num[i]+" ");
+            };
+        }
+        document.write("<br>");
+        //배열 100-900(forEach)
+        {
+            const num = [100,200,300,400,500,600,700,800,900]
+
+            num.forEach(function(el){
+                document.write(el+" ");
+            })
+        }
+        document.write("<br>");
+        //배열 100-900(forin)
+        {
+            const num = [100,200,300,400,500,600,700,800,900];
+
+           for(const key in num){
+            document.write(num[key]);
+           }
+        }
+        document.write("<br>");
+        //배열 100-900(forin)
+        {
+            const num = [100,200,300,400,500,600,700,800,900];
+
+           for(const i of num){
+            document.write(i);
+           }
+        }
+        
+
+
+
+    </script>
+</body>
+</html>

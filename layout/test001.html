@@ -9,55 +9,108 @@
         * {
             margin: 0;
             padding: 0;
+            text-align: center;
+            color: #fff;
         }
         #wrap {
             width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-areas: 
-            "header header"
-            "nav nav"
-            "aside section1"
-            "aside section2"
-            "footer footer"
-            ;
-            grid-template-columns: 300px 900px;
-            grid-template-rows: 100px 100px 390px 390px 100px;
         }
-        #header {
-            background-color: #111;
-            grid-area: header;
+        .header {
+            height: 100px;
+            width: 100%;
+            background-color: #a8e3ff;
+            display: flex;
+            justify-content: space-between;
         }
-        #nav {
-            background-color: #222;
-            grid-area: nav;
+        .logo {
+            width: 20%;
+            height: inherit;
+            background-color: #0091d5;
         }
-        #aside {
-            background-color: #333;
-            grid-area: aside;
+        .menu {
+            display: flex;
+            align-items: center;
         }
-        #section1 {
-            background-color: #444;
-            grid-area: section1;
+        .menu div {
+            height: 50px;
+            width: 150px;
+            background-color: #16b5ff;
         }
-        #section2 {
-            background-color: #555;
-            grid-area: section2;
+        .slider {
+            height: 450px;
+            width: 100%;
+            background-color: #25baff;
         }
-        #footer {
-            background-color: #666;
-            grid-area: footer;
+        .contants {
+            height: 350px;
+            width: 100%;
+            background-color: #45c4ff;
+            display: flex;
         }
+        .cont1 {
+            width: 33.3333%;
+            height: inherit;
+            background-color: #2e80a6;
+        }
+        .cont2 {
+            width: 33.3333%;
+            height: inherit;
+            background-color: #3ea6d7;
+        }
+        .cont3 {
+            width: 33.3333%;
+            height: inherit;
+            background-color: #246381;
+        }
+
+        .footer {
+            height: 100px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .foot1 {
+            width: 20%;
+            background-color: #5abce9;
+        }
+        .foot2 {
+            width: 60%;
+            background-color: #60cbfc;
+        }
+        .foot3 {
+            width: 20%;
+            background-color: #52abd4;
+        }
+        .tt {
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+        }
+
     </style>
 </head>
 <body>
     <div id="wrap">
-        <header id="header"></header>
-        <nav id="nav"></nav>
-        <aside id="aside"></aside>
-        <section id="section1"></section>
-        <section id="section2"></section>
-        <footer id="footer"></footer>
+        <div class="header">
+            <div class="logo tt">로고</div>
+            <div class="menu">
+                <div class="menu1 tt">MENU-1</div>
+                <div class="menu2 tt">MENU-2</div>
+                <div class="menu3 tt">MENU-3</div>
+                <div class="menu4 tt">MENU-4</div>
+            </div>
+        </div>
+        <div class="slider tt">이미지슬라이드</div>
+        <div class="contants">
+            <div class="cont1 tt">콘텐츠1</div>
+            <div class="cont2 tt">콘텐츠2</div>
+            <div class="cont3 tt">콘텐츠3</div>
+        </div>
+        <div class="footer">
+            <div class="foot1 tt">푸터1</div>
+            <div class="foot2 tt">푸터2</div>
+            <div class="foot3 tt">푸터3</div>
+        </div>
     </div>
 </body>
 </html>
