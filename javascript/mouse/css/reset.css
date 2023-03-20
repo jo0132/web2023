@@ -1,0 +1,67 @@
+@import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+@import url('https://webfontworld.github.io/utoImagegothic/UtoImageGothic.css');
+@import url('https://webfontworld.github.io/leferi/LeferiPointBlack.css');
+@import url('https://webfontworld.github.io/Healthset/HealthsetGothic.css');
+@import url('https://webfontworld.github.io/locus/LocusSangsang.css');
+@import url('https://webfontworld.github.io/miryang/MYArirangGothic.css');
+@import url('https://webfontworld.github.io/NexonLv2Gothic/NexonLv2Gothic.css');
+@import url('https://webfontworld.github.io/Montserrat/Montserrat.css');
+@import url('https://webfontworld.github.io/Oswald/Oswald.css');
+@import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+a {
+    text-decoration: none;
+    columns: #222;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+}
+li,ul,ol {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+em {
+    font-style: normal;
+}
+.font01 {
+    font-family: NexonLv1Gothic;
+    font-weight: 300;
+}
+.font02 {
+    font-family: UtoImageGothic;
+}
+.font03 {
+    font-family: LeferiPointBlack;
+}
+.font04 {
+    font-family: HealthsetGothic;
+}
+.font05 {
+    font-family: LocusSangsang;
+}
+.font06 {
+    font-family: AritaBuri;
+}
+.font07 {
+    font-family: NexonLv2Gothic;
+}
+.font08 {
+    font-family: Montserrat;
+}
+.font09 {
+    font-family: Oswald;
+}
+.font10 {
+    font-family: TheJamsil;
+}
