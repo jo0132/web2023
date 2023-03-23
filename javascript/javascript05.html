@@ -123,14 +123,14 @@
     "javascript reference".indexOf("a");   // 1
     "javascript reference".indexOf("ja");  // 0
     "javascript reference".indexOf("jv");  // -1
-    "javascript reference".indexOf("refercence")   // 11
+    "javascript reference".indexOf("reference")   // 11
     "javascript reference".indexOf("r");    // 6
     "javascript reference".indexOf("re");   // 11
     "javascript reference".indexOf("javascript", 0);    // 0
     "javascript reference".indexOf("javascript", 1);    // -1
-    "javascript reference".indexOf("refercence", 0);   // 11
-    "javascript reference".indexOf("refercence", 11);  // 11
-    "javascript reference".indexOf("refercence", 12);  // -1
+    "javascript reference".indexOf("reference", 0);   // 11
+    "javascript reference".indexOf("reference", 11);  // 11
+    "javascript reference".indexOf("reference", 12);  // -1
     "javascript reference".indexOf("r", 7);    // 11
     "javascript reference".indexOf("r", 12);   // 15
 }
@@ -140,8 +140,8 @@
                 <!-- sample 07 -->
 
                 <div id="sample08" class="sample">
-                    <h3>08. LastIndexOf()</h3>
-                    <div class="notice">"문자열".LastIndexOf(검색값, [위치값])</div>
+                    <h3>08. lastIndexOf()</h3>
+                    <div class="notice">"문자열".lastIndexOf(검색값, [위치값])</div>
                     <ul>
                         <li>문자열을 역순으로 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</li>
                         <li>문자열을 역순으로 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환합니다.</li>
@@ -149,7 +149,13 @@
                     </ul>
                     <div class="script">
 <pre><code class="language-js">{
-
+    "javascript reference".lastIndexOf("javascript");       //0
+    "javascript reference".lastIndexOf("javascripts");      //-1
+    "javascript reference".lastIndexOf("j");                //0
+    "javascript reference".lastIndexOf("a");                //3
+    "javascript reference".lastIndexOf("jv");               //-1
+    "javascript reference".lastIndexOf("reference");       //11
+    "javascript reference".lastIndexOf("r");                //15
 }
 </code></pre>
                     </div>
@@ -168,13 +174,13 @@
                     <div class="script">
 <pre><code class="language-js">{
     "javascript reference".match("javascript");    //"javascript"
-    "javascript reference".match("refercence");    //"refercence"
+    "javascript reference".match("reference");    //"reference"
     "javascript reference".match("r");             //"r"
     "javascript reference".match("R");             //null
-    "javascript reference".match(/refercence/);    //refercence
-    "javascript reference".match(/Refercence/);    //null
-    "javascript reference".match(/Refercence/i);   //refercence
-    "javascript reference".match(/Refercence/g);   //refercence
+    "javascript reference".match(/reference/);    //reference
+    "javascript reference".match(/Reference/);    //null
+    "javascript reference".match(/Reference/i);   //reference
+    "javascript reference".match(/Reference/g);   //null
     "javascript reference".match(/r/);             //r
     "javascript reference".match(/r/g);            //r r r
     "javascript reference".match(/w/g);            //null
@@ -195,14 +201,14 @@
                     <div class="script">
 <pre><code class="language-js">{
     "javascript reference".search("javascript");    //0
-    "javascript reference".search("refercence");    //11
+    "javascript reference".search("reference");    //11
     "javascript reference".search("r");             //6
     "javascript reference".search("a");             //1
     "javascript reference".search("jv");            //-1
     "javascript reference".search("J");             //-1
-    "javascript reference".search(/refercence/);    //11    //정규식 표현을 썼음
-    "javascript reference".search(/Refercence/);    //-1
-    "javascript reference".search(/Refercence/i);   //11   //i가 소문자로 인식해줌 refercence
+    "javascript reference".search(/reference/);    //11    //정규식 표현을 썼음
+    "javascript reference".search(/Reference/);    //-1
+    "javascript reference".search(/Reference/i);   //11   //i가 소문자로 인식해줌 reference
     "javascript reference".search(/[a-z]/g);        //0
     "자바스크립트".search(/[a-z]/g);                  //-1
 }
