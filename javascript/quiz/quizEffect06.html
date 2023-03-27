@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 이펙트06</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <style>
+        /* .quiz__view .quiz__cnt {
+            display: inline;
+            padding: 30px;
+            background-color: #ccc;
+        } */
+    </style>
+</head>
+<body >
+    <header id="header">
+        <h1><a href="../javascript14.html">Quiz </a><em>객관식 확인하기(여러문제) 유형 : 슬라이드 유형</em></h1>
+        <ul>
+            <li><a href="quizEffect01.html">1</a></li>
+            <li><a href="quizEffect02.html">2</a></li>
+            <li><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
+            <li><a href="quizEffect05.html">5</a></li>
+            <li class="active"><a href="quizEffect06.html">6</a></li>
+        </ul>
+    </header>
+    <!-- // header -->
+    
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <div class="quiz__header">
+                    <h2 class="quiz__title"></h2>
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question"></div>
+                    <div class="quiz__view">
+                        <div class="dog__wrap">
+                        <div class="quiz__cnt"></div>
+                            <div class="true">정답입니다!</div>
+                            <div class="false">틀렸습니다!</div>
+                            <div class="card-container">
+                                <div class="dog">
+                                    <div class="head">
+                                        <div class="ears"></div>
+                                        <div class="face"></div>
+                                        <div class="eyes">
+                                            <div class="teardrop"></div>
+                                        </div>
+                                        <div class="nose"></div>
+                                        <div class="mouth">
+                                            <div class="tongue"></div>
+                                        </div>
+                                        <div class="chin"></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="tail"></div>
+                                        <div class="legs"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz__choice">
+                        <!-- <label for="choice1">
+                            <input type="radio" id="choice1" name="chioce" value="1">
+                            <span></span>
+                        </label>
+                        <label for="choice2">
+                            <input type="radio" id="choice2" name="chioce" value="2">
+                            <span> </span>
+                        </label>
+                        <label for="choice3">
+                            <input type="radio" id="choice3" name="chioce" value="3">
+                            <span> </span>
+                        </label>
+                        <label for="choice4">
+                            <input type="radio" id="choice4" name="chioce" value="4">
+                            <span></span>
+                        </label> -->
+                    </div>
+                    <div class="quiz__answer">
+                        <button class="next">다음 문제</button>
+                    </div>
+                    <div class="quiz__desc"></div>
+                </div>
+            </div>
+
+            <!-- <div class="quiz__check">정답 확인하기</div> -->
+        </div>
+    </main>
+    <!-- // main -->
+
+    
+
+    <footer id="footer">
+        <a href="mailto:jo0132@naver.com">jo0132@naver.com</a>
+    </footer>
+    <!-- // footer -->
+
+    <script>
+        const quizinfo =[
+            {
+                infoType : "정보처리 기능사",
+                infoTime : "2008년 4회",
+                infoNumber : "20080401",
+                infoQuestion : "일반적으로 digital type 의 양을 바르게 표현한 것은?",
+                infoChoice : ["시간의 흐름", "연필의 갯수", "온도의 변화", "식물의 성장"],
+                infoAnswer : "연필의 갯수",
+                infoDesc : "연필은 1.5개가 존재 하지 않으므로 디지털입니다"
+                // 문제1 end
+            },{
+                infoType : "정보처리 기능사",
+                infoTime : "2008년 4회",
+                infoNumber : "20080402",
+                infoQuestion : "입력단자와 출력단자가 반대가 되는 즉 “0” 이면 “1”,“1” 이면 “0”이 되는 것은?",
+                infoChoice :["AND", "NOT", "OR", "Flip-Flop"],
+                infoAnswer : "NOT",
+                infoDesc : "서로 반대가 된다고 하였으므로 NOT 게이트 이며 플리플롭이라면 T 플리플롭입니다."
+                // 문제2 end
+            },{
+                infoType : "정보처리 기능사",
+                infoTime : "2008년 4회",
+                infoNumber : "20080403",
+                infoQuestion : "다른 모든 플립플롭의 기능을 대용할 수 있으며 응용범위가 넓고 집적회로화 되어, 가장 널리 사용되는 플립플롭은?",
+                infoChoice : ["RS 플립플롭", "JK 플립플롭", "D 플립플롭", "T 플립플롭"
+                ],
+                infoAnswer : "JK 플립플롭",
+                infoDesc : "JK 플리플롭은 만능 플립플롭이라고 불리울 만큼 기능이 많으며 모든 플립플롭의 기능을 대체할수 있습니다."
+                // 문제3 end
+            },{
+                infoType : "정보처리 기능사",
+                infoTime : "2008년 4회",
+                infoNumber : "20080404",
+                infoQuestion : "16진수 FF를 10진수로 나타내면?",
+                infoChoice : ["254", "255", "256", "257"],
+                infoAnswer : "255",
+                infoDesc : "우선 16진수를 4자리씩 확장하여 2진수로 변환한후 10진수로 읽어 주시면 빠르게 읽을수 있습니다."
+            },{
+                infoType : "정보처리 기능사",
+                infoTime : "2008년 4회",
+                infoNumber : "20080405",
+                infoQuestion : "하나의 명령어가 2개의 오퍼랜드를 가지고 있으며, 처리할 데이터를 제 1, 제 2 오퍼랜드에 기억시키고 그 처리결과를 제 1오퍼랜드에 기억시키므로 제 1오퍼랜드로 표시된 장소에 기억되어 있던 내용은 처리후에 지워지게 되는 명령의 형식은?",
+                infoChoice :["1 어드레스(Address) 방식", "2 어드레스(Address) 방식", "3 어드레스(Address) 방식", "2 메모리(Memory) 방식"],
+                infoAnswer : "2 어드레스(Address) 방식",
+                infoDesc : "기억 기능이 없다고 하였으므로 2주소 방식 입니다. 0주소 : 스택(Stack) <br>1주소 : 누산기(ACC)<br>2주소 : 일반적,범용, 기억불능,자료보존 불능<br>3주소 : 특수, 기억가능, 자료보존 가능"
+            },{
+                infoType : "정보처리 기능사",
+                infoTime : "2008년 4회",
+                infoNumber : "20080406",
+                infoQuestion : "원판형의 자기디스크 장치에서 하나의 원으로 구성된 기억공간으로, 원판형을 따라 동심원으로 나눈 것은?",
+                infoChoice :[ "헤드(Head)", "릴(Reel)", "실린더(Cylinder)", "트랙(Track)"],
+                infoAnswer : "릴(Reel)",
+                infoDesc : "원판을 따라 동심원으로 나눈것을 트랙이라고 합니다. 이러한 트랙들을 다시 나누면 그것을 섹터라고 부릅니다."
+            }
+        ]
+
+        // 선택자
+        const quizWrap = document .querySelector(".quiz__wrap");
+        const quizTitle = quizWrap.querySelector(".quiz__title");
+        const quizChoice = quizWrap.querySelector(".quiz__choice");
+        const quizQuestion = quizWrap.querySelector(".quiz__question");
+        const dogWrap = quizWrap.querySelector(".dog__wrap");
+        const quizAnswer = quizWrap.querySelector(".quiz__answer");
+        const quizNext = quizWrap.querySelector(".quiz__answer .next");
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const quizCnt = quizWrap.querySelector(".quiz__cnt")
+
+        // quizTitle.innerHTML="<span>" + quizinfo[0].infoType +"</span> <em>" + quizinfo[0].infoTime + "</em>"
+
+
+        //함수 : 재활용, 그룹화, 실행문
+
+            let quizCount = 0;
+            let quizScore = 0;
+
+        //문제 출력
+        const updateQuiz = (index) => {
+            let typeTag = `
+                <span>${quizinfo[index].infoType}</span>
+                <em>${quizinfo[index].infoTime}</em>
+            `;
+            let questionTag = `
+                <em>${index+1} </em>.
+                <span>${quizinfo[index].infoQuestion}</span>
+            `;
+            let choiceTag = `
+                <label for="choice1">
+                    <input type="radio" id="choice1" name="chioce" value="1">
+                    <span>${quizinfo[index].infoChoice[0]}</span>
+                </label>
+                <label for="choice2">
+                    <input type="radio" id="choice2" name="chioce" value="2">
+                    <span>${quizinfo[index].infoChoice[1]}</span>
+                </label>
+                <label for="choice3">
+                    <input type="radio" id="choice3" name="chioce" value="3">
+                    <span>${quizinfo[index].infoChoice[2]}</span>
+                </label>
+                <label for="choice4">
+                    <input type="radio" id="choice4" name="chioce" value="4">
+                    <span>${quizinfo[index].infoChoice[3]}</span>
+                </label>
+            `;
+            let descTag = `
+                정답은 ${quizinfo[index].infoAnswer}입니다.<br>
+                ${quizinfo[index].infoDesc}
+            `;
+            let cntTag = `
+                현재 문제는 ${index}/${quizinfo.length}입니다.
+            `;
+
+            quizTitle.innerHTML = typeTag;
+            quizQuestion.innerHTML = questionTag;
+            quizChoice.innerHTML = choiceTag;
+            quizDesc.innerHTML = descTag;
+            quizCnt.innerHTML = cntTag;
+
+
+            // 보기선택자
+            const quizChoiceSpan = quizWrap.querySelectorAll(".quiz__choice span");
+            const quizChoiceInput = quizWrap.querySelectorAll(".quiz__choice Input");
+
+            // quizChoiceSpan.forEach((span, num) => {
+            //     span.setAttribute("onclick","choiceSelected(this)");
+            // });
+
+            for(let i= 0; i<quizChoiceSpan.length; i++){
+                quizChoiceSpan[i].setAttribute("onclick","choiceSelected(this)");
+                // quizChoiceInput[i].disabled = "true";
+            }
+
+            // 다음 버튼, 해설 숨기기
+            quizAnswer.style.display = "none";
+            quizDesc.style.display = "none";
+
+            
+        };
+
+        updateQuiz(quizCount); //위에와 연결된 매개변수
+
+        // 클릭한 답이 넘어옴
+        function choiceSelected(answer){
+            let userAnswer = answer.textContent;    //사용자정답
+            let currentAnswer = quizinfo[quizCount].infoAnswer;
+
+            if(userAnswer == currentAnswer){
+                console.log("정답")
+                dogWrap.classList.add("like");
+            } else {
+                console.log("오답")
+                dogWrap.classList.add("dislike");
+            }
+            quizAnswer.style.display = "block";
+            quizDesc.style.display = "block";
+        }
+
+        // 정답확인
+        quizNext.addEventListener("click",() => {
+            quizCount++;
+            updateQuiz(quizCount);
+
+            dogWrap.classList.remove("like","dislike");
+        });
+
+        //설명
+
+
+
+
+        
+    </script>
+
+</body>
+</html>
