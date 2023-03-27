@@ -9,11 +9,15 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
     <style>
-        /* .quiz__view .quiz__cnt {
-            display: inline;
-            padding: 30px;
-            background-color: #ccc;
-        } */
+        .quiz__view .quiz__cnt {
+            display: inline-block;
+            position: absolute;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 20px;
+            color: #fff;
+            background-color: #6d00b6;
+        }
     </style>
 </head>
 <body >
@@ -211,7 +215,7 @@
                 ${quizinfo[index].infoDesc}
             `;
             let cntTag = `
-                현재 문제는 ${index}/${quizinfo.length}입니다.
+                현재 문제는 총 ${quizinfo.length}번 중 ${index+1}번째 문제입니다.
             `;
 
             quizTitle.innerHTML = typeTag;

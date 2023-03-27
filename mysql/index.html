@@ -129,6 +129,14 @@
                         MAMP란 웹사이트를 개발할 때 쓰이는 기술 스택이 macos, Apache, MYSQL, php의 양자이자 솔루션 스택이다.<br>
                         <a href="https://www.mamp.info/en/downloads/" target="_blank">https://www.mamp.info/en/downloads/</a>
                     </div> 
+                    <h4>PHP 정보 확인</h4>
+                    <div class="bs-callout bs-callout-info">
+                        phpinfo()
+                    </div> 
+                    <div>정보 파일 수정 위치 : Loaded Configuration File : C:\MAMP\conf\php8.0.1\php.ini</div>
+                    <div>에러 표시 : display_errors =  on</div>
+                    <div>캐시 설정 : opcache.enable = 0</div>
+                    <div>PHP 관리자 페이지 : http://localhost/phpMyAdmin/</div>
                 </div>
                 <!-- //intro2 -->
 
@@ -260,6 +268,16 @@ mysql> show tables;
 Empty set (0.00 sec)
 
 </code></pre>
+
+                    <div class="bs-callout bs-callout-info">truncate table 테이블 이름;</div>
+<pre><code class="language-js">mysql> truncate table member;
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> show tables;
+Empty set (0.00 sec)
+
+</code></pre>
+
 
                     <h4 id="intro5-5" class="page-header">테이블 복사</h4>
                     <div class="bs-callout bs-callout-info"></div>
