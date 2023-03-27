@@ -223,8 +223,8 @@
             `;
 
             let scrTag = `
-                🎉축🎉 총 ${Math.ceil((quizScore / (quizinfo.length-1))*100)} 점입니다!<br>
-                총 ${quizinfo.length-1}번 중 ${quizScore}문제 맞추셨습니다.
+                🎉총 ${Math.ceil((quizScore / (quizinfo.length-1))*100)} 점입니다!🎉<br>
+                총 ${quizinfo.length-1}문제 중 ${quizScore}문제를 맞추셨습니다.
             `;
 
             quizTitle.innerHTML = typeTag;
@@ -252,12 +252,7 @@
                 quizScr.style.display = "block";
                 quizCnt.style.display = "none"; 
                 quizMain.style.display = "none";
-                
             }
-
-
-            
-
             
         };
 
@@ -272,6 +267,7 @@
         function choiceSelected(answer){
             let userAnswer = answer.textContent;    //사용자정답
             let currentAnswer = quizinfo[quizCount].infoAnswer;
+            let incorAnswer = [];
 
             if(userAnswer == currentAnswer){
                 console.log("정답")
@@ -280,6 +276,7 @@
             } else {
                 console.log("오답")
                 dogWrap.classList.add("dislike");
+                incorAnswer = index;
             }
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
