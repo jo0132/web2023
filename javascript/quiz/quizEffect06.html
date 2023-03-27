@@ -82,7 +82,7 @@
                         </label> -->
                     </div>
                     <div class="quiz__answer">
-                        <button class="next">다음 문제</button>
+                        <button class="next">다음➡️➡️</button>
                     </div>
                     <div class="quiz__desc"></div>
                 </div>
@@ -176,7 +176,7 @@
         const quizNext = quizWrap.querySelector(".quiz__answer .next");
         const quizDesc = quizWrap.querySelector(".quiz__desc");
         const quizCnt = quizWrap.querySelector(".quiz__cnt");
-        const quizScr = quizWrap.querySelector(".quiz__scr")
+        const quizScr = quizWrap.querySelector(".quiz__scr");
 
         // quizTitle.innerHTML="<span>" + quizinfo[0].infoType +"</span> <em>" + quizinfo[0].infoTime + "</em>"
 
@@ -224,7 +224,7 @@
 
             let scrTag = `
                 🎉총 ${Math.ceil((quizScore / (quizinfo.length-1))*100)} 점입니다!🎉<br>
-                총 ${quizinfo.length-1}문제 중 ${quizScore}문제를 맞추셨습니다.
+                총 ${quizinfo.length-1}문제 중 ${quizScore}문제를 맞추셨습니다.<br>
             `;
 
             quizTitle.innerHTML = typeTag;
@@ -267,7 +267,6 @@
         function choiceSelected(answer){
             let userAnswer = answer.textContent;    //사용자정답
             let currentAnswer = quizinfo[quizCount].infoAnswer;
-            let incorAnswer = [];
 
             if(userAnswer == currentAnswer){
                 console.log("정답")
@@ -276,7 +275,6 @@
             } else {
                 console.log("오답")
                 dogWrap.classList.add("dislike");
-                incorAnswer = index;
             }
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
