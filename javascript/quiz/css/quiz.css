@@ -1,3 +1,4 @@
+
 /* header */
 #header {
     position: fixed;
@@ -62,6 +63,7 @@
     padding: 100px 0;
 }
 
+
 /* footer */
 #footer {
     position: fixed;
@@ -99,6 +101,17 @@ footer a {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+}
+.quiz__scr {
+    height: 50vh;
+    width: 50vw;
+    font-size: 30px;
+    padding: 200px 0;
+    position: absolute;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #6d00b6;
+    text-align: center;
 }
 .quiz__wrap .quiz {
     width: 500px;
@@ -283,6 +296,16 @@ footer a {
     border-right: 10px solid transparent;
 }
 
+.quiz__cnt {
+    display: inline-block;
+    position: absolute;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #6d00b6;
+}
+
 
 
 
@@ -305,6 +328,8 @@ footer a {
 .dog__wrap {
     position: relative;
 }
+
+
 .dog__wrap .true {
     width: 120px;
     height: 120px;

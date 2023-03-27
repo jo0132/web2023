@@ -9,15 +9,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
     <style>
-        .quiz__view .quiz__cnt {
-            display: inline-block;
-            position: absolute;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 20px;
-            color: #fff;
-            background-color: #6d00b6;
-        }
+
+
     </style>
 </head>
 <body >
@@ -36,6 +29,7 @@
     
     <main id="main">
         <div class="quiz__wrap">
+            <div class="quiz__scr"></div>
             <div class="quiz">
                 <div class="quiz__header">
                     <h2 class="quiz__title"></h2>
@@ -160,11 +154,20 @@
                 infoChoice :[ "헤드(Head)", "릴(Reel)", "실린더(Cylinder)", "트랙(Track)"],
                 infoAnswer : "릴(Reel)",
                 infoDesc : "원판을 따라 동심원으로 나눈것을 트랙이라고 합니다. 이러한 트랙들을 다시 나누면 그것을 섹터라고 부릅니다."
+            },{
+                infoType : "",
+                infoTime : "",
+                infoNumber : "",
+                infoQuestion : "",
+                infoChoice :"",
+                infoAnswer : "",
+                infoDesc : ""
             }
         ]
 
         // 선택자
         const quizWrap = document .querySelector(".quiz__wrap");
+        const quizMain = quizWrap .querySelector(".quiz");
         const quizTitle = quizWrap.querySelector(".quiz__title");
         const quizChoice = quizWrap.querySelector(".quiz__choice");
         const quizQuestion = quizWrap.querySelector(".quiz__question");
@@ -172,15 +175,16 @@
         const quizAnswer = quizWrap.querySelector(".quiz__answer");
         const quizNext = quizWrap.querySelector(".quiz__answer .next");
         const quizDesc = quizWrap.querySelector(".quiz__desc");
-        const quizCnt = quizWrap.querySelector(".quiz__cnt")
+        const quizCnt = quizWrap.querySelector(".quiz__cnt");
+        const quizScr = quizWrap.querySelector(".quiz__scr")
 
         // quizTitle.innerHTML="<span>" + quizinfo[0].infoType +"</span> <em>" + quizinfo[0].infoTime + "</em>"
 
 
         //함수 : 재활용, 그룹화, 실행문
 
-            let quizCount = 0;
-            let quizScore = 0;
+        let quizCount = 0;
+        let quizScore = 0;
 
         //문제 출력
         const updateQuiz = (index) => {
@@ -215,7 +219,12 @@
                 ${quizinfo[index].infoDesc}
             `;
             let cntTag = `
-                현재 문제는 총 ${quizinfo.length}번 중 ${index+1}번째 문제입니다.
+                현재 문제는 총 ${quizinfo.length-1}번 중 ${quizCount+1}번째 문제입니다.
+            `;
+
+            let scrTag = `
+                🎉축🎉 총 ${Math.ceil((quizScore / (quizinfo.length-1))*100)} 점입니다!<br>
+                총 ${quizinfo.length-1}번 중 ${quizScore}문제 맞추셨습니다.
             `;
 
             quizTitle.innerHTML = typeTag;
@@ -223,6 +232,7 @@
             quizChoice.innerHTML = choiceTag;
             quizDesc.innerHTML = descTag;
             quizCnt.innerHTML = cntTag;
+            quizScr.innerHTML = scrTag;
 
 
             // 보기선택자
@@ -235,17 +245,28 @@
 
             for(let i= 0; i<quizChoiceSpan.length; i++){
                 quizChoiceSpan[i].setAttribute("onclick","choiceSelected(this)");
-                // quizChoiceInput[i].disabled = "true";
+                // quizChoice.disabled = "true";
             }
 
-            // 다음 버튼, 해설 숨기기
-            quizAnswer.style.display = "none";
-            quizDesc.style.display = "none";
+            if(quizCount+1 == quizinfo.length){                
+                quizScr.style.display = "block";
+                quizCnt.style.display = "none"; 
+                quizMain.style.display = "none";
+                
+            }
+
+
+            
 
             
         };
 
         updateQuiz(quizCount); //위에와 연결된 매개변수
+
+        // 다음 버튼, 해설 숨기기
+        quizAnswer.style.display = "none";
+        quizDesc.style.display = "none";
+        quizScr.style.display = "none";
 
         // 클릭한 답이 넘어옴
         function choiceSelected(answer){
@@ -255,12 +276,14 @@
             if(userAnswer == currentAnswer){
                 console.log("정답")
                 dogWrap.classList.add("like");
+                quizScore++;
             } else {
                 console.log("오답")
                 dogWrap.classList.add("dislike");
             }
             quizAnswer.style.display = "block";
             quizDesc.style.display = "block";
+
         }
 
         // 정답확인
@@ -269,14 +292,12 @@
             updateQuiz(quizCount);
 
             dogWrap.classList.remove("like","dislike");
+
+            quizAnswer.style.display = "none";
+            quizDesc.style.display = "none";
+
         });
 
-        //설명
-
-
-
-
-        
     </script>
 
 </body>
