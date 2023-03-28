@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기1</title>
+    
+    <!-- SEO -->
+    <meta name="author" content="아라라">
+    <meta name="description" content="프론트엔드를 준비하고 공부하는 사이트 튜토리얼입니다.">
+    <meta name="keyword" content="프론트엔드, 사이트 사이트 만들기 , 튜토리얼">
+    <meta name="robots" content="all">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.png"/>  
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/favicon.png"/> 
+    <link rel="apple-touch-icon" href="assets/ico/favicon.png"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/stlye.css">
+
+
+</head>
+<body>
+    <div id="skip">
+        <a href="#">헤더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">이미지/텍스트 영역 바로가기</a>
+        <a href="#">카드 영역 바로가기</a>
+        <a href="#">베너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+        <a href="#">푸터 영역 바로가기</a>
+    </div>
+    <!-- skip -->
+
+    <header id="headerType" style="display:none">
+        <h2 class="blind">헤더영역</h2>
+        <div class="header__inner">
+            <h1 class="header__logo">🥪Breakfast🥗</h1>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">아침을먹어야하는이유</a></li>
+                    <li><a href="#">아침을먹는이유</a></li>
+                    <li><a href="#">재료</a></li>
+                    <li><a href="#">영양</a></li>
+                    <li><a href="#">제품</a></li>
+                    <li><a href="#">공지사항</a></li>
+                </ul>
+            </nav>
+            <div class="header__member">
+                <a href="#">로그인</a>
+            </div>
+        </div>
+    </header>
+    <!-- headerType -->
+    
+    <main id="mainType">
+        <section id="sliderType" class="nexon hide">
+            <h2 class="blind">슬라이드영역</h2>
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__info container">
+                        <span class="small">EVENT</span>
+                        <h3 class="title">아침식사를 합니다🥪</h3>
+                        <P class="desc">아침밥은 하루를 시작하기 위해 필요한 에너지를 제공하고, 신진대사를 촉진하여 체내 기능을 개선시키는 데 
+                            도움이 됩니다. 또한, 혈당 수준을 안정시켜주어 집중력과 기억력을 개선시켜줄 수 있습니다.</P>
+                        <div class="btn">
+                            <a href="#">자세히보기</a>
+                            <a href="#">상담 신청</a>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#"><span class="blind">이전이미지</span></a>
+                        <a href="#"><span class="blind">다음이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#"class="dot active"><span class="blind">첫번째 이미지</span></a>
+                        <a href="#"class="dot"><span class="blind">두번째 이미지</span></a>
+                        <a href="#"class="dot"><span class="blind">세번째 이미지</span></a>
+                        <a href="#"class="play"><span class="blind">플레이</span></a>
+                        <a href="#"class="stop"><span class="blind">정지</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sliderType -->
+
+        <section id="imageType" class="nexon section center" >
+            <h2 class="blind">이미지영역</h2>
+                <h2 class="section__h2">아침을 먹어야하는 이유</h2>
+                <p class="section__desc">아침밥을 꼭 먹어야 하루의 체력과 기분이 달라집니다.</p>
+                <div class="image__inner container">
+                    <article class="image">
+                        <figure class="image__header">
+                            <img src="assets/img/imageType01_01.jpg" alt="간편한 아침">
+                        </figure>
+                        <div class="image__body">
+                            <h3 class="title">간편한 아침</h3>
+                            <p class="desc">아침을 간편하게 먹기 위해서 빵이나 간편식으로 잘 나와있습니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    <article class="image">
+                        <figure class="image__header">
+                            <img src="assets/img/imageType01_02.jpg" alt="여유로운 아침">
+                        </figure>
+                        <div class="image__body">
+                            <h3 class="title">여유로운 아침</h3>
+                            <p class="desc">아침을 여유롭게 먹을 때 너무 무겁게 먹는 것은 하루에 부담을 줍니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                </div>
+        </section>
+        <!-- imageType -->
+
+        <section id="imgTextType" class="nexon section gray ">
+            <h2 class="blind">이미텍스트영역</h2>
+            <h2 class="blind">아침에먹기 좋은 건강한 레시피</h2>
+            <div class="container">
+                <div class="imgText__inner">
+                    <article class="text">
+                        <span>NOTICE</span>
+                        <h3>아침에먹기 좋은 건강한 레시피</h3>
+                        <p>아침밥으로 먹을만한 메뉴는 다양하지만, 아래는 건강하고 맛있는 아침밥 메뉴 종류입니다.</p>
+                        <ul>
+                            <li><a href="#">오트밀 쉐이크</a></li>
+                            <li><a href="#">스크램블 에그토스트</a></li>
+                            <li><a href="#">그릭 요거트 파르페</a></li>
+                            <li><a href="#">김밥</a></li>
+                            <li><a href="#">오므라이스</a></li>
+                            <li><a href="#">샌드위치샐러드</a></li>
+                            <li><a href="#">에그 베네딕트</a></li>
+                            <li><a href="#">수프</a></li>
+                        </ul>
+                    </article>
+                    <article class="img i1">
+                        <a href="#">샌드위치 종류 </a>
+                    </article>
+                    <article class="img i2">
+                        <a href="#">계란 요리 </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- imgTextType -->
+
+        <section id="cardType" class="nexon section">
+            <h2 class="blind">카드영역</h2>
+            <div class="container">
+                <h2 class="section__h2">아침이 주는 효과</h2>
+                <p class="section__desc">아침 식사는 우리의 몸과 뇌를 에너지로 충전하는 첫 번째 식사입니다. 아침에 적절한 양의 전압을 회수하면 하루가 점점 늘어나고 기억력이 좋아지고, 몸의 대사 기능도 빨라집니다.</p>
+                <div class="card__inner">
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../asset/img/cardType01_01.jpg" alt="에너지 충전">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">에너지 충전</h3>
+                            <p class="desc">아침밥은 에너지를 공급하여 하루를 시작하는데 도움을 주고 아침에 적절한 양의 탄단지와 미네랄, 비타민 등을 함유한 식사를 섭취하면, 에너지를 빠르게 생성할 수 있습니다.</p>
+                            <a class="btn" href="#">자세히보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../asset/img/cardType01_02.jpg" alt="집중력과 기억력 향상">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">집중력과 기억력 향상</h3>
+                            <p class="desc">아침밥을 먹는 것은 뇌 기능에도 긍정적인 영향을 줍니다. 적절한 양의 단백질, 비타민, 미네랄을 함유한 아침 식사는 집중력과 기억력을 향상시키는 데 도움이 됩니다.</p>
+                            <a class="btn" href="#">자세히보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../asset/img/cardType01_03.jpg" alt="에너지 충전">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">대사 기능 향상</h3>
+                            <p class="desc">아침밥을 먹는 것은 대사 기능을 향상시키는 데 도움이 됩니다. 아침 식사를 거르면 혈당이 낮아지는 것을 방지하기 위해 체내에서 에너지를 생성하기 위한 대사 기능이 악화될 수 있습니다</p>
+                            <a class="btn" href="#">자세히보기</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- cardType -->
+
+        <section id="bannerType" class="nexon section">
+            <h2 class="blind">베너영역</h2>
+            <div class="banner__inner">
+                <h3>아침에 에너지를 얻어요</h3>
+                <p>아침밥에 대한 좀더 다양한 레시피를 알고 싶으시다면?<br>
+                    블로그에 방문하셔서 다양한 레시피를 구경하세요!</p>
+                <a href="#">https://jo0132.tistory.com/</a>
+            </div>
+        </section>
+        <!-- bannerType -->
+
+        <section id="textType" class="nexon section center">
+            <h2 class="blind">텍스트영역</h2>
+            <div class="container">
+                <span class="section__small">NOTICE</span>
+                <h2 class="section__h2 mb70">아침밥 재료 선정 기준</h2>
+                <div class="text__inner">
+                    <div class="text t1">
+                        <h3 class="text__title">영양성분</h3>
+                        <p class="text__desc">아침 식사는 우리의 몸과 뇌를 에너지로 충전하는 첫 번째 식사입니다. 아침에 적절한 양의 영양소를 섭취하면 하루 내내 집중력과 기억력이 좋아지고, 몸의 대사 기능도 원활해집니다.</p>
+                        <a class="text__btn" href="#">더보기</a>
+                    </div>
+                    <div class="text t2">
+                        <h3 class="text__title">칼로리</h3>
+                        <p class="text__desc">아침밥은 하루 중 첫 식사이기 때문에 체중 증가나 소화 불량 등의 문제가 발생할 수 있습니다. 적당한 칼로리를 유지하면서 영양소를 고루 섭취할 수 있는 것이 좋습니다.</p>
+                        <a class="text__btn" href="#">더보기</a>
+                    </div>
+                    <div class="text t3">
+                        <h3 class="text__title">시간</h3>
+                        <p class="text__desc">아침은 일상 생활에서 가장 바쁜 시간 중 하나입니다. 따라서 아침밥은 간단하면서도 영양소가 풍부한 재료로 준비하는 것이 좋습니다. 또한 미리 재료를 준비해두면 시간을 절약할 수 있습니다.</p>
+                        <a class="text__btn" href="#">더보기</a>
+                    </div>
+                    <div class="text t4">
+                        <h3 class="text__title">개인 취향</h3>
+                        <p class="text__desc">아침밥은 개인의 취향에 따라 다양한 메뉴를 선택할 수 있습니다. 예를 들어, 샐러드나 샌드위치, 죽 등 다양한 옵션이 있습니다. 따라서 자신이 좋아하는 음식을 선택하여 즐기는 것이 좋습니다.</p>
+                        <a class="text__btn" href="#">더보기</a>
+                    </div>
+                    <div class="text t5">
+                        <h3 class="text__title">건강상태</h3>
+                        <p class="text__desc">개인의 건강 상태에 따라 아침밥의 재료를 선택하는 것이 중요합니다. 예를 들어, 당뇨병이나 고혈압 환자는 고당도, 고나트륨 식품을 피하고, 식이섬유가 풍부한 재료를 선택하는 것이 좋습니다.</p>
+                        <a class="text__btn" href="#">더보기</a>
+                    </div>
+                    <div class="text t6">
+                        <h3 class="text__title">가격</h3>
+                        <p class="text__desc">아침밥 재료를 선택할 때 가격도 중요한 요소 중 하나입니다. 비용 효율적인 식재료를 선택하여 더 많은 양을 준비하거나 다른 음식에 사용할 수 있습니다.</p>
+                        <a class="text__btn" href="#">더보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- textType -->
+
+    </main>
+    <!-- mainType -->
+    
+    <footer id="footerType" class="section gray">
+        <h2 class="blind">푸터영역</h2>
+        <div class="container">
+            <h2 class="blind">푸터</h2>
+            <div class="footer__inner">
+                <div class="footer__menu">
+                    <div>
+                        <h4><a href="">아침밥 레시피</a></h4>
+                        <ul>
+                            <li><a href="">한식</a></li>
+                            <li><a href="">일식</a></li>
+                            <li><a href="">양식</a></li>
+                            <li><a href="">간편식</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4><a href="">재료선정</a></h4>
+                        <ul>
+                            <li><a href="">탄수화물</a></li>
+                            <li><a href="">단백질</a></li>
+                            <li><a href="">지방</a></li>
+                            <li><a href="">섬유질</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4><a href="">건강별 정리</a></h4>
+                        <ul>
+                            <li><a href="">심혈관 질환</a></li>
+                            <li><a href="">성인병</a></li>
+                            <li><a href="">고관절 질환</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4><a href="">레시피 도서 추천</a></h4>
+                        <ul>
+                            <li><a href="">한식</a></li>
+                            <li><a href="">일식</a></li>
+                            <li><a href="">양식</a></li>
+                            <li><a href="">간편식</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4><a href="">나이별 메뉴</a></h4>
+                        <ul>
+                            <li><a href="">어린이</a></li>
+                            <li><a href="">청소년</a></li>
+                            <li><a href="">청년</a></li>
+                            <li><a href="">중장년</a></li>
+                            <li><a href="">노년</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4><a href="">Q&A</a></h4>
+                        <ul>
+                            <li><a href="">문의하기</a></li>
+                            <li><a href="">F&A</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    2023 아침밥 먹기 실천 위원회<br>All Right Reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footerType -->
+
+</body>
+</html>
