@@ -217,6 +217,145 @@
                 </div>
                 <!-- sample 18 -->
 
+                <div id="sample19" class="sample">
+                    <h3>19.slice()</h3>
+                    <div class="notice">"문자열".slice(시작위치,[끝나는 위치])</div>
+                    <ul>
+                        <li>시작하는 위치에서 종료 위치 ㅣ값을 추출하여, 새로운 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js"> ['j','a','v','a','s','c','r','i','p','t'].slice(0);             // ['j','a','v','a','s','c','r','i','p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(1);             // ['a','v','a','s','c','r','i','p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(2);             // ['v','a','s','c','r','i','p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(0, 1);          // ['j']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(1, 2);          // ['a']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(0, 2);          // ['j','a']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(0, 3);          // ['j','a','v']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(5, 10);         // ['c','r','i','p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(5, -1);         // ['c','r','i','p']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(5, -2);         // ['c','r','i']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-1);            // ['t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-2);            // ['p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-2);            // ['i','p','t']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-3, -1)         // ['i','p']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-3, -2)         // ['i']
+    ['j','a','v','a','s','c','r','i','p','t'].slice(-3, -4)         // X
+
+    "javascript".slice(0);          //javascript
+    "javascript".slice(1);          //avascript
+    "javascript".slice(2);          //vascript
+    "javascript".slice(0,1);        //j
+    "javascript".slice(1,2);        //a
+    "javascript".slice(0,2);        //ja
+    "javascript".slice(0,3);        //jav
+    "javascript".slice(5,10);        //cript
+    "javascript".slice(5,-1);        //crip
+    "javascript".slice(5,-2);        //cri
+    "javascript".slice(-1);        //t
+    "javascript".slice(-2);        //pt
+    "javascript".slice(-3);        //ipt
+    "javascript".slice(-3,-1);        //ip
+    "javascript".slice(-3,-2);        //i
+
+
+    console.log("javascript".slice(0));
+    
+</code></pre>
+                    </div>
+                </div>
+                <!-- // sample01 -->
+
+                <div id="sample22" class="sample">
+                    <h3>22.split()</h3>
+                    <div class="notice">"문자열".split(구분자, [제한])</div>
+                    <ul>
+                        <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js"> "javascript".split("");                 //['j','a','v','a','s','c','r','i','p','t']
+    "java script".split("");                //['java','script']
+    "java scr ipt".split("");               //['java','scr','ipt']
+
+    "javascript".split("" ,1);              //['j']
+    "javascript".split("" ,2);              //['j','a']
+    "javascript".split("" ,3);              //['j','a','v']
+
+    "java script".split("" ,1);             //['java']
+    "java script".split("" ,2);             //['java','script']
+    
+    "javascript".split("j");                //['','avascript']
+    "javascript".split("a");                //['j','v','script']
+    "javascript".split("e");                //['javascript']
+
+    "java/scr/ipt".split("/");              //['java','scr','ipt']
+    "java&scr!ipt".split("&");              //['java','scr!ipt']
+    "java&scr!ipt".split("!");              //['javascr','ipt']
+    "java&scr!ipt".split(/&|\!/);           //['java','scr','ipt']
+
+
+    "javascript".split("").join()                       //j,a,v,a,s,c,r,i,p,t
+    "javascript".split("").join("*")                    //j*a*v*a*s*c*r*i*p*t
+    "javascript".split("").reverse().join()           //t,p,i,r,c,s,a,v,a,j(리버스는 배열에서만 사용 가능합니다. 그렇기 때문에 리버스가 조인 뒤로 올수 없습니다.)
+    "javascript".split("").reverse().join("/")           //t/p/i/r/c/s/a/v/a/j
+
+
+    console.log("javascript".split("").reverse().join());
+    
+</code></pre>
+                    </div>
+                </div>
+                <!-- // sample01 -->
+
+                <div id="sample30" class="sample">
+                    <h3>30.trim()</h3>
+                    <div class="notice">"문자열"..trim()</div>
+                    <ul>
+                        <li>문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">
+    "javascript".trim("");                 //javascript
+    "javascript ".trim("");                 //javascript
+    " javascript".trim("");                 //javascript
+    " java script".trim("");                 //java script
+
+    console.log("javascript".trim(""));
+</code></pre>
+                    </div>
+                </div>
+                <!-- // sample01 -->
+                
+                <div id="sample31" class="sample">
+                    <h3>31.trimend()</h3>
+                    <div class="notice">"문자열"..trim()</div>
+                    <ul>
+                        <li>문자열의 뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">
+    " javascript ".trimStart("");                 //javascript
+
+    console.log("javascript".trimStart(""));
+</code></pre>
+                    </div>
+                </div>
+                <!-- // sample01 -->
+
+                <div id="sample32" class="sample">
+                    <h3>32.trimstart()</h3>
+                    <div class="notice">"문자열"..trim()</div>
+                    <ul>
+                        <li>문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">
+    " javascript ".trimEnd("");                 //javascript
+ 
+    console.log("javascript".trimEnd(""));
+</code></pre>
+                    </div>
+                </div>
+                <!-- // sample01 -->
                 
             </div>
         </div>
@@ -231,29 +370,17 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        "javascript refercence".indexOf("javascript")   //0 
-        "javascript refercence".indexOf("javascripts")   //-1
-        "javascript refercence".indexOf("j")   //0
-        "javascript refercence".indexOf("a")   //3
-        "javascript refercence".indexOf("jv")   //-1
-        "javascript refercence".indexOf("refercence")   //11
-        "javascript refercence".indexOf("r")   //15
-        "javascript refercence".indexOf("javascript", 0)   //0 
-        "javascript refercence".indexOf("javascript", 1)   //0 
-        "javascript refercence".indexOf("refercence", 0)   //-1
-        "javascript refercence".indexOf("refercence", 1)   //-1
-        "javascript refercence".indexOf("refercence", 11)   //11
-        "javascript refercence".indexOf("refercence", 12)   //11
+        "javascript".trim("");                 //javascript
+        "javascript ".trim("");                 //javascript
+        " javascript".trim("");                 //javascript
+        " java script".trim("");                 //java script
+
+        " javascript ".trimStart("");                 //javascript
+        " javascript ".trimEnd("");                 //javascript
 
 
-
-
-
-        // console.log(console.log("1234567890abcde".lastIndexOf("6",5)));
-        // console.log(console.log("abcdefg abcdefg".lastIndexOf("c",2)));
-        console.log("javascript reference".lastIndexOf("javascript", 0)); // 0
-        console.log("javascript reference".lastIndexOf("javascript", 5)); // 11
-
+       
+        console.log("javascript".trim(""));
 
     </script>
 </body>
