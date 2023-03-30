@@ -26,6 +26,17 @@
     <img src="img/ara_01.jpg" alt="ara01">
   </div>
 
-  <script src="js/solution-1.js"></script> 
+
+  <script>
+    const imgMain = document.querySelector("#main > img");
+
+    imgMain.addEventListener("mouseover", () => {
+        imgMain.src = "img/ara_02.jpg";
+    });
+
+    imgMain.addEventListener("mouseout", () => {
+        imgMain.src = "img/ara_01.jpg";
+    });
+  </script>
 </body>
 </html>
