@@ -8,141 +8,255 @@
 </head>
 <body>
     <script>
-        // 0부터 100
         {
-            for(let i = 0; i <=100; i++){
-                document.write(i);
+            let num = 0;
+            while (false) {
+                num++;
+                if(num == 3){
+                    continue;
+                }
+                if(num > 10){
+                    break;
+                }
             }
+            console.log(num)
         }
-        document.write("<br>");
 
-        //100칸 테이블
+        // 2번
         {
-            let table = "<table border ='1'>"
-                for(let i = 1; i <= 10; i++){
-                    table += "<tr>"
-                        for(let j = 1; j <= 10; j++){
-                            table += "<td>"+i+"</td>"
-                        }
-                    table += "</tr>"
-                };
-            table += "</table>";
-            document.write(table);
+            let a = 6, b = 9, c = 3, result;
+            result = ++a + b++ + ++c;
+
+            console.log(result);
+            console.log(a+b+c);
         }
-        document.write("<br>");
+
+        //3번
+        {
+            function func(){
+                let a = [];
+
+                for(i=1; i<=5; i++){
+                    a += [i];
+                }
+                console.log(a);
+            }
+            func();
+        }
+
+        //4번
+        {
+            let arr = [3,4,1,4,1,3,4,9,8,3];
         
-        //20단
-        {
-            let i = 20;
-            document.write(i,"단");
-            document.write("<br>");
-            for(let j = 1; j < 10; j++){
-                document.write(i + "*"+j+"="+i*j+"<br>");
-            };
-        }
-        document.write("<br>");
-
-        //0부터 100
-        {
-            let sum = 0;
-            for(let i = 0; i <=100; i+=2){
-                sum += i;
+            for(let i=0; i<10; i++){
+                if(i % 3 == 2){
+                    console.log(arr[i]);
+                }
             }
-            document.write(sum);
-        }
-        document.write("<br>");
 
-        //1-100까지 출력(짝수는 파란색 홀수는 빨간색)
+        }
+
+        //5번
         {
-            for(let i = 1; i <=100; i++){
-                if(i % 2 == 1){
-                    document.write("<span style='color:red'>"+i+"</span>");
-                } else {
-                    document.write("<span style='color:blue'>"+i+"</span>");
+            function func(num1, num2){
+                if(num1 > num2) return num1
+                else return num2
+            }
+            console.log(func(17, 23) + func(50, 40))
+        }
+
+        //6번
+        {
+            function func(index){
+                console.log("함수가 실행되었습니다." + index);
+            }
+            function callback(num){
+                for(let i=0; i<=5; i++){
+                    num(i);
+                }
+            }
+            callback(func);
+        }
+
+        //7번
+        {
+            for(let i=1; i<=5; i++){
+                console.log(i);
+
+                if(i == 4){
+                    break;
                 }
             }
         }
-        document.write("<br>");
-        //배열안에 1-10까지 데이터가 있음 (forEach문을 통해 출력하시오)
-        {
-            const arr = [1,2,3,4,5,6,7,8,9,10];
 
-            arr.forEach(el => {
-                document.write(el);
-            });
+        //8번
+        {
+            const arr= [100,200,300,400,500];
+
+            const text1 = arr.join("*");
+            arr.push("600");
+            const text3 = arr.join("");
+            arr.pop();
+            const text4 = arr.join(" ");
+
+            console.log(text1);
+            console.log(text3);
+            console.log(text4);
         }
-        document.write("<br>");
-        //함수의 유형 4가지
-        //선언
+
+        //9번
+        {
+            let a, b = 10;
+
+            for(let i = 0; i<5; i++){
+                a = i;
+                b -= a;
+            }
+            console.log(a,b)
+        }
+
+        //10번
         {
             function func(){
-                document.write("실행");
-            };
-            func();
-        }
-        document.write("<br>");
-        
-        //익명
-        {
-            const func = function(){
-                document.write("실행");
-            }
-            func();
-        }
-        document.write("<br>");
-        
-        //매개변수
-        {
-            function func(a){
-                document.write(a)
-            }
-            func("실행");
-        }
-        document.write("<br>");
-        //리턴
-        {
-            function func(){
-                const str = "실행"
-                return str;
-            }
-            document.write(func());
-        }
-        document.write("<br>");
-        
-        //7번을 화살표 함수로
-        //선언
-        {
-            func = () => {
-                document.write("실행");
-            };
-            func();
-        }
-        document.write("<br>");
+                let i = 10, j = 20; k = 30;
+                i /= j;
+                j -= i;
+                k %= j;
 
-        //익명
-        {
-            const func = () => {
-                document.write("실행");
+                console.log(i);
+                console.log(j);
+                console.log(k);
             }
             func();
         }
-        document.write("<br>");
-        
-        //매개변수
+
+        //11번
         {
-            func = (a) => {
-                document.write(a)
+            let k = 2;
+            let temp;
+            for(let i=0; i<=3; i++){
+                temp = k;
+                k++;
+                console.log(temp + "번");
             }
-            func("실행");
         }
-        document.write("<br>");
-        //리턴
+
+        //12번
         {
-            func = () => {
-                const str = "실행"
-                return str;
+            let num = 10;
+            num += 2;
+            num -= 3;
+            num *= 5;
+            num /= 5;
+            num %= 9;
+            
+            console.log(num)
+        }
+        
+        //13번
+        {
+            let num = [1, 5, 1, 2, 7, 5];
+            for(let i=0; i<6; i++){
+                if((i+2) % 2 == 0){
+                    console.log(num[i]);
+                }
             }
-            document.write(func());
+        }
+        
+        // 14번
+        {
+            let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+            for(let i=0; i<=9; i++){
+                switch(num[i] % 2){
+                    case 1:
+                        console.log(num[i]);
+                        break;
+                    default:
+                        console.log("**");
+                }
+            }
+        }
+
+        //15번
+        {
+            let cnt =0;
+            let sum = 0;
+            for(let i = 0; i <=7; i++){
+                if(i%2 == 1){
+                    cnt++;
+                    sum += i;
+                }
+                console.log(cnt+","+sum/2);
+            }
+        }
+
+        //16번
+        {
+            let data = [70, 80, 75, 60, 90];
+            let best = 1;
+            let score = 0;
+
+            for(let i=0; i<data.length; i++){
+                if(data[i]>=80) {
+                    best++;
+                }
+                if(score < data[i]) {
+                    score = data[i];
+                }
+            }
+
+            console.log(best, score)
+        }
+
+        //17번
+        {
+            let a, b, result;
+            a = 7, b = 4;
+            result = a|b;
+
+            console.log(result)
+        }
+
+        //18번
+        {
+            function solution(a, b, c){
+            let answer = "YES", max;
+            let total = a + b + c;
+
+            if(a > b) max = a;
+            else max = b;
+            if(c > max) max = c;
+            if(total-max <= max) answer = "NO"; 
+            
+            return answer;
+        }
+
+        console.log(solution(53, 93, 107));
+        }
+
+        //19번
+        {
+            function solution(a, b, c){
+                let answer;
+                if(a < b) answer = a;
+                else answer = b;
+                if(c <= answer) answer = c; 
+                return answer;
+            }
+            console.log(solution(15, 12, 11));
+        }
+
+        //20번
+        {
+            function solution(day, arr){
+                let answer =0;
+                for(let x of arr){
+                    if(x % 10 == day) answer++;
+                }
+                return answer;
+            }
+            arr = [25, 23, 11, 47, 53, 17, 33, 40];
+            console.log(solution(0, arr));
         }
     </script>
 </body>
