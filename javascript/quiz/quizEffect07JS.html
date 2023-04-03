@@ -109,16 +109,17 @@
     <!-- // footer -->
 
     <script>
-        const cbt = document.querySelectorAll(".cbt");
+const cbt = document.querySelectorAll(".cbt");
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtOmr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
+        
 
         let questionAll = [];  //모든 퀴즈 정보
 
         //데이터 가져오기
         const dataQuestion = () => {
-            fetch("json/gisa2020_01.json")
+            fetch("json/gineungsaJC2023_01.json")
             .then(res => res.json())
             .then(items => {
                 questionAll = items.map((item, index) => {
@@ -129,6 +130,7 @@
                     const answerChoices = [...item.incorrect_answers];  //오답 불러오기
                     formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) + 1;
                     answerChoices.splice(formattedQuestion.answer - 1, 0, item.correct_answer); 
+                    // console.log(answerChoices);
 
                     //보기를 추가
                     answerChoices.forEach((choice, index) => {                  
@@ -144,7 +146,7 @@
                     if(item.hasOwnProperty("question_img")){
                         formattedQuestion.questionImg = item.question_img;
                     }
-
+                    
                     //해설이 있으면 출력
                     if(item.hasOwnProperty("desc")){
                         formattedQuestion.desc = item.desc;
@@ -157,6 +159,11 @@
 
             })
             .catch((err) => console.log(err));
+
+            const quizImg = document.querySelectorAll(".cbt__question__img");
+                if(quizImg[number].innerText == "img/undefined.png"){
+                    quizImg[number].classList.add("hide");
+                }
         }
 
         //문제 만들기
@@ -168,7 +175,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img"></div>
+                        <div class="cbt__question__img"><img src="img/${question.questionImg}.png" alt=""></div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number+1}_1" onclick="answerSelect(this)">
                             <label for="select${number}_1"><span>${question.choice1}</span></label>
@@ -253,6 +260,7 @@
         
         cbtSubmit.addEventListener("click", answerQuiz);
         dataQuestion();
+
 
     </script>
 
