@@ -343,7 +343,7 @@ footer a {
     right: 20px;
     top: 135px;
     width: 280px;
-    height: calc(100vh - 160px);
+    /* height: calc(100vh - 160px); */
     background-color: #fff;
     overflow-y: auto;
 
@@ -363,53 +363,53 @@ footer a {
 
 .time_submit {
     width: 280px;
-    padding: 10px 10px 20px;
+    padding: 10px;
     background-color: #f8E0Dc;
     border-bottom: 8px ridge #cc9aee;
 }
-.time_submit > div {
-    display: flex;
-    justify-content: space-between;
-    
-    background-color: #f8E0Dc;
-    display: inline-block;
-    color: #313E55;
-    padding: 10px 0 10px;
-    border-radius: 20px;
-}
 
+.time_submit > div {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    /* padding: 20px; */
+    margin: 10px;
+    border-radius: 20px;
+    color: #313E55;
+    background-color: #ffffff;
+}
 .cbt__time {
     position: relative;
     padding-left: 40px !important;
     margin: 3px 0;
-    float: right;
+    /* float: right; */
 }
-.cbt__time::before{
+.cbt__time::before {
     content: '';
     position: absolute;
-    left: 11px;
-    top: 3px;
-    width: 24px;
-    height: 24px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-alarm' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='%23a022f3' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Ccircle cx='12' cy='13' r='7' /%3E%3Cpolyline points='12 10 12 13 14 13' /%3E%3Cline x1='7' y1='4' x2='4.25' y2='6' /%3E%3Cline x1='17' y1='4' x2='19.75' y2='6' /%3E%3C/svg%3E");
+    left: 10px;
+    top: 1px;
+    width: 22px;
+    height: 22px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23a022f3' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
 }
 .cbt__submit {
     all: unset;
     position: relative;
-    padding-left: 25px !important;
+    padding-left: 40px !important;
+    /* float: right; */
     margin: 3px 0;
-    float: right;
-    
 }
-.cbt__submit::before{
+.cbt__submit::before {
     content: '';
     position: absolute;
-    left: 0;
-    top: 3px;
-    width: 24px;
-    height: 24px;
+    left: 10px;
+    top: 1px;
+    width: 22px;
+    height: 22px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-bar-to-down' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='%23a022f3' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cline x1='4' y1='20' x2='20' y2='20' /%3E%3Cline x1='12' y1='14' x2='12' y2='4' /%3E%3Cline x1='12' y1='14' x2='16' y2='10' /%3E%3Cline x1='12' y1='14' x2='8' y2='10' /%3E%3C/svg%3E");
 }
+
 .cbt__info .cbt__tittle {
     text-decoration: underline;
     text-underline-offset: 4px;

@@ -65,10 +65,12 @@
             <div class="cbt__aside">
                 <div class="cbt__info">
                     <div class="time_submit">
-                        <div>
-                            <button class="cbt__submit">제출하기</button>
-                            <span class="cbt__time">59분 10초</span>
-                        </div>
+                            <div>
+                                <button class="cbt__submit">제출하기</button>
+                            </div>
+                            <div>
+                                <span class="cbt__time">59분 10초</span>
+                            </div>
                     </div>
                     <div>
                         <div class="cbt__tittle">수험자 : <em class="cbt__name"></em></div>
@@ -180,6 +182,8 @@
         const cbtStart = document.querySelector(".cbt__start")
         const cbtBtn = document.querySelector(".cbt__start button")
         const cbtName = document.querySelector(".cbt__name")
+        const cbtQuestionImg = document.querySelectorAll(".cbt__question__img")
+        const cbtQuestionDesc = document.querySelectorAll(".cbt__question__desc")
 
         let questionAll = [];  //모든 퀴즈 정보
         let questionLength = 0;
@@ -239,14 +243,6 @@
             .catch((err) => console.log(err));
         }
 
-        const cbtQuizStarts = () => {
-            cbtStart.classList.add("hide")
-            // console.log("ok")
-            const userName = prompt('여러분의 이름을 적어주세요😆')
-            cbtName.textContent = userName;
-        }
-
-        cbtBtn.addEventListener("click", cbtQuizStarts);
 
 
         //문제 만들기
@@ -288,16 +284,28 @@
                     </div>
                 `)
                 
+                
             });
         
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
 
             
-        }
+            const cbtQuestionImgDesc = () => {
+                cbtStart.classList.add("hide")
+                // console.log("ok")
+                const userName = prompt('여러분의 이름을 적어주세요😆')
+                cbtName.textContent = userName;
+            }
 
-        // const quizRemain = document.querySelector(".cbt__score .quiz__remain em")
-        // quizRemain.innerHTML= exam.length- ;
+            const questionDesc = document.querySelectorAll(".cbt__question__desc");
+
+            questionDesc.forEach(el => {
+                if(el.innerHTML == "undefined"){
+                    el.style.display = "none";
+                }
+            });   
+        }
         
 
         //정답 확인
@@ -311,10 +319,10 @@
                 const numberAnswer = userAnswer ? userAnswer.slice(-1) : undefined;
 
                 if(numberAnswer == question.answer){
-                    console.log("정답입니다.");
+                    // console.log("정답입니다.");
                     cbtSelects[number].parentElement.classList.add("good");
                 } else {
-                    console.log("오답입니다.")
+                    // console.log("오답입니다.")
                     cbtSelects[number].parentElement.classList.add("bad");
 
                     const label = cbtSelects[number].querySelectorAll("label");
