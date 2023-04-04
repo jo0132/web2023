@@ -72,7 +72,7 @@
                                 <span class="cbt__time">59분 10초</span>
                             </div>
                     </div>
-                    <div>
+                    <div class="tittle_score">
                         <div class="cbt__tittle">수험자 : <em class="cbt__name"></em></div>
                         <div class="cbt__score">
                             <span class="quiz__sum">전체 문제수 : <em class="cbt__length"></em> 문항</span>
@@ -102,7 +102,7 @@
                     </div> -->
                 </div>
             </div>
-            <div class="cbt__start hide">
+            <div class="cbt__start">
                 <div class="cbt_modall">
                     <h2>기능사 시험 도전하기</h2>
                     <div class="cbt__choice">
@@ -243,6 +243,25 @@
             .catch((err) => console.log(err));
         }
 
+        const cbtQuestionImgDesc = () => {
+            cbtStart.classList.add("hide");
+            const getUserName = () => {
+                const userName = prompt('여러분의 이름을 적어주세요😆');
+                if(userName === ""){
+                    return getUserName();
+                }if(userName === null){
+                    return getUserName();
+                }
+                return userName;
+            };
+            const userName = getUserName();
+            cbtName.textContent = userName;
+
+        }
+
+
+
+        cbtBtn.addEventListener("click", cbtQuestionImgDesc);
 
 
         //문제 만들기
@@ -291,12 +310,7 @@
             cbtOmr.innerHTML = omr.join('');
 
             
-            const cbtQuestionImgDesc = () => {
-                cbtStart.classList.add("hide")
-                // console.log("ok")
-                const userName = prompt('여러분의 이름을 적어주세요😆')
-                cbtName.textContent = userName;
-            }
+
 
             const questionDesc = document.querySelectorAll(".cbt__question__desc");
 
@@ -305,6 +319,14 @@
                     el.style.display = "none";
                 }
             });   
+            
+            const questionImg = document.querySelectorAll(".cbt__question__img"); 
+
+            questionImg.forEach(el => {
+                    if(el.innerHTML == "undefined"){
+                        el.style.display = "none";
+                    }
+                });
         }
         
 

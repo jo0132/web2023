@@ -341,10 +341,9 @@ footer a {
 .cbt__aside {
     position: fixed;
     right: 20px;
-    top: 135px;
+    top: 81px;
     width: 280px;
     /* height: calc(100vh - 160px); */
-    background-color: #fff;
     overflow-y: auto;
 
 }
@@ -359,6 +358,16 @@ footer a {
     margin-bottom: 20px;
     text-align: left;
     color: #313E55;
+}
+
+.cbt__info .cbt__tittle {
+    text-decoration: underline;
+    font-weight: bold;
+    text-underline-offset: 4px;
+    margin-bottom: 5px;
+}
+.cbt__info span {
+    display: inline-block;
 }
 
 .time_submit {
@@ -377,20 +386,22 @@ footer a {
     border-radius: 20px;
     color: #313E55;
     background-color: #ffffff;
+    border: 2px solid #c2b2af;
 }
 .cbt__time {
     position: relative;
     padding-left: 40px !important;
     margin: 3px 0;
+    bottom: 3px;
     /* float: right; */
 }
 .cbt__time::before {
     content: '';
     position: absolute;
     left: 10px;
-    top: 1px;
     width: 22px;
     height: 22px;
+    top: 2px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23a022f3' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E");
 }
 .cbt__submit {
@@ -399,27 +410,23 @@ footer a {
     padding-left: 40px !important;
     /* float: right; */
     margin: 3px 0;
+    bottom: 3px;
 }
 .cbt__submit::before {
     content: '';
     position: absolute;
     left: 10px;
-    top: 1px;
+    top: 1spx;
     width: 22px;
     height: 22px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon icon-tabler icon-tabler-arrow-bar-to-down' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='%23a022f3' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'/%3E%3Cline x1='4' y1='20' x2='20' y2='20' /%3E%3Cline x1='12' y1='14' x2='12' y2='4' /%3E%3Cline x1='12' y1='14' x2='16' y2='10' /%3E%3Cline x1='12' y1='14' x2='8' y2='10' /%3E%3C/svg%3E");
 }
-
-.cbt__info .cbt__tittle {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    margin-bottom: 5px;
-}
-.cbt__info span {
-    display: inline-block;
+.tittle_score{
+    padding: 20px;
 }
 
 .cbt__omr {
+    background-color: #fff;
     padding: 20px;
     border: 8px ridge #cc9aee;
     overflow-y: auto;
