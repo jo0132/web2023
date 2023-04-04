@@ -126,7 +126,7 @@ footer a {
 .quiz__wrap .quiz {
     width: 500px;
     background-color: #fff;
-    border: 8px ridge #cc9aee;
+    border: 6px ridge #cc9aee;
     margin: 10px;
 }
 .quiz__title {
@@ -328,7 +328,7 @@ footer a {
 
 .cbt__header {
     width: calc(100% - 300px);
-    border: 8px ridge #cc9aee;
+    border: 6px ridge #cc9aee;
     margin-bottom: 20px;
     background-color: #f8E0Dc;
     display: flex;
@@ -345,7 +345,7 @@ footer a {
     width: 280px;
     height: calc(100vh - 160px);
     background-color: #fff;
-    border: 8px ridge #cc9aee;
+    border: 6px ridge #cc9aee;
     overflow-y: auto;
 
 }
@@ -476,7 +476,7 @@ footer a {
 }
 .cbt__quiz .cbt {
     width: 49%;
-    border: 8px ridge #cc9aee;
+    border: 6px ridge #cc9aee;
     margin-bottom: 10px;
     padding: 20px;
 }
