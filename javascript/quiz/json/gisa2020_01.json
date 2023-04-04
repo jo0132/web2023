@@ -44,14 +44,14 @@
     },{
         "subject" : "정보처리 기능사",
         "question" : "다음 진리표와 같이 연산이 행해지는 게이트는?",
-        "question_img" : "q8",
+        "question_img" : "<img src='img/gineungsaJC2008_04_08.jpg' alt=''>",
         "incorrect_answers" : ["OR","NAND","XOR"],
         "correct_answer" : "AND",
         "desc" : "1의보수는 0은 1로 1은 0으로 무조건 반대로 바꾸어 주면됩니다."
     },{
         "subject" : "정보처리 기능사",
         "question" : "8bit 컴퓨터에서 부호화 절대치 방식으로 수치 자료를 표현했을 때, 기억된 값은 얼마인가?",
-        "question_img" : "q9",
+        "question_img" : "<img src='img/gineungsaJC2008_04_09.jpg' alt=''>",
         "incorrect_answers" : ["-12","11","12"],
         "correct_answer" : "-11",
         "desc" : "부호화 절대치의 경우 맨 왼쪽의 숫자가 0이면 양수이고1이면 음수 입니다..나머지는 그냥 2진수 읽듯이 읽어 주시면 됩니다."
@@ -64,14 +64,14 @@
     },{
         "subject" : "정보처리 기능사",
         "question" : "그림의 전기회로를 컴퓨터의 논리회로로 치환하면?",
-        "question_img" : "q11",
+        "question_img" : "<img src='img/gineungsaJC2008_04_11.jpg' alt=''>",
         "incorrect_answers" : ["AND","NOT","NAND"],
         "correct_answer" : "OR",
         "desc" : "두 스위치중 아무것이나 연결되면 꼬마전구에 불이 들어 오므로 OR 입니다."
     },{
         "subject" : "정보처리 기능사",
         "question" : "다음의 논리회로에 맞는 불 대수식은?(A, B는 입력, Y는출력)",
-        "question_img" : "q12",
+        "question_img" : "<img src='img/gineungsaJC2008_04_12.jpg' alt=''>",
         "incorrect_answers" : ["Y=A·B","Y=A · (A B)","Y=(A+B) · B"],
         "correct_answer" : "Y=A +B",
         "desc" : "단순한 OR 게이트의 연결 입니다"
@@ -108,7 +108,7 @@
     },{
         "subject" : "정보처리 기능사",
         "question" : "다음 그림에서 ALU 로 2개의 값이 입력되었을 때 AND연산 후의 값으로 맞는 것은?",
-        "question_img" : "q18",
+        "question_img" : "<img src='img/gineungsaJC2008_04_18.jpg' alt=''>",
         "incorrect_answers" : ["010100","001011","111111"],
         "correct_answer" : "101011",
         "desc" : "101011과 101011을 비교 했을 때 AND는 하나라도 0이면 무조건 0이여야 하기때문에 답은 101011이 된다."
@@ -127,6 +127,7 @@
     },{
         "subject" : "정보처리 기능사",
         "question" : "다음 SQL 검색문의 의미로 가장 적절한 것은?<br>SELECT DISTINCT 학과명 FROM 학생;",
+        "question_desc" : "SELECT DISTINCT 학과명 FROM 학생;",
         "incorrect_answers" : ["학생 테이블의 학과명을 모두 검색하라.","학생 테이블의 학과명 중에서 중복된 학과명은 모두 검색하라.","학생 테이블을 학과명 구별하지 말고 모두 검색하라."],
         "correct_answer" : "학생 테이블의 학과명을 중복되지 않게 모두 검색하라.",
         "desc" : "DISTINCT : 검색 결과중 중복 제거<br>CASCADE : 연관관계까지 함께 삭제(참조 중인것도 삭제)<br>RESTRICT : 참조중이면 삭제 하지 않음"
@@ -174,7 +175,8 @@
         "desc" : "프리젠테이션 기본단위 : 슬라이더(슬라이더 개개의 구성요소 : 개체)<br>스프레드시트 기본단위 : 셀"
     },{
         "subject" : "정보처리 기능사",
-        "question" : "다음 SQL 명령문의 의미로 가장 적절한 것은?<br> DROP TABLE 성적 CASCADE;",
+        "question" : "다음 SQL 명령문의 의미로 가장 적절한 것은?",
+        "question_desc" : "DROP TABLE 성적 CASCADE;",
         "incorrect_answers" : ["성적 테이블이 다른 테이블에 의해 참조 중이면 제거하지 마시오.","성적 테이블만 제거 하시오","성적 테이블의 인덱스만 제거하시오."],
         "correct_answer" : "성적 테이블과 이 테이블을 참조하는 다른 테이블도 함께 제거하시오.",
         "desc" : "DISTINCT : 검색 결과중 중복 제거<br>CASCADE : 연관관계까지 함께 삭제(참조 중인것도 삭제)<br>RESTRICT : 참조중이면 삭제 하지 않음"
@@ -258,7 +260,8 @@
         "desc" : "32비트 단위로 데이터를 처리 합니다."
     },{
         "subject" : "정보처리 기능사",
-        "question" : "다음 문장의 ( )안에 알맞은 내용은?<br>(     )selects from among the processes<br>in memory that are ready to execute,<br> and allocates the CPU to one of them.",
+        "question" : "다음 문장의 ( )안에 알맞은 내용은?",
+        "question_desc" : "(     )selects from among the processes<br>in memory that are ready to execute,<br> and allocates the CPU to one of them.",
         "incorrect_answers" : ["Cycle ","Spooler","Buffer"],
         "correct_answer" : "Scheduler",
         "desc" : "cpu와 관련된 스캐쥴러에 관한 이야기 입니다. "
@@ -270,7 +273,8 @@
         "desc" : "RR(round-robin) : 시분할 시스템에 많이 사용합니다."
     },{
         "subject" : "정보처리 기능사",
-        "question" : "다음 괄호 안에 가장 알맞은 단어는?<br>A(n)(     ) is a program that acts an<br>intermediary between a user of<br>computer and the computer hardware.",
+        "question" : "다음 괄호 안에 가장 알맞은 단어는?",
+        "question_desc" : "A(n)(     ) is a program that acts an<br>intermediary between a user of<br>computer and the computer hardware.",
         "incorrect_answers" : ["GUI","interpreter","file system"],
         "correct_answer" : "operating system",
         "desc" : "user, hardware 사이에 존재 한다고하였으므로 운영체제 입니다"
