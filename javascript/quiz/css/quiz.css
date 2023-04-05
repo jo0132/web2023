@@ -341,6 +341,7 @@ footer a {
     padding: 20px;
 }
 
+
 .cbt__aside {
     position: fixed;
     right: 20px;
@@ -390,6 +391,12 @@ footer a {
     color: #313E55;
     background-color: #ffffff;
     border: 2px solid #c2b2af;
+}
+.time_submit__score {
+    display: none;
+}
+.time_submit__score span {
+   margin: 0 37px; 
 }
 .cbt__time {
     position: relative;

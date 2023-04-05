@@ -35,7 +35,6 @@
         <div class="quiz__wrap__cbt">
             <div class="cbt__header">
                 <h2>2020년 1회 정보처리기능사 기출문제</h2>
-                <div><span></span>점 입니다!</div>
                 
             </div>
             <div class="cbt__conts">
@@ -72,6 +71,10 @@
                             <div>
                                 <span class="cbt__time">59분 10초</span>
                             </div>
+                            <div class="time_submit__score">
+                                <span>??점입니다.</span>
+                            </div>
+
                     </div>
                     <div class="tittle_score">
                         <div class="cbt__tittle">수험자 : <em class="cbt__name"></em></div>
@@ -164,7 +167,6 @@
                     </div>
                     <button>시작하기</button>
                 </div>
-            </div>
 
         </div>
     </main>
@@ -190,11 +192,12 @@
         const cbtIndex = document.querySelector(".cbt__index")
         const cbtViewsubject = document.querySelector(".cbt__view .subject")
         const cbtHeader = document.querySelector(".cbt__header h2")
-        const cbtHeaderScore = document.querySelector(".cbt__header div span")
         const cbtStart = document.querySelector(".cbt__start")
         const cbtstartBtn = document.querySelector(".cbt__start button")
         const cbtTime = document.querySelector(".cbt__time")
         const cbtViewName = document.querySelector(".cbt__view .name")
+        const cbtScorebox = document.querySelector(".time_submit__score")
+
 
 
 
@@ -203,6 +206,8 @@
         let questionRest = 100;
         let questionTime = "";
         let questionTimeRemain = "1000";
+        let quizScore = 0;
+
 
         // 시작하기
         const quizStart = () => {
@@ -349,6 +354,7 @@
                 if(numberAnswer == question.answer){
                     // console.log("정답입니다.");
                     cbtSelects[number].parentElement.classList.add("good");
+                    quizScore++;
                 } else {
                     // console.log("오답입니다.")
                     cbtSelects[number].parentElement.classList.add("bad");
@@ -365,9 +371,16 @@
                 }else{
                     quizDesc[number].classList.remove("hide")
                 }
+                const cbtHeaderScore = document.querySelector(".time_submit__score span")
+                cbtHeaderScore.innerHTML = `총 ${Math.ceil((quizScore / questionLength)*100)}입니다!`;
+
+                cbtScorebox.style.display = "block";
             });
-            cbtHeaderScore.innerHTML
+            
         }
+        console.log(quizScore);
+        console.log(questionLength);
+        console.log(cbtScorebox);
 
         //보기체크
         const answerSelect2 = (elem) => {
