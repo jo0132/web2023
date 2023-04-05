@@ -35,6 +35,7 @@
         <div class="quiz__wrap__cbt">
             <div class="cbt__header">
                 <h2>2020년 1회 정보처리기능사 기출문제</h2>
+                <div><span></span>점 입니다!</div>
                 
             </div>
             <div class="cbt__conts">
@@ -189,9 +190,12 @@
         const cbtIndex = document.querySelector(".cbt__index")
         const cbtViewsubject = document.querySelector(".cbt__view .subject")
         const cbtHeader = document.querySelector(".cbt__header h2")
+        const cbtHeaderScore = document.querySelector(".cbt__header div span")
         const cbtStart = document.querySelector(".cbt__start")
         const cbtstartBtn = document.querySelector(".cbt__start button")
         const cbtTime = document.querySelector(".cbt__time")
+        const cbtViewName = document.querySelector(".cbt__view .name")
+
 
 
         let questionAll = [];  //모든 퀴즈 정보
@@ -203,7 +207,9 @@
         // 시작하기
         const quizStart = () => {
             cbtStart.classList.add("hide");
+            cbtName.textContent = cbtViewName.value.trim();
 
+            console.log(cbtName);
             // 시간 설정
             questionTime = setInterval(reduceTime,1000)//
         }
@@ -259,28 +265,13 @@
                 cbtRest.innerHTML = questionLength;
 
 
+
+        // <div class="cbt__question__img"><img src="img/${question.question_img}.jpg" alt="기능사 시험"></div>
+
             })
             .catch((err) => console.log(err));
         }
 
-        // const cbtQuestionImgDesc = () => {
-        //     cbtStart.classList.add("hide");
-        //     // const getUserName = () => {
-        //     //     const userName = prompt('여러분의 이름을 적어주세요😆');
-        //     //     if(userName === ""){
-        //     //         return getUserName();
-        //     //     }if(userName === null){
-        //     //         return getUserName();
-        //     //     }
-        //     //     return userName;
-        //     // };
-        //     const userName = getUserName();
-        //     cbtName.textContent = userName;
-
-        // }
-
-        // cbtBtn.addEventListener("click", cbtQuestionImgDesc);
-        // <div class="cbt__question__img"><img src="img/${question.question_img}.jpg" alt="기능사 시험"></div>
 
         //문제 만들기
         const newQuestion = () => {
@@ -374,8 +365,8 @@
                 }else{
                     quizDesc[number].classList.remove("hide")
                 }
-
             });
+            cbtHeaderScore.innerHTML
         }
 
         //보기체크
@@ -445,7 +436,15 @@
                 let minutes = Math.floor(questionTimeRemain / 60);
                 let seconds = questionTimeRemain % 60;
 
-                return minutes + "분" + seconds + "초";
+                // Second.innerText = seconds;
+                // if(minutes < 10){
+                //     Minute.innerText = "0" + minutes;
+                // }
+                // if(seconds < 10){
+                //     Second.innerText = "0" + seconds;
+                // }
+
+                return `${minutes}분 ${seconds.toString().padStart(2, '0')}초`;
                 //초의 단위가 한자리 수가 되면 앞에 0을 붙여주기
 
             }
