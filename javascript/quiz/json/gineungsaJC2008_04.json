@@ -44,14 +44,14 @@
     },{
         "subject" : "정보처리 기능사",
         "question" : "다음 진리표와 같이 연산이 행해지는 게이트는?",
-        "question_img" : "<img src='img/gineungsaJC2008_04_08.jpg' alt=''>",
+        "question_img" : "gineungsaJC2008_04_08",
         "incorrect_answers" : ["OR","NAND","XOR"],
         "correct_answer" : "AND",
         "desc" : "1의보수는 0은 1로 1은 0으로 무조건 반대로 바꾸어 주면됩니다."
     },{
         "subject" : "정보처리 기능사",
         "question" : "8bit 컴퓨터에서 부호화 절대치 방식으로 수치 자료를 표현했을 때, 기억된 값은 얼마인가?",
-        "question_img" : "<img src='img/gineungsaJC2008_04_09.jpg' alt=''>",
+        "question_img" : "gineungsaJC2008_04_09",
         "incorrect_answers" : ["-12","11","12"],
         "correct_answer" : "-11",
         "desc" : "부호화 절대치의 경우 맨 왼쪽의 숫자가 0이면 양수이고1이면 음수 입니다..나머지는 그냥 2진수 읽듯이 읽어 주시면 됩니다."
@@ -64,14 +64,14 @@
     },{
         "subject" : "정보처리 기능사",
         "question" : "그림의 전기회로를 컴퓨터의 논리회로로 치환하면?",
-        "question_img" : "<img src='img/gineungsaJC2008_04_11.jpg' alt=''>",
+        "question_img" : "gineungsaJC2008_04_11",
         "incorrect_answers" : ["AND","NOT","NAND"],
         "correct_answer" : "OR",
         "desc" : "두 스위치중 아무것이나 연결되면 꼬마전구에 불이 들어 오므로 OR 입니다."
     },{
         "subject" : "정보처리 기능사",
         "question" : "다음의 논리회로에 맞는 불 대수식은?(A, B는 입력, Y는출력)",
-        "question_img" : "<img src='img/gineungsaJC2008_04_12.jpg' alt=''>",
+        "question_img" : "gineungsaJC2008_04_12",
         "incorrect_answers" : ["Y=A·B","Y=A · (A B)","Y=(A+B) · B"],
         "correct_answer" : "Y=A +B",
         "desc" : "단순한 OR 게이트의 연결 입니다"
@@ -108,7 +108,7 @@
     },{
         "subject" : "정보처리 기능사",
         "question" : "다음 그림에서 ALU 로 2개의 값이 입력되었을 때 AND연산 후의 값으로 맞는 것은?",
-        "question_img" : "<img src='img/gineungsaJC2008_04_18.jpg' alt=''>",
+        "question_img" : "gineungsaJC2008_04_18",
         "incorrect_answers" : ["010100","001011","111111"],
         "correct_answer" : "101011",
         "desc" : "101011과 101011을 비교 했을 때 AND는 하나라도 0이면 무조건 0이여야 하기때문에 답은 101011이 된다."
