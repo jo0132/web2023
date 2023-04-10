@@ -76,34 +76,34 @@ body {
 }
 
 body.img01 {
-    background-image: url(../img/mouseEffect01-min.jpg);
+    background-image: url(../img/Effect_bg01-min.jpg);
 }
 body.img02 {
-    background-image: url(../img/mouseEffect02-min.jpg);
+    background-image: url(../img/Effect_bg02-min.jpg);
 }
 body.img03 {
-    background-image: url(../img/mouseEffect03-min.jpg);
+    background-image: url(../img/Effect_bg03-min.jpg);
 }
 body.img04 {
-    background-image: url(../img/mouseEffect04-min.jpg);
+    background-image: url(../img/Effect_bg04-min.jpg);
 }
 body.img05 {
-    background-image: url(../img/mouseEffect05-min.jpg);
+    background-image: url(../img/Effect_bg05-min.jpg);
 }
 body.img06 {
-    background-image: url(../img/mouseEffect06-min.jpg);
+    background-image: url(../img/Effect_bg06-min.jpg);
 }
 body.img07 {
-    background-image: url(../img/mouseEffect07-min.jpg);
+    background-image: url(../img/Effect_bg07-min.jpg);
 }
 body.img08 {
-    background-image: url(../img/mouseEffect08-min.jpg);
+    background-image: url(../img/Effect_bg08-min.jpg);
 }
 body.img09 {
-    background-image: url(../img/mouseEffect09-min.jpg);
+    background-image: url(../img/Effect_bg09-min.jpg);
 }
 body.img10 {
-    background-image: url(../img/mouseEffect10-min.jpg);
+    background-image: url(../img/Effect_bg10-min.jpg);
 }
 body::after {
     content: '';
