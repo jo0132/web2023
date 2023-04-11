@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 이펙트01</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <style>
+        .slider__wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slider__img {
+            position: relative;
+            width: 800px;
+            height: 450px;
+            overflow: hidden;
+        }
+        .slider {
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 0.3s;
+        }
+        .slider::before {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            background: rgba(0,0,0,0.4);
+            color: #fff;
+            padding: 5px 10px;
+        }
+        .slider:nth-child(1)::before {content: '이미지1';}
+        .slider:nth-child(2)::before {content: '이미지2';}
+        .slider:nth-child(3)::before {content: '이미지3';}
+        .slider:nth-child(4)::before {content: '이미지4';}
+        .slider:nth-child(5)::before {content: '이미지4';}
+        .slider:nth-child(1) {z-index: 5;}
+        .slider:nth-child(2) {z-index: 4;}
+        .slider:nth-child(3) {z-index: 3;}
+        .slider:nth-child(4) {z-index: 2;}
+        .slider:nth-child(5) {z-index: 1;}
+
+
+    </style>
+</head>
+<body class="img01 bg01 font01">
+    <header id="header">
+        <h1>Javascript slider Effect01</h1>
+        <p>슬라이드 이펙트01</p>
+        <ul>
+            <li class="active"><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect03.html">3</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li><a href="sliderEffect05.html">5</a></li>
+            <li><a href="sliderEffect06.html">6</a></li>
+        </ul>
+
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="slider__wrap">
+            <div class="slider__img">
+                <div class="slider"><img src="./img/Effect_bg01-min.jpg" alt="이미지 1"></div>
+                <div class="slider"><img src="./img/Effect_bg06-min.jpg" alt="이미지 2"></div>
+                <div class="slider"><img src="./img/Effect_bg02-min.jpg" alt="이미지 3"></div>
+                <div class="slider"><img src="./img/Effect_bg08-min.jpg" alt="이미지 4"></div>
+                <div class="slider"><img src="./img/Effect_bg09-min.jpg" alt="이미지 5"></div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:jo0132@naver.com">jo0132@naver.com</a>
+    </footer>
+    <!-- //footer -->
+    <script>
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = sliderWrap.querySelector(".slider__img");
+        const slider = sliderWrap.querySelectorAll(".slider");      // slider를 배열로 받으므로 하나하나 선택할경우 배열로 선택 가능하다.
+
+        let currentIndex = 0;               // 현재 보이는 이미지
+        let slidercount = slider.length;    //이미지 갯수
+        let sliderInterval = 3000;
+    </script>
+
+    <!-- 자바스크립트 -->
+    <script>
+        setInterval(()=>{
+            let nextIndex = (currentIndex + 1) % slidercount
+
+
+
+            currentIndex = nextIndex
+        },sliderInterval)   //3초마다 동작
+
+
+    </script>
+   
+</body>
+</html>
