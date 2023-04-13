@@ -90,6 +90,8 @@
             <li><a href="sliderEffect04.html">4</a></li>
             <li><a href="sliderEffect05.html">5</a></li>
             <li class="active"><a href="sliderEffect06.html">6</a></li>
+            <li><a href="sliderEffect07.html">7</a></li>
+
         </ul>
 
     </header>
@@ -140,6 +142,7 @@
         let sliderWidth = slider[0].offsetWidth;                                //이미지 가로값
         let sliderInterval = 2000;
         let dotIndex = "";
+        
 
         function init(){
             slider.forEach(() => dotIndex += "<a href='#' class='dot'>이미지</a>");
@@ -151,6 +154,17 @@
         }
         init();
 
+        let dotActive = document.querySelectorAll(".slider__dot .dot");
+
+        //닷을 누르면 이미지 넘어가기
+        dotActive.forEach((el,i) => {
+            el.addEventListener("click",function(){
+                sliderDot.querySelector(".dot.active").classList.remove("active");
+                el.classList.add("active");
+                gotoSlider(i);
+            });
+        });
+
         //이미지 이동시키기
         function gotoSlider(num){
             sliderInner.style.transition = "all 400ms";
@@ -160,7 +174,9 @@
             let dotActive = document.querySelectorAll(".slider__dot .dot");
             dotActive.forEach((active) => active.classList.remove("active"));
             dotActive[num].classList.add("active");
+            
         }
+        
 
         //버튼을 클릭했을 때
         sliderBtn.forEach((btn, index) => {
@@ -175,6 +191,7 @@
                 }
             });
         });
+
     </script>
 
 
