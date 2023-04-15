@@ -232,6 +232,7 @@
                         question: item.question,
                         number: index + 1
                     }
+                    console.log(item)
                     const answerChoices = [...item.incorrect_answers];  //오답 불러오기
                     formattedQuestion.answer = Math.round(Math.random() * answerChoices.length) + 1;
                     answerChoices.splice(formattedQuestion.answer - 1, 0, item.correct_answer); 
@@ -276,7 +277,7 @@
             })
             .catch((err) => console.log(err));
         }
-
+        console.log(formattedQuestion);
 
         //문제 만들기
         const newQuestion = () => {
