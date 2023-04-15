@@ -15,6 +15,7 @@
         body {
             background-image: url(https://images.unsplash.com/photo-1496264057429-6a331647b69e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
             background-size: cover;
+            background-repeat: no-repeat;
         }
         body::before {
             content: '';
@@ -28,17 +29,15 @@
         }
         .result__wrap {
             font-family: "GmarketSans";
-            /* width: 100%; */
+            width: 100%;
             height: 100vh;
-            /* display: inline-block; */
-            color: #fff;
             display: flex;
-            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            margin-left: 320px;
+            color: #fff;
         }
         #result {
-            width: 100vh;
+            /* width: 800px; */
             line-height: 2;
         }
         .quote {
