@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        input {
+            border-style: none;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+        }
+        .numgen__wrap {
+            position: relative;
+            top: 250px;
+            display: flex;
+            justify-content: center;
+        }
+        .numgen {
+            width: 800px;
+            /* height: 500px; */
+            background-color: #fff;
+            display: block;
+            box-shadow: 0 0 20px rgba(95, 120, 161, 0.4);
+            border-radius: 10px;
+        }
+        .numgen__header {
+            margin-top: 65px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        .numgen__header h2 {
+            font-size: 50px;
+            color: #5f78a1;
+        }
+        .numgen__btn {
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        .btn {
+            width: 200px;
+            flex: 1 1 auto;
+            margin: 10px;
+            padding: 30px;
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;
+            /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+        }
+
+        .btn:hover {
+            background-position: right center; /* change the direction of the change here */
+        }
+        .btn-2 {
+            background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+        }
+        .numgen__result {
+            display: none;
+            justify-content: center;
+            margin-bottom: 65px;
+        }
+        .result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .result span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            margin: 0 10px;
+            border-radius: 50%;
+            background-color: #a6c1ee;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .result span:nth-child(2n){
+            background-color: #fbc2eb;
+        }
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="numgen__wrap">
+        <div class="numgen">
+            <div class="numgen__header">
+                <h2>로또번호 생성기</h2>
+            </div>
+            <div class="numgen__btn">
+                <div class="btn__inner">
+                    <input type="button" value="클릭" class="btn btn-2">
+                </div>
+            </div>
+            <div class="numgen__result">
+                <div class="result">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <p></p>
+    </div>
+    <script>
+        const numgenWrap = document.querySelector(".numgen__wrap");
+        const numgenBtn = numgenWrap.querySelector(".numgen__btn");
+        const btnInput = numgenWrap.querySelector(".btn__inner input");
+        const numgenResult = numgenWrap.querySelector(".numgen__result");
+        const result = numgenWrap.querySelector(".result");
+        const resultSpan = numgenWrap.querySelectorAll(".result span");
+
+        btnInput.addEventListener("click",() => {
+            const numbers = new Set();
+            for(let i = 0; numbers.size < 6; i++){
+                const resultNum= Math.floor((Math.random() * 45)+1);
+                numbers.add(resultNum);
+            }
+            const numbersResult = [...numbers];
+            for(let i = 0; i < 6; i++){
+                resultSpan[i].textContent = numbersResult[i]
+            }
+            numgenResult.style.display = "block"
+        });
+        console.log(resultSpan);
+
+    </script>
+</body>
+</html>
