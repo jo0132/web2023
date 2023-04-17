@@ -13,9 +13,13 @@
             /* background-color: #000; */
         }
         body {
-            background-image: url(https://images.unsplash.com/photo-1496264057429-6a331647b69e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80);
             background-size: cover;
             background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         body::before {
             content: '';
@@ -23,28 +27,42 @@
             left: 0;top: 0;
             width: 100%;
             height: 100vh;
-            z-index: -1;
-            background-color: rgba(0, 0, 0, 0.4);
-    
+            z-index: -1;    
         }
         .result__wrap {
             font-family: "GmarketSans";
-            width: 100%;
-            height: 100vh;
+            width: 600px;
+            height: 400px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: #fff;
+            color: #000;
+            /* border: 1px solid #fff; */
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 60px;
+            backdrop-filter: blur(5px)
+        }
+        .result__wrap::after {            
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 400px;
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 25px rgba(57, 57, 57, 0.5);
         }
         #result {
             /* width: 800px; */
             line-height: 2;
         }
         .quote {
-            font-size: 35px;
+            font-size: 30px;
         }
         .author {
-            font-size: 25px;
+            font-size: 20px;
         }
 
     </style>
@@ -74,13 +92,27 @@
                 // };
                 resultQuote.textContent = items[randomIndex].quote;
                 resultAuthor.textContent = "- "+items[randomIndex].author;
+                // document.body.style.transition= "all 2s";
             })
 
             .catch((err) => console.log(err));
         };
+        
+        const randomBg = (value) => {
+            fetch("https://source.unsplash.com/random/?yellow")
+            .then(res => {
+                document.body.style.backgroundImage = `url(${res.url})`
+                document.body.style.transition= "ease 2s";
+
+            })
+            .catch((err) => console.log(err));
+        };
 
         dataresult();
+        randomBg();
+        setInterval(randomBg, 10000);
         setInterval(dataresult, 10000);
+
 
   
         // console.log(items);
