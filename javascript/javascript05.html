@@ -84,6 +84,198 @@
 </ul>
             </div>
             <div class="main__sample">
+                <div id="sample01" class="sample">
+                    <h3>01. at()</h3>
+                    <div class="notice">"문자열".at(위치값)</div>
+                    <ul>
+                        <li>()안에 숫자를 index로 받아 문자열에 해당 되는 인덱스의 요소를 반환합니다.</li>
+                        <li>배열에도 사용가능하며 정수값을 받아 utf-16코드 단위로 구성된 새 string을 반환</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "Live positive".at("3");        // e
+    "Live positive".at("6");        // o(띄여쓰기 무시)
+    "Live positive".at("10");       // i
+    "Live positive".at("20");       // undefined
+    
+    "Live positive".at("-3");        // i
+    "Live positive".at("-6");        // s
+    "Live positive".at("-10");       // e(띄여쓰기 무시)
+    "Live positive".at("-20");       // undefined
+    
+    "Live positive".at("e");        // L(문자는 우연히 1로 변환하여 L을 받아드립니다.)
+    "Live positive".at("p");        // L
+    "Live positive".at("pos");      // L
+    
+    "Live positive".at("p9");       // L
+    "Live positive".at("p","o");    // L
+    "Live positive".at("Live");     // L
+    
+    "Live positive".at(0);          // L
+    "Live positive".at(4);          //   (띄여쓰기까지 포함되어 4번째 인 띄여쓰기가 출력됩)
+    "Live positive".at(10);         // i
+    "Live positive".at(20);         // undefined
+    
+    "Live positive".at(-4);         // t
+    "Live positive".at(-10);        // e
+    "Live positive".at(-20);        // undefined
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample 01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>02. charAt()</h3>
+                    <div class="notice">"문자열".charAt(위치값)</div>
+                    <ul>
+                        <li>String 차입의 데이터(문자열)에서 특정 문자르 char 타입으로 변환 할때 사용하는 함수</li>
+                        <li>문자열에서 특정 인덱스에 위치하는 유니코드 단일문자를 반환</li>
+                        <li>유니코드는 ASCII코드와 달리 16비트 이상의 다양한 비트 수를 사용하여 문자를 표현합니다</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "Live positive".charAt("3");        // e
+    "Live positive".charAt("6");        // o(띄여쓰기 무시)
+    "Live positive".charAt("10");       // i
+    "Live positive".charAt("20");       // undefined(아무것도 안나오지만 undefined를 출력한 것임)
+    
+    "Live positive".charAt("-3");        // undefined (음수 인덱스는 받을 수 없어 undefined가 출력됨)
+    "Live positive".charAt("-6");        // undefined 
+    "Live positive".charAt("-10");       // undefined
+    "Live positive".charAt("-20");       // undefined
+    
+    "Live positive".charAt("e");        // L(문자는 우연히 1로 변환하여 L을 받아드립니다.)
+    "Live positive".charAt("p");        // L
+    "Live positive".charAt("pos");      // L
+    
+    "Live positive".charAt("p9");       // L
+    "Live positive".charAt("p","o");    // L
+    "Live positive".charAt("Live");     // L
+    
+    "Live positive".charAt(0);          // L
+    "Live positive".charAt(4);          //   (띄여쓰기까지 포함되어 4번째 인 띄여쓰기가 출력됩)
+    "Live positive".charAt(10);         // i
+    "Live positive".charAt(20);         // undefined
+    
+    "Live positive".charAt(-4);         // undefined (음수는 받을 수 없으므로)
+    "Live positive".charAt(-10);        // undefined
+    "Live positive".charAt(-20);        // undefined
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample 02 -->
+
+                <div id="sample03" class="sample">
+                    <h3>03. charCodeAt()</h3>
+                    <div class="notice">"문자열".charCodeAt(위치값)</div>
+                    <ul>
+                        <li>index에 해당하는 문자의 UTF-16 코드 값을 리턴합니다.</li>
+                        <li>0에서 65535 사이의 숫자를 반환</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "Live positive".charCodeAt("3");        // e = 101
+    "Live positive".charCodeAt("6");        // o = 111(띄여쓰기 무시)
+    "Live positive".charCodeAt("10");       // i = 105
+    "Live positive".charCodeAt("20");       // NaN(아무것도 안나오지만 NaN를 출력한 것임)
+
+    "Live positive".charCodeAt("-3");        // NaN (음수 인덱스는 받을 수 없어 NaN가 출력됨)
+    "Live positive".charCodeAt("-6");        // NaN 
+    "Live positive".charCodeAt("-10");       // NaN
+    "Live positive".charCodeAt("-20");       // NaN
+
+    "Live positive".charCodeAt("e");        // L = 76(정상적인 결과값이 아님/다른 브라우저에서는 원래라면 NaN을 반환함)
+    "Live positive".charCodeAt("p");        // L = 76(정상적인 결과값이 아님)
+    "Live positive".charCodeAt("pos");      // L = 76(정상적인 결과값이 아님)
+
+    "Live positive".charCodeAt("p9");       // L = 76(정상적인 결과값이 아님)
+    "Live positive".charCodeAt("p","o");    // L = 76(정상적인 결과값이 아님)
+    "Live positive".charCodeAt("Live");     // L = 76(정상적인 결과값이 아님)
+    "Live positive".charCodeAt("Live positive rrr")      // L = 76(정상적인 결과값이 아님)
+
+    "Live positive".charCodeAt(0);          // L = 76
+    "Live positive".charCodeAt(4);          // p = 32(띄여쓰기 무시)
+    "Live positive".charCodeAt(10);         // i = 105
+    "Live positive".charCodeAt(20);         // NaN
+
+    "Live positive".charCodeAt(-4);         // NaN
+    "Live positive".charCodeAt(-10);        // NaN
+    "Live positive".charCodeAt(-20);        // NaN
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample 03 -->
+
+                <div id="sample04" class="sample">
+                    <h3>04. codePointAt()</h3>
+                    <div class="notice">"문자열".codePointAt(위치값)</div>
+                    <ul>
+                        <li>문자열에서 인덱스에 대한 유니코드 포인트 값이 아닌 정수를 반환하빈다.</li>
+                        <li>주어진 인덱스 위치의 코드 포인트를 반환하며 이모지까지도 정확하고 올바르게 잔환할수 있습니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    "Live positive".codePointAt("3");        // e = 101
+    "Live positive".codePointAt("6");        // o = 111(띄여쓰기 무시)
+    "Live positive".codePointAt("10");       // i = 105
+    "Live positive".codePointAt("20");       // undefined(아무것도 안나오지만 undefined를 출력한 것임)
+    
+    "Live positive".codePointAt("-3");        // undefined (음수 인덱스는 받을 수 없어 undefined가 출력됨)
+    "Live positive".codePointAt("-6");        // undefined 
+    "Live positive".codePointAt("-10");       // undefined
+    "Live positive".codePointAt("-20");       // undefined
+    
+    "Live positive".codePointAt("e");        // L = 76(정상적인 결과값이 아님/다른 브라우저에서는 원래라면 undefined을 반환함)
+    "Live positive".codePointAt("p");        // L = 76(정상적인 결과값이 아님)
+    "Live positive".codePointAt("pos");      // L = 76(정상적인 결과값이 아님)
+    
+    "Live positive".codePointAt("p9");       // L = 76(정상적인 결과값이 아님)
+    "Live positive".codePointAt("p","o");    // L = 76(정상적인 결과값이 아님)
+    "Live positive".codePointAt("Live");     // L = 76(정상적인 결과값이 아님)
+    "Live positive".codePointAt("Live positive rrr")      // L = 76(정상적인 결과값이 아님)
+    "🤔".charPointAt("🤔")                 // 1293000
+    
+    "Live positive".codePointAt(0);          // L = 76
+    "Live positive".codePointAt(4);          // p = 32(띄여쓰기 무시)
+    "Live positive".codePointAt(10);         // i = 105
+    "Live positive".codePointAt(20);         // undefined
+    
+    "Live positive".codePointAt(-4);         // undefined
+    "Live positive".codePointAt(-10);        // undefined
+    "Live positive".codePointAt(-20);        // undefined 
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample 04 -->
+
+                <div id="sample05" class="sample">
+                    <h3>05. concat()</h3>
+                    <div class="notice">"문자열".concat('원하는 문자열', 매개변수)</div>
+                    <ul>
+                        <li>문자열이나 배열을 이어붙이는 역할을 합니다.</li>
+                        <li>기존의 문자열이나 배열을 수정하지 않고 새로운 문자열이나 배열을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="Language-js">{
+    const str1 = 'Live';
+    const str2 = 'positive';
+    const str3 = str1.concat(' ',str2);
+    console.log(str3);  // Live positive
+    
+    const arr1 = [1, 2, 3];
+    const arr2 = [4, 5, 6];
+    const arr3 = arr1.concat(arr2);
+    console.log(arr3); // [1, 2, 3, 4, 5, 6]
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample 05 -->
+
                 <div id="sample06" class="sample">
                     <h3>06. includes()</h3>
                     <div class="notice">"문자열".indexOf(검색값, [위치값])</div>
@@ -161,6 +353,31 @@
                     </div>
                 </div>
                 <!-- sample 08 -->
+                
+                <div id="sample09" class="sample">
+                    <h3>09. localeCompare()</h3>
+                    <div class="notice">"기준 문자열".localeCompare(위치를 찾고자 하는 문자열)</div>
+                    <ul>
+                        <li>참조조문자열이 정렬 순으로 지정딘 문자열 앞 혹은 뒤에 오는지 또는 동일한 문자열인지 나타내는 숫치를 반환</li>
+                        <li>앞에 있으면 -1 뒤에 있으면 1 동일한 위치(같은 변수)면 0</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    const str1 = 'Live';
+    const str2 = 'positive';
+    const str3 = 'javascript';
+    
+    console.log(str1.localeCompare(str2)); // -1
+    console.log(str2.localeCompare(str1)); // 1
+    console.log(str2.localeCompare(str3)); // 1
+    console.log(str3.localeCompare(str2)); // -1
+    console.log(str1.localeCompare(str1)); // 0
+    console.log(str1.localeCompare(str3)); // 1
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample 09 -->
 
                 <div id="sample10" class="sample">
                     <h3>10. match()</h3>
@@ -189,6 +406,120 @@
                     </div>
                 </div>
                 <!-- sample 10 -->
+
+                <div id="sample12" class="sample">
+                    <h3>12. normalize()</h3>
+                    <div class="notice">"문자열".normalize(정규식표현)</div>
+                    <ul>
+                        <li>주어진 문자열을 유니코드 정규화 방식에 따라 정규화된 형태로 반환합니다.</li>
+                        <li>주어진 값이 문자열이 아닌 경우에는 문자열로 변환후 정규화를 합니다.</li>
+
+                        <li>NFC(normalization form C): 정준 분해를 수행한 후 재결합하여 정규화된 문자열을 반환합니다.</li>
+                        <li>NFD(normalization form D): 정준 분해만 수행한 후 반환합니다.</li>
+                        <li>NFKC(normalization form KC): NFC와 비슷하게 동작하지만, 호환성 문자를 정규화합니다.</li>
+                        <li>NFKD(normalization form KD): NFD와 비슷하게 동작하지만, 호환성 문자를 정규화합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    const str = 'Live';
+
+    console.log(str.normalize());           // Live
+    console.log(str.normalize('NFC'));      // Live (어째서? 이게 맞나?)
+    console.log(str.normalize('NFD'));      // Live
+    console.log(str.normalize('NFKC'));     // Live
+    console.log(str.normalize('NFKD'));     // Live
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample 12 -->
+
+                <div id="sample13" class="sample">
+                    <h3>13. padEnd()</h3>
+                    <div class="notice">"문자열".padEnd(매개변수,'추가하고자하는 문자열')</div>
+                    <ul>
+                        <li>현재 문자열에 다른 문자열을 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다.</li>
+                        <li>채워넣기는 대상 문자열의 끝(우측)부터 적용됩니다.</li>
+                        <li>기존 문자열 길이 + 남는 자리</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    const str = 'Live';
+
+    console.log(str.padEnd(1));           // 'Live'
+    console.log(str.padEnd(5));           // 'Live '
+    console.log(str.padEnd(10));           // 'Live      '
+    console.log(str.padEnd(1,'?'));           // 'Live'
+    console.log(str.padEnd(5,'?'));           // 'Live?'
+    console.log(str.padEnd(10,'?'));           // 'Live??????'
+    
+    console.log(str.padEnd(-1));           // 'Live'
+    console.log(str.padEnd(-5));           // 'Live'
+    console.log(str.padEnd(-10));           // 'Live'
+    console.log(str.padEnd(-1,'?'));           // 'Live'
+    console.log(str.padEnd(-5,'?'));           // 'Live'
+    console.log(str.padEnd(-10,'?'));           // 'Live'
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample 13 -->
+
+                <div id="sample14" class="sample">
+                    <h3>14. padStart()</h3>
+                    <div class="notice">"문자열".padStart(매개변수,'추가하고자하는 문자열')</div>
+                    <ul>
+                        <li>현재 문자열에 다른 문자열을 채워, 주어진 길이를 만족하는 새로운 문자열을 반환합니다.</li>
+                        <li>채워넣기는 대상 문자열의 시작(좌측)부터 적용됩니다.</li>
+                        <li>기존 문자열 길이 + 남는 자리</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    const str = 'Live';
+
+    console.log(str.padStart(1));           // 'Live'
+    console.log(str.padStart(5));           // ' Live'
+    console.log(str.padStart(10));           // '      Live'
+    console.log(str.padStart(1,'?'));           // 'Live'
+    console.log(str.padStart(5,'?'));           // '?Live'
+    console.log(str.padStart(10,'?'));           // '??????Live'
+    
+    console.log(str.padStart(-1));           // 'Live'
+    console.log(str.padStart(-5));           // 'Live'
+    console.log(str.padStart(-10));           // 'Live'
+    console.log(str.padStart(-1,'?'));           // 'Live'
+    console.log(str.padStart(-5,'?'));           // 'Live'
+    console.log(str.padStart(-10,'?'));           // 'Live'
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample 14 -->
+
+                <div id="sample15" class="sample">
+                    <h3>15. repeat()</h3>
+                    <div class="notice">"문자열".repeat(매개변수,'추가하고자하는 문자열')</div>
+                    <ul>
+                        <li>문자열을 주어진 횟수마큼 반복해 새로운 문자열을 반환합니다.</li>
+                        <li>하나의 매개변수를 받으며 이 매개변수는 반복할 횟수를 나타내며 0이상의 정수여야합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">{
+    cconst str = 'Live';
+
+    console.log(str.repeat(1));           // 'Live'
+    console.log(str.repeat(5));           // ' LiveLiveLiveLiveLive'
+    console.log(str.repeat(10));           // 'LiveLiveLiveLiveLiveLiveLiveLiveLiveLive'
+    console.log(str.repeat(1,'?'));           // 'Live'
+    console.log(str.repeat(5,'?'));           // 'LiveLiveLiveLiveLive'
+    console.log(str.repeat(10,'?'));           // 'LiveLiveLiveLiveLiveLiveLiveLiveLiveLive'
+    
+    // console.log(str.repeat(-1));           // ERROR(음수이기때문에)
+}
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample 14 -->
 
                 <div id="sample18" class="sample">
                     <h3>18. search()</h3>
