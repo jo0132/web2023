@@ -42,7 +42,7 @@
         </div>
     </main>
     <footer id="footer">
-        <div class="info">현재 윈도루를 사용하고 있으며 화면크기는1920 X1060입니다. </div>
+        <div class="info">roading...</div>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -50,51 +50,56 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
 
+        function printAgent(){
+            // 운영체제 정보 알아내기
+            let os = navigator.userAgent.toLowerCase();
+            let sw = screen.width;
+            let sh = screen.height;
+            let info = document.querySelector(".info");
+            
+
+            if (os.indexOf("windows") >= 0) {
+            info.innerHTML = "현재 윈도우를 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+            } else if (os.indexOf("macintosh") >= 0) {
+            info.innerHTML = "현재 맥을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+            } else if (os.indexOf("iphone") >= 0) {
+            info.innerHTML = "현재 아이폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+            } else if (os.indexOf("android") >= 0) {
+            info.innerHTML = "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
+            }
+
+
+        }
+
         // $( "#draggable3" ).draggable({ containment: ".icon_box", scroll: false });
         $(".icon1").draggable({
             containment: ".icon_box", scroll: false,
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse01.png")
+                $(".cursor img").attr("src", "img/game_mouse01.png");
+                $("#header").css("background-color", "#ff3e3e63");
             },
         });
         $(".icon2").draggable({
             containment: ".icon_box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse02.png")
+                $("#header").css("background-color", "#415dff63");
             },
         });
         $(".icon3").draggable({
             containment: ".icon_box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse03.png")
+                $("#header").css("background-color", "#41ff4b63");
             },
         });
         $(".icon4").draggable({
             containment: ".icon_box", scroll: false,
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse04.png")
+                $("#header").css("background-color", "#ffeb3b63");
             },
         });
-
-        function printAgent(){
-            // 운영체제 정보 알아내기
-            let os = navigator.userAgent.toLowerCase();
-            let sw = screen.width;
-            let sh = screen.height;
-            let infor = document.getElementsByClassName(".info");
-
-            if (os.indexOf("windows") >= 0) {
-            infor.innerHTML = "현재 윈도우를 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
-            } else if (os.indexOf("macintosh") >= 0) {
-            infor.innerHTML = "현재 맥을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
-            } else if (os.indexOf("iphone") >= 0) {
-            infor.innerHTML = "현재 아이폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
-            } else if (os.indexOf("android") >= 0) {
-            infor.innerHTML = "현재 안드로이드 폰을 사용하고 있으며, 화면 크기는 " + sw + "x" + sh + " 입니다."
-            }
-
-            // console.log(os);
-        }
 
 
         function printTime(){
@@ -104,8 +109,13 @@
                 (now.getMonth()+1)+"월 " +
                 now.getDate()+"일 " +
                 now.getHours()+"시 " +
-                now.getMinutes()+"분";
+                now.getMinutes()+"분" +
+                now.getSeconds()+"초";
         }
+
+
+
+
 
         // 페이지 로딩 후
         window.onload = function(){
@@ -121,6 +131,24 @@
             printAgent();   //하단 중앙에
  
         }
+
+        document.querySelector(".icon1").addEventListener("click", ()=>{
+            let audio = new Audio('./audio/1.wav');
+            audio.play();
+        });
+        document.querySelector(".icon2").addEventListener("click", ()=>{
+            let audio = new Audio('./audio/2.wav');
+            audio.play();
+        });
+        document.querySelector(".icon3").addEventListener("click", ()=>{
+            let audio = new Audio('./audio/3.wav');
+            audio.play();
+        });
+        document.querySelector(".icon4").addEventListener("click", ()=>{
+            let audio = new Audio('./audio/4.mp3');
+            audio.play();
+        });
+
 
 
     </script>
