@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형02</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1,h2,h3,h4,h5,h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .Gmarket {
+            font-family: 'GmarketSans';
+        }
+        .text__wrap {
+            position: absolute;
+            display: flex;
+            top: 120px;
+            left: 380px;
+        }
+        .text__header {}
+        .text__header span {
+            display: inline-block;
+            width: 150px;
+            padding: 3px 0px;
+            background-color: #f34;
+            border-radius: 30px;
+            margin: 0 243px 10px 0;
+            color: #fff;
+            text-align: center;   
+        }
+        .text__header h1 {
+            font-size: 50px;
+            text-align: left;
+            line-height: 60px;
+            width: 250px;
+            height: 120px;
+            margin-bottom: 26px;
+            font-weight: 1000;
+
+        }
+        .text__header p {
+            width: 349px;
+            height: 81px;
+            font-size: 18px;
+            text-align: left;
+            line-height: 27px;
+        }
+        .text__main {
+            width: 767px;
+            height: 441px;
+            justify-content: space-between;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .text__main div {
+            width: 45%;
+            position: relative;
+            padding: 90px 0px 20px 20px;
+        }
+        .text__main div h4 {
+            font-size: 24px;
+            text-align: left;
+        }
+        .text__main div p {
+            width: 373px;
+            height: 81px;
+            font-size: 18px;
+            text-align: left;
+            line-height: 27px;
+            margin-top: 20px;
+            font-weight: 100;
+        }
+        .text__con::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: #AF2222;
+            background-image: url(../asset/img/textType01_01.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            border-radius: 50%;
+        }
+        .text__con.t1::before {
+            background-image: url(../asset/img/textType01_01.png);
+            background-color: #e0ffdf;
+        }
+        .text__con.t2::before {
+            background-image: url(../asset/img/textType01_02.png);
+            background-color: #DEFFFB;
+        }
+        .text__con.t3::before {
+            background-image: url(../asset/img/textType01_03.png);
+            background-color: #E3E6FF;
+        }
+        .text__con.t4::before {
+            background-image: url(../asset/img/textType01_04.png);
+            background-color: #FBE5FF;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="text__wrap container Gmarket">
+        <div class="text__header">
+            <span>FRONTEND</span>
+            <h1>
+                프론트앤드
+                전문과정
+            </h1>
+            <p>
+                프론트앤드 개발자로 취업하기 위한<br>
+                전문 과정입니다.<br>
+                여러분들도 도전해보세요!<br>
+            </p>
+        </div>
+        <div class="text__main">
+            <div class="text__con t1">
+                <h4>웹 디자인</h4>
+                <p>
+                    웹디자이너가 포함된 웹 및 멀티미디어 디자이너는 다른 직업과 비교하여 임금과 복리후생이 낮은 퍼블리싱은 웹 사이트를 제작할
+                </p>
+            </div>
+            <div class="text__con t2">
+                <h4>웹 퍼블리셔</h4>
+                <p>
+                    퍼블리싱은 웹 사이트를 제작할 때, 웹 디자이너가 디자인한 것을 웹 표준성과 접근성에 부합하도록 재정하였다.
+                </p>
+            </div>
+            <div class="text__con t3">
+                <h4>프론트앤드 개발자</h4>
+                <p>
+                    사이트와 상호작용하는 모든 부분에 대한 개발, 관리, 유지 보수를 하는 것 솔루션의 프로세스를 개발합니다.
+                </p>
+            </div>
+            <div class="text__con t4">
+                <h4>백앤드 개발자</h4>
+                <p>
+                    용어 자체에서 알 수 있듯이, 백엔드는 웹사이트나 웹 애플리케이션 또는 모바일 솔루션의 프로세스와 관련된입니다.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

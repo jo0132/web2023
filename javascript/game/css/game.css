@@ -21,7 +21,7 @@ body {
     width: 100%;
     padding: 10px;
     background-color: #ffeb3b63;
-
+    font-family: "Sam3KRFont";
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,6 +46,7 @@ body {
     height: 100vh;
     /* background-color: #fff; */
     padding: 60px 10px 10px;
+    font-family: "Sam3KRFont";
 }
 .icon_box > div {
     margin-top: 20;
