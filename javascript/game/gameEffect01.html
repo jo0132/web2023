@@ -48,42 +48,55 @@
             <div class="music__inner">
                 <div class="music__header">
                     <span class="left"></span>
-                    <!-- <h2>노지의 추천 뮤직</h2> -->
+                    <h2>MUSIC PLAYER</h2>
                     <span class="right"></span>
                 </div>
                 <div class="music__contents">
                     <div class="music__view">
-                        <div class="image">
+                        <div class="images">
                             <img src="img/music_image01.png" alt="음악">
                         </div>
                     </div>
-                    <div class="title">
-                        <h3>노래 제목</h3>
-                        <p>노래 작가 이름</p>
-                    </div>
-                    <div class="progess">
-                        <div class="bar">
-                            <audio src="audio/1.wav"></audio>
-                        </div>
-                        <div class="timer">
-                            <span class="current">0:00</span>
-                            <span class="current">3:55</span>
-                        </div>
-                    </div>
                     <div class="music__control">
-                        <span>전체 반복</span>
-                        <span>이전곡 재생</span>
-                        <span>재생</span>
-                        <span>다음곡 재생</span>
-                        <span>재생 목록</span>
-                        <!-- <span>한곡 반곡</span>
-                        <span>랜덤 반복</span>
-                        <span>정지 반복</span> -->
+                        <div class="title">
+                            <h3>노래 제목</h3>
+                            <p>작곡가 이름</p>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio id="main-audio" src="audio/1.wav"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="current">0:00</span>
+                                <span class="duration">3:32</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span>
+                                <i class="repeat" id="control-repeat" title="전체 반복"></i>
+                            </span>
+                            <span>
+                                <i class="prev" id="control-prev" title="이전곡 재생"></i>
+                            </span>
+                            <span>
+                                <i class="play" id="control-play" title="재생"></i>
+                            </span>
+                            <span>
+                                <i class="next" id="control-next" title="다음 곡 재생"></i>
+                            </span>
+                            <span>
+                                <i class="list" id="control-list" title="재생 목록"></i>
+                            </span>
+                            <!-- <span class="repeat_one">반복 재생</span>
+                            <span class="shuffle">랜덤 재생</span>
+                            <span class="stop">정지</span> -->
+                        </div>
                     </div>
                 </div>
                 <div class="music__footer"></div>
             </div>
         </div>
+
     </main>
     <footer id="footer">
         <div class="info">roading...</div>
