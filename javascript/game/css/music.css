@@ -10,7 +10,7 @@
 
     .music__inner {
         width: 350px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(251, 133, 253, 0.3);
         backdrop-filter: blur(20px);
         position: absolute;
         left: 50%;
@@ -27,7 +27,7 @@
         font-size: 14px;
         padding-top: 3px;
         font-family: 'Poppins';
-        font-weight: 200;
+        font-weight: 500;
     }
     .music__header .left {}
     .music__header .right {}
@@ -40,9 +40,10 @@
         padding: 0 20px 20px 20px;
         width: 90%;
     }
-    .music__view .image {
+    .music__view .images {
+
     }
-    .music__view .image img {
+    .music__view .images img {
         border-radius: 20px;
         box-shadow: 0 20px 50px rgba(246, 50, 50, 0.4);
     }
@@ -68,15 +69,15 @@
         margin-bottom: 20px;
     }
     .music__control .progress {
-        padding: 20px;
-        /* background-color: #ccc; */
+        /* padding: 20px; */
+        background-color: #ccc;
         height: 5px;
         border-radius: 3px;
     }
     .music__control .progress .bar {
-        width: 50%;
+        width: 0%;
         height: 5px;
-        background-color: rgb(152, 220, 245);
+        background-color: rgb(204, 0, 255);
         border-radius: 3px;
     }
     .music__control .progress .timer {
@@ -102,33 +103,49 @@
     width: 40px;
     height: 40px;
     }
+    .music__control .control span:active {
+        background-color: #eaeaea;
+        border-radius: 50%;
+        z-index: 500;
+    }
 
     .music__control .control span i {
-        margin: 8px;
-        width: 24px;
-        height: 24px;
+        margin-right: 20px;
+        width: 40px;
+        height: 40px;
         display: block;
         background-image: url(../img/music_icon.svg);
+        background-size: 500px;
     }
 
     .music__control .control span i.repeat {
         background-position: 0 0;
     }
     .music__control .control span i.prev {
-        background-position: -24px 0;
+        background-position: -40px 0;
     }
     .music__control .control span i.play {
-        background-position: -24px -24px;
+        margin-left: 1.5px;
+        margin-top: 1px;
+        background-position: -120px 0;
     }
     .music__control .control span:nth-child(3){
         border-radius: 50%;
         background-color: #c23eff;
     }
+
+   
     .music__control .control span i.next {
-        background-position: -48px 0;
+        background-position: -80px 0;
     }
     .music__control .control span i.list {
-        background-position: -72px 0;
+        background-position: -200px 0;
+    }
+    .music__control .control span i.repeat_one {}
+    .music__control .control span i.shuffle {}
+    .music__control .control span i.stop {
+
+        background-position: -160px 0;
     }
 
 
