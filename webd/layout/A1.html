@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .main__wrap {
+            width: 1200px;
+            height: 700px;
+            margin: 0 auto;
+            background-color: #111;
+        }
+        #header {
+            height: 100px;
+            background-color: #222;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .logo {
+            width: 20%;
+            height: inherit;
+            background-color: #333;
+        }
+        .nav {
+            height: 50px;
+            width: 60%;
+            background-color: #444;
+            margin: 25px;
+        }
+        #slider {
+            display: block;
+            height: 300px;
+            background-color: #555;
+        }
+        #contents {
+            height: 200px;
+            background-color: #666;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .con1 {
+            width: 33.333%;
+            height: inherit;
+            background-color: #121212;
+        }
+        .con2 {
+            width: 33.333%;
+            height: inherit;
+            background-color: #313131;
+        }
+        .con3 {
+            width: 33.333%;
+            height: inherit;
+            background-color: #454545;
+        }
+
+        #footer {
+            height: 100px;
+            background-color: #777;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flogo {
+            width: 20%;
+            background-color: #888;
+        }
+        .fcopy {
+            width: 60%;
+            background-color: #999;
+        }
+        .sns {
+            width: 20%;
+            background-color: #1313;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main__wrap">
+        <header id="header">
+            <div class="logo"></div>
+            <nav class="nav"></nav>
+        </header>
+        <sectoion id="slider"></sectoion>
+        <section id="contents">
+            <div class="con1"></div>
+            <div class="con2"></div>
+            <div class="con3"></div>
+        </section>
+        <footer id="footer">
+            <div class="flogo"></div>
+            <div class="fcopy"></div>
+            <div class="sns"></div>
+        </footer>
+    </div>
+</body>
+</html>
