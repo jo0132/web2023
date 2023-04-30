@@ -54,6 +54,10 @@
             background-color: #f1deff;
             display: block;
         }
+        .nav > ul > li > a:active,
+        .nav > ul > li > a:hover {
+            background-color: #eaccff;
+        }
         .nav > ul > li > ul {
             position: absolute;
             left: 0;
@@ -66,6 +70,9 @@
             text-align: center;
             padding: 10px;
             display: block;
+        }
+        .nav > ul > li > ul > li > a:hover {
+            background-color: #d694d4;
         }
 
 
@@ -176,5 +183,21 @@
         <div class="footer3"></div>
     </footer>
 </div>
+<script>
+    document.querySelectorAll(".nav > ul > li").forEach(li => {
+        li.addEventListener("mouseover", () => {
+            // document.querySelector(".nav > ul > li > ul").style.display = "block";
+            document.querySelectorAll(".nav > ul > li > ul").forEach(e => {
+                e.style.display = "block";
+            });
+        });
+        li.addEventListener("mouseout", () => {
+            document.querySelectorAll(".nav > ul > li > ul").forEach(e => {
+                e.style.display = "none";
+            });
+        });
+
+    });
+</script>
 </body>
 </html>
