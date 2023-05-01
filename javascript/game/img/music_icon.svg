@@ -7,6 +7,8 @@
 <path d="M53 27L53 13" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M93 12L103 20L93 28V12Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M107 13V27" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M332 12L348 28" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M348 12L332 28" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M211 28.15L213.347 22.45M224.3 28.15L221.953 22.45M221.953 22.45L220.975 20.075L217.65 12L214.325 20.075L213.347 22.45M221.953 22.45H213.346M222.4 12.95H230M224.3 17.7H230M226.2 22.45H230M228.1 27.2H230" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M266 28.9998L269 25.9998L266 22.9998" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M266 13L269 16L266 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
