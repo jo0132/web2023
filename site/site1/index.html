@@ -21,9 +21,13 @@
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/stlye.css">
 
 
+    <style>
+
+    </style>
 </head>
 <body>
     <div id="skip">
@@ -60,10 +64,63 @@
     <!-- headerType -->
     
     <main id="mainType">
-        <section id="sliderType" class="nexon hide">
+        <section id="sliderType" class="nexon">
             <h2 class="blind">슬라이드영역</h2>
             <div class="slider__inner">
-                <div class="slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">EVENT</span>
+                                    <h3 class="title">아침식사를 합니다🥪</h3>
+                                    <P class="desc">아침밥은 하루를 시작하기 위해 필요한 에너지를 제공하고, 신진대사를 촉진하여 체내 기능을 개선시키는 데 
+                                        도움이 됩니다. 또한, 혈당 수준을 안정시켜주어 집중력과 기억력을 개선시켜줄 수 있습니다.</P>
+                                    <div class="btn">
+                                        <a href="#">자세히보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="slider__info container">
+                                    <span class="small">EVENT</span>
+                                    <h3 class="title">아침식사를 합니다🥪</h3>
+                                    <P class="desc">아침밥은 하루를 시작하기 위해 필요한 에너지를 제공하고, 신진대사를 촉진하여 체내 기능을 개선시키는 데 
+                                        도움이 됩니다. 또한, 혈당 수준을 안정시켜주어 집중력과 기억력을 개선시켜줄 수 있습니다.</P>
+                                    <div class="btn">
+                                        <a href="#">자세히보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="slider__info container">
+                                    <span class="small">EVENT</span>
+                                    <h3 class="title">아침식사를 합니다🥪</h3>
+                                    <P class="desc">아침밥은 하루를 시작하기 위해 필요한 에너지를 제공하고, 신진대사를 촉진하여 체내 기능을 개선시키는 데 
+                                        도움이 됩니다. 또한, 혈당 수준을 안정시켜주어 집중력과 기억력을 개선시켜줄 수 있습니다.</P>
+                                    <div class="btn">
+                                        <a href="#">자세히보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- <div class="slider">
                     <div class="slider__info container">
                         <span class="small">EVENT</span>
                         <h3 class="title">아침식사를 합니다🥪</h3>
@@ -85,7 +142,7 @@
                         <a href="#"class="play"><span class="blind">플레이</span></a>
                         <a href="#"class="stop"><span class="blind">정지</span></a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         <!-- sliderType -->
@@ -312,6 +369,43 @@
         </div>
     </footer>
     <!-- footerType -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable : true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        const btnStop = document.querySelector(".swiper-button-stop");
+        const btnStart = document.querySelector(".swiper-button-play");
+
+        btnStart.style.display = "none";
+        btnStart.addEventListener("click",()=>{
+            swiper.autoplay.start();
+            btnStop.style.display = "block";
+            btnStart.style.display = "none";
+        });
+        btnStop.addEventListener("click",()=>{
+            swiper.autoplay.stop();
+            btnStop.style.display = "none";
+            btnStart.style.display = "block";
+        });
+    </script>
 
 </body>
 </html>
