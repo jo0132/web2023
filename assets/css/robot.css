@@ -1,19 +1,28 @@
 @import url('https://webfontworld.github.io/DungGeunMo/DungGeunMo.css');
 
+.header_custom {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    top: 150px;
+}
+
 .robot {
     /* width: 100vw; */
-    height: 30vh;
+    height: 20vh;
     margin-bottom: 40px;
     /* background: #34496a; */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: static;
+    z-index: -100000;
 }
   
 #webgl {
-    width: 800px;
-    height: 600px;
+    width: 50vh;
+    height: 50vh;
     position: absolute;
     z-index: -1;
 }
@@ -27,15 +36,15 @@
 }
   
 #bg-box {
-    width: 802px;
-    height: 602px;
+    width: 50vh;
+    height: 50vh;
     position: absolute;
     z-index: -1;
 }
   
 .svg-box {
-    width: 800px;
-    height: 600px;
+    width: 50vh;
+    height: 50vh;
     position: absolute;
     z-index: 1;
   }
