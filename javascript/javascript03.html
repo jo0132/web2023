@@ -77,9 +77,11 @@
                     <li><a href="#">23. 함수 유형 : 파라미터 함수</a></li>
                     <li><a href="#">24. 함수 유형 : 아규먼트 함수</a></li>
                     <li><a href="#">25. 함수 유형 : 재귀 함수</a></li>
-                    <li><a href="#">26. 함수 유형 : 콜백 함수</a></li>
-                    <li><a href="#">27. 함수 유형 : promise 함수</a></li>
+                    <li><a href="#">26. 함수 유형 : 콜백 함수(다른 함수에 인수로 넘겨지는 함수)</a></li>
+                    <li><a href="#">27. 함수 유형 : 콜백 함수(반복문)</a></li>
+                    <li><a href="#">28. 함수 유형 : 콜백 함수(동기/비동기)</a></li>
 
+                    <li><a href="#">01. 함수 유형 : promise 함수</a></li>
                     <li><a href="#">01. 함수 유형 : 내부 함수</a></li>
                     <li><a href="#">01. 함수 유형 : 내부 함수 : 스코프, 클로저</a></li>
 
@@ -963,7 +965,112 @@ document.write("<br>")
     <script>hljs.highlightAll();</script>
     <script>
 
-        //27. 함수 유형 : promise 함수
+        // //26
+        // {
+        //     // function func1(){
+        //     //     document.write("1.함수 실행<br>");
+        //     // }
+        //     // function func2(){
+        //     //     document.write("2.함수 실행<br>");
+        //     // }
+        //     // func1()
+        //     // func2()
+
+        //     function func(){
+        //         document.write("2.함수 실행");
+        //     }
+        //     function callback(str){
+        //         document.write("1. 함수 실행");
+        //         str();
+        //     }
+        //     callback(func);
+        // }
+        //27.콜백함수 : 반복문
+        // {
+        //     function func(index){
+        //         console.log("함수가 실행되었습니다."+index);
+        //     }
+        //     function callback(num){
+        //         for(let i=1; i<=10; i++){                  
+        //             num(i);
+        //         }
+        //     }
+        //     callback(func);
+        // }
+        //28. 함수 유형 : 콜백 함수(동기/비동기)
+        {
+            // //01
+            // function funcA(){
+            //     console.log("funcA가 실행되었습니다.");
+            // }
+            // function funcB(){
+            //     console.log("funcB가 실행되었습니다.");
+            // }
+
+            // funcA();
+            // funcB();
+            // // a b
+
+            // 02
+            // function funcA(){
+            //     setTimeout(()=>{
+            //         console.log("funcA가 실행되었습니다.");
+            //     },1000)
+            // }
+            // function funcB(){
+            //     console.log("funcB가 실행되었습니다.");
+            // }
+
+            // funcA();
+            // funcB();
+            //  // b a
+
+            // //03
+            // function funcA(callback){
+            //     setTimeout(()=>{
+            //         console.log("funcA가 실행되었습니다.");
+            //         callback();
+            //     },1000)
+            // }
+            // function funcB(){
+            //     console.log("funcB가 실행되었습니다.");
+            // }
+            // funcA(function(){
+            //     funcB();
+            // })
+
+            // 04
+            function funcA(callback){
+                setTimeout(()=>{
+                    console.log("funcA가 실행되었습니다.");
+                    callback();
+                },1000)
+            }
+            function funcB(callback){
+                setTimeout(()=>{
+                    console.log("funcB가 실행되었습니다.");
+                    callback();
+                },1000)
+            }
+            function funcC(callback){
+                setTimeout(()=>{
+                    console.log("funcC가 실행되었습니다.");
+                    callback();
+                },1000)
+            }
+            function funcD(){
+                setTimeout(()=>{
+                    console.log("funcD가 실행되었습니다.");
+                },1000)
+            }
+            funcA(function(){
+                funcB(function(){
+                    funcC(function(){
+                        funcD;
+                    })
+                })
+            })
+        }
 
     </script>
 </body>
