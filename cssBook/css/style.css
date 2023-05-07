@@ -84,6 +84,7 @@
 /* footer */
 #footer {}
 
+
 @media (max-width: 1200px) {
     .box__wrap__header .btn span {
         width: 4vw;

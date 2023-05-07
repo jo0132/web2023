@@ -40,25 +40,25 @@
         #header h1 a {
             font-size: 80px;
             font-weight: 800;
-            color: #0243f1;
+            color: #AF6EE3;
         }
         #header nav ul li {
             display: inline;
         }
         #header nav ul li a {
-            border: 1px dashed #0243f1;
-            color: #0243f1;
+            border: 1px dashed #AF6EE3;
+            color: #AF6EE3;
             padding: 10px 20px;
             margin: 6px 3px;
             display: inline-block;
             transition: background-color 0.3s, color 0.3s;
         }
         #header nav ul li a:hover {
-            background-color: #0243f1;
+            background-color: #AF6EE3;
             color: #fff;
         }
         #header nav ul li.active a {
-            background-color: #0243f1;
+            background-color: #AF6EE3;
             color: #fff;
         }
 
@@ -88,6 +88,14 @@
             padding-bottom: 40px;
             border-bottom: 1px dashed #dcdcdc;
         }
+        .main__menu span {
+            display: inline-block;
+            padding: 0 10px;
+            margin: 10px 0;
+            font-size: 25px;
+            background-color: #AF6EE3;
+            color: #fff;
+        }
         .main__menu li {
             line-height: 2;
         }
@@ -96,7 +104,7 @@
         }
         .main__menu li strong::before {
             content: '';
-            background: #ff8080;
+            background: #d9abff;
             position: absolute;
             left: 0;
             bottom: 0;
@@ -117,9 +125,9 @@
         }
         .main__desc p {
             margin-bottom: 15px;
-            border-left: 5px solid #0243F1;
+            border-left: 5px solid #AF6EE3;
             padding: 12px 10px 10px 20px;
-            background-color: #F5F5F5;
+            background-color: #faf4ff;
         }
         .main__desc ul {
             padding-left: 15px;
@@ -128,7 +136,7 @@
         .main__desc li {
             list-style: square;
         }
-        .main__desc a {
+        .main__desc > a {
             display: block;
             border: 1px dotted #ccc;
             margin: 10px 0;
@@ -138,7 +146,7 @@
             transition: all 0.2s;
         }
         .main__desc a:hover {
-            border-color: #0243f1;
+            border-color: #AF6EE3;
             background-color: #dae4ff;
         }
 
@@ -172,7 +180,7 @@
             margin-bottom: 10px;
         }
         .main__sample .notice {
-            border-left: 5px solid #0243f1;
+            border-left: 5px solid #AF6EE3;
             padding: 13px 10px 10px 15px;
             background-color: #f6f6f6;
         }
@@ -193,7 +201,7 @@
             content: '';
             width: 5px;
             height: 5px;
-            background-color: #0243f1;
+            background-color: #AF6EE3;
             position: absolute;
             left: 0;
             top: 9px;
@@ -202,13 +210,13 @@
             width: 100%;
         }
         .main__sample table th{
-            background-color: #f5f5f5;
+            background-color: #AF6EE3;
             padding: 2px;
         }
 
         .main__sample table td{
             text-align: center;
-            border: 1px solid #f5f5f5;
+            border: 1px solid #f2e2ff;
             padding: 2px;
         }
         .main__sample table button{
