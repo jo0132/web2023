@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <style>
+        /* 한번에 나타나기 */
+        /* #parallax__wrap > section {
+            opacity: 0;
+            transition: all 0.3s;
+        }
+        #parallax__wrap > section.show {
+            opacity: 1;
+        } */
+        #parallax__wrap > section .parallax__item__num {
+            opacity: 0;
+            transform: translateY(200px);
+            transition: all 1s 0.1s cubic-bezier(0, 0.49, 0.25, 1);
+        }
+        #parallax__wrap > section .parallax__item__title {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.5s 0.2s cubic-bezier(0, 0.49, 0.25, 1);
+        }
+        #parallax__wrap > section .parallax_item__imgWrap {
+            opacity: 0;
+            transform: translateY(200px) rotate(30deg) skew(20deg);
+            transition: all 0.5s 0.4s cubic-bezier(0, 0.49, 0.25, 1);
+        }
+        #parallax__wrap > section .parallax__item__desc {
+            opacity: 0;
+            transform: translateY(-200px);
+            transition: all 0.5s 0.6s cubic-bezier(0, 0.49, 0.25, 1);
+        }
+        #parallax__wrap > section:nth-child(even) .parallax__item__title {
+            transform: translateX(100px);
+        }
+        
+
+        #parallax__wrap > section.show .parallax__item__num {
+            transform: translateY(0);
+            opacity: 0.07;
+        }
+
+        #parallax__wrap > section.show .parallax__item__title {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        #parallax__wrap > section.show .parallax_item__imgWrap {
+            opacity: 1;
+            transform: translateY(0) rotate(0) skew(0);
+        }
+        #parallax__wrap > section.show .parallax__item__desc {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="">
+    <header id="header">
+        <h1>Javascript parallax Effect01</h1>
+        <p>페럴랙스 이펙트 : 나타나기</p>
+        <ul>
+            <li><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li class="active"><a href="parallaxEffect04.html">4</a></li>
+            <li><a href="parallaxEffect05.html">5</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li><a href="parallaxEffect07.html">7</a></li>
+
+        </ul>
+
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div id="parallax__wrap">
+            <section id="section1" class="parallax__item">
+                <span class="parallax__item__num">01</span>
+                <h2 class="parallax__item__title">sectin1</h2>
+                <figure class="parallax_item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">결과도 중요하지만, 과정을 더 중요하게 생각한다.</p>
+            </section>
+            <!-- //section1 -->
+            <section id="section2" class="parallax__item">
+                <span class="parallax__item__num">02</span>
+                <h2 class="parallax__item__title">sectin2</h2>
+                <figure class="parallax_item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">미래는 두려움의 존재가 아니라 우리가 개척해나아가야 할 존재이다.</p>
+            </section>
+            <!-- //section2 -->
+            <section id="section3" class="parallax__item">
+                <span class="parallax__item__num">03</span>
+                <h2 class="parallax__item__title">sectin</h2>
+                <figure class="parallax_item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">모든 것이 현재에 달려 있다.</p>
+            </section><!-- //section3 -->
+            <section id="section4" class="parallax__item">
+                <span class="parallax__item__num">04</span>
+                <h2 class="parallax__item__title">sectin4</h2>
+                <figure class="parallax_item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">과거는 과거일 뿐 더 이상 돌아갈 수 없다.</p>
+            </section><!-- //section4 -->
+            <section id="section5" class="parallax__item">
+                <span class="parallax__item__num">05</span>
+                <h2 class="parallax__item__title">sectin5</h2>
+                <figure class="parallax_item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">현재에 느끼는 어떠한 감정도 과거에 존재했던 어느 한 시점에 영향을 미치지 못한다. </p>
+            </section><!-- //section5 -->
+            <section id="section6" class="parallax__item">
+                <span class="parallax__item__num">06</span>
+                <h2 class="parallax__item__title">sectin6</h2>
+                <figure class="parallax_item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">사람은 태어날 때 부터 꿈을 안고 태어난다.</p>
+            </section><!-- //section6 -->
+            <section id="section7" class="parallax__item">
+                <span class="parallax__item__num">07</span>
+                <h2 class="parallax__item__title">sectin7</h2>
+                <figure class="parallax_item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">현실에 잠시 묻혀있을 뿐이다. </p>
+            </section><!-- //section7 -->
+            <section id="section8" class="parallax__item">
+                <span class="parallax__item__num">08</span>
+                <h2 class="parallax__item__title">sectin8</h2>
+                <figure class="parallax_item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">아무 생각 없이 사는 인생은 바다에서 표류하는 쪽배와 같다. </p>
+            </section><!-- //section8 -->
+            <section id="section9" class="parallax__item">
+                <span class="parallax__item__num">09</span>
+                <h2 class="parallax__item__title">sectin9</h2>
+                <figure class="parallax_item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc">꿈이 없는 사람은 아무 생명력이 없는 인형과 같다.</p>
+            </section><!-- //section9 -->
+        </div>
+    </main>
+
+    <footer id="footer">
+        <a href="mailto:jo0132@naver.com">jo0132@naver.com</a>
+    </footer>
+    <script>
+        function scroll(){
+            let scrollTop = window.pageYOffset || window.scrollY;
+
+            document.querySelectorAll(".parallax__item").forEach(item => {
+                if(scrollTop > item.offsetTop - window.innerHeight/2){
+                    item.classList.add("show");
+                }
+            })
+            requestAnimationFrame(scroll);
+        }
+        scroll();
+
+    </script>
+</body>
+</html>
