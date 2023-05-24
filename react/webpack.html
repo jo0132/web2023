@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>노지영 | arr's www</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../assets/ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/ico/favicon-16x16.png">
+    <link rel="manifest" href="../assets/ico/manifest.json">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="../assets/ico/ms-icon-144x144.png">
+    <meta name="theme-color" content="#FFFFFF">
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="웹스토리보이" />
+    <meta property="og:url" content="https://jo0132.dothome.co.kr/" />
+    <meta property="og:image" content="https://jo0132.github.io/web2023/assets/ico/icon.jpg" />
+    <meta property="og:site_name" content="웹스토리보이" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="웹스토리보이" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="https://jo0132.github.io/web2023/assets/ico/icon.jpg" />
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">noh jiyoeng &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://jo0132.tistory.com/">Blog</a></li>
+                    <li><a href="https://github.com/jo0132/web2023">Github</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs1" id="content">
+        <div class="container">
+            <h1>Class v1.0 &lt;/doc&gt;</h1>
+            <p><a href="https://jo0132.github.io/web2023/" target="_blank">arr's www</a></p>
+        </div>
+    </div>
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-9">
+                <h2 class="page-header">webpack</h2>
+                <div class="bs-docs-section">
+                    <h3 id="intro1" class="page-header">webpack 개념</h3>
+                    <p class="lead">
+                        webpack는 웹 애플리케이션을 위한 정적 모듈 번들러(Static Module Bundler)입니다.
+                    </p>
+                    <p>
+                        웹 애플리케이션은 여러 개의 JavaScript 파일, CSS 파일, 이미지 파일 등 다양한 종류의 파일들로 구성됩니다. 이러한 파일들은 각각의 의존성을 가지고 있고, 웹 페이지에서 로드되어야 합니다. Webpack은 이러한 파일들을 분석하여 의존성 관리를 수행하고, 필요한 파일들을 하나로 묶어서 번들 파일을 생성합니다.
+                    </p>
+                    <p>
+                        Webpack은 모듈 시스템을 지원하는 JavaScript 파일을 처리할 수 있으며, CommonJS나 AMD 등과 같은 다양한 모듈 형식을 사용할 수 있습니다. 또한, 웹 애플리케이션의 성능을 향상시키기 위해 코드 압축, 리소스 최적화, 지연 로딩 등 다양한 기능을 제공합니다.
+                    </p>
+                    <p>
+                        Webpack의 설정 파일을 사용하여 웹 애플리케이션의 빌드 프로세스를 커스터마이징할 수 있으며, 로더(Loader)와 플러그인(Plugin)을 활용하여 다양한 작업을 자동화할 수 있습니다. 예를 들어, Babel 로더를 사용하여 ES6+ 문법을 하위 버전의 JavaScript로 변환하거나, CSS 로더를 사용하여 CSS 파일을 번들에 포함시킬 수 있습니다.
+                    </p>
+                    <p>
+                        Webpack은 현대적인 웹 개발에서 많이 사용되는 도구 중 하나로, 모듈화와 번들링을 통해 개발 생산성을 높이고 웹 애플리케이션의 성능을 최적화할 수 있는 강력한 기능을 제공합니다.
+                    </p>
+                </div>
+                <!-- //intro1 -->
+                <div class="bs-docs-section">
+                    <h3 id="intro2" class="page-header">webpack 설치</h3>
+                    <h4 id="intro2-1">2.1 Node.js 설치하기</h4>
+                    <p>
+                        웹팩을 시작하기 전에 node.js를 설치해야합니다.
+                    </p>
+
+                    <h4 id="intro2-3">2.2 npm 초기화</h4>
+<pre><code class="language-js">$npm init ot npm init -y</code></pre>
+<pre><code class="language-js">
+    {
+        "name": "game",
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js",
+        "scripts": {
+            "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "author": "",
+        "license": "ISC"
+        }
+</code></pre>
+                    <h4 id="intro2-3">2.3 webpack 설치</h4>
+<pre><code class="language-js">npm install webpack webpack-cli --save-dev</code></pre>
+                    <h4 id="intro2-4">2.4 webpack.config.js</h4>
+                    <p><code>npx webpack</code>을 작성하면 파일이 번들링 됩니다.</p>
+<pre><code class="language-js">const path = require('path');
+
+    module.exports = {
+        mode: 'production',        //production, development
+        entry: {
+            index: './src/index.js'
+        },
+        output: {
+            path: path.resolve(__dirname, 'public'),
+            filename: 'js/[name].js'
+        }
+    }
+</code></pre>
+                    <h4 id="intro2-5">2.5 webpack-dev-server</h4>
+<pre><code class="language-js">npm install webpack webpack-dev-server --save-dev</code></pre>
+<pre><code class="language-js">npm run start</code></pre>
+<pre><code class="language-js">{
+        "name": "game",
+        "version": "1.0.0",
+        "description": "",
+        "main": "index.js",
+        "scripts": {
+          "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "author": "",
+        "license": "ISC",
+        "devDependencies": {
+          "webpack": "^5.83.1",
+          "webpack-cli": "^5.1.1",
+          "webpack-dev-server": "^4.15.0"
+        }
+      }
+</code></pre>
+
+                    <h4 id="intro2-6">2.6 HTML 번들러 설정</h4>
+<pre><code class="language-js">npm install webpack html-webpack-plugin --save-dev</code></pre>
+<pre><code class="language-js">const path = require('path');
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    
+    module.exports = {
+        mode: 'production',        //production, development
+        entry: {
+            index: './src/index.js'
+        },
+        output: {
+            path: path.resolve(__dirname, 'public'),
+            filename: 'js/[name].js'
+        },
+        plugins: [new HtmlWebpackPlugin({
+            template: './src/index.html',       //번들 전
+            filename: './index.html',            //번들 후
+            hash: true,
+            showErrors: true
+        })],
+    }
+</code></pre>
+                    <h4 id="intro2-7">2.7 CSS 번들러 설정</h4>
+<pre><code class="language-js">npm install --save-dev style-loader css-loader</code></pre>
+<pre><code class="language-js">{
+    "name": "game",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "build": "webpack",
+      "start": "webpack server --open"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "css-loader": "^6.7.4",
+      "html-webpack-plugin": "^5.5.1",
+      "style-loader": "^3.3.3",
+      "webpack": "^5.83.1",
+      "webpack-cli": "^5.1.1",
+      "webpack-dev-server": "^4.15.0"
+    }
+  }
+</code></pre>
+<pre><code class="language-js">module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+</code></pre>
+<h4 id="intro2-8">2.8 CSS 파일 분리하기</h4>
+<pre><code class="language-js">npm install --save-dev mini-css-extract-plugin</code></pre>
+<pre><code class="language-js">const path = require('path');
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
+    const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+    
+    module.exports = {
+        mode: 'production',        //production, development
+        entry: {
+            index: './src/index.js'
+        },
+        output: {
+            path: path.resolve(__dirname, 'public'),
+            filename: 'js/[name].js'
+        },
+        plugins: [
+            new MiniCssExtractPlugin({
+                filename: './css/style.css'     //번들 후
+            }),
+            new HtmlWebpackPlugin({
+            template: './src/index.html',       //번들 전
+            filename: './index.html',           //번들 후
+            hash: true,
+            showErrors: true
+        })],
+        module: {
+            rules: [
+              {
+                test: /\.css$/i,
+                // use: ["style-loader", "css-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                exclude: '/node_modules/'
+              },
+            ],
+          },
+    }
+</code></pre>
+<pre><code class="language-js">{
+    "name": "game",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "build": "webpack",
+      "start": "webpack server --open"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "css-loader": "^6.7.4",
+      "html-webpack-plugin": "^5.5.1",
+      "mini-css-extract-plugin": "^2.7.6",
+      "style-loader": "^3.3.3",
+      "webpack": "^5.83.1",
+      "webpack-cli": "^5.1.1",
+      "webpack-dev-server": "^4.15.0"
+    }
+  }
+  
+</code></pre>
+
+                </div>
+                <!-- //intro2 -->
+
+                <div class="bs-docs-section">
+                    <h3 id="intro3" class="page-header">vite 설치</h3>
+                    
+                </div>
+                <!-- //intro1 -->
+                
+            </div>
+            <div class="col-md-3">
+                <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                    <ul class="nav bs-sidenav">
+                        <li class="active"><a href="#intro1">webpack 개념</a></li>
+                        <li>
+                            <a href="#intro2">webpack 설치</a>
+                            <ul>
+                                <li>2.1 Node.js 설치하기</li>
+                                <li>2.2 npm 초기화</li>
+                                <li>2.3 webpack 설치</li>
+                                <li>2.4 webpack.config.js</li>
+                                <li>2.5 webpack-dev-server</li>
+                            </ul>
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+<!-- //row -->
+    </div>
+    <!-- //container -->
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li><a href="https://jo0132.github.io/web2023/">arr's www</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+</body>
+</html>
