@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+ul, li, ol {
+    list-style: none;
+}
+img {
+    width: 100%;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+#aside {
+    height: 850px;
+    width: 200px;
+}
+#aside > h1 {
+    width: 100%;
+    color: #2a3500;
+    font-size: 30px;
+    padding: 40px 40px;
+}
+.nav {
+    width: 100%;
+}
+.nav > ul {
+    width: 100%;
+    position: absolute;
+    
+}
+.nav > ul > li {
+    position: relative;
+    display: flex;
+}
+.nav > ul > li > a {
+    display: block;
+    width: 150px;
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #4c5f00;
+    color: #fff;
+}
+.nav > ul > li > a:active,
+.nav > ul > li > a:hover {
+    background-color: #738d0c;
+    width: 150px;
+}
+
+.nav > ul > li > ul {
+    width: 100%;
+    display: flex;
+    background-color: #697e16;
+    z-index: 99999;
+    display: none;
+}
+.nav > ul > li > ul > li {
+    padding: 20px 30px;
+    display: inline-block;
+    color: #fff;
+
+}
+.nav > ul > li > ul > li > a:active,
+.nav > ul > li > ul > li:hover {
+    background-color: #a7ce0ba2;
+}
+.side_link {
+    display: inline-block;
+    position: absolute;
+    top: 400px;
+    padding: 7px;
+}
+#main {
+    height: 850px;
+    width: calc(100% - 200px);
+    position: relative;
+}
+.slides {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+.slide__wrap {
+    width: 100%;
+    height: 1600px;
+}
+.slide__wrap .slide {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+.slide > div {
+    width: 50%;
+    padding: 20px;
+    background-color: #ffffffb0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.slide > div > h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #131800;
+}
+.slide > div > p {
+    font-size: 15px;
+    color: #131800;
+}
+
+.slide.s1 {
+    width: 100%;
+    background-image: url(../img/slide01.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.slide.s2 {
+    width: 100%;
+    background-image: url(../img/slide02.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.slide.s3 {
+    width: 100%;
+    background-image: url(../img/slide03.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.link {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    width: 150px;
+    height: 300px;
+}
+.link > div {
+    width: 150px;
+    height: 100px;
+    color: #fff;
+    border: 5px solid #b5e200;
+}
+
+.limg01 {
+    width: 100%;
+    background-image: url(../img/link01.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.limg02 {
+    width: 100%;
+    background-image: url(../img/link02.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.limg03 {
+    width: 100%;
+    background-image: url(../img/link03.png);
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.link_desc {
+    z-index: 1000;
+    background-color: #00000067;
+    width: 100%;
+    height: 100%;
+}
+.link_desc:hover {
+    background-color: #000000b6;
+}
+.link_desc h4 {
+    text-align: center;
+    padding: 20px 0 10px 0 ;
+    font-size: 20px;
+}
+.link_desc p {
+    text-align: center;
+    padding: 0 0 10px 0 
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+    background-image: url("../img/banner01.png");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    text-align: right;
+}
+.banner > h3 {
+    padding: 50px 40px 0 0;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.banner > p {
+    padding: 0 40px 0 0;
+    font-size: 20px;
+    font-weight: 100;
+}
+.contents {
+    width: 100%;
+    height: 250px;
+}
+.contents > ul {
+    margin: 15px;
+    width: 100%;
+    display: flex;
+} 
+.contents > ul > li {
+    margin-right: 30px;
+}
+.contents > ul > li.active a {
+    background-color: #8ba71d;
+}
+
+.contents > ul > li > a {
+    display: inline-block;
+    font-size: 30px;
+    padding: 5px;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #4c5f00;
+}
+.contents > ul > li > a:hover {
+    background-color: #8ba71d;
+}
+
+#notice {
+    margin: 10px;
+    display: none;   
+}
+#notice > ul {
+
+}
+#notice > ul > li {
+    display: flex;
+    justify-content: space-between;
+}
+#notice > ul > li > a {
+    display: inline-block;
+    margin: 5px;
+}
+#notice > ul > li > a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+#notice > ul > li > span {
+    color: #333;
+}
+#gellury {
+    margin: 15px 30px;
+}
+#gellury > ul {
+    display: flex;
+    justify-content: space-between;
+}
+#gellury > ul > li {
+    width: 30%;
+    height: 130px;
+    overflow: hidden;
+}
+#gellury > ul > li:nth-child(1){
+    background-image: url(../img/gellury01.png);
+}
+#gellury > ul > li:nth-child(2){
+    background-image: url(../img/gellury02.png);
+}
+#gellury > ul > li:nth-child(3){
+    background-image: url(../img/gellury03.png);
+}
+#gellury > ul > li > a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 30px;
+    background-color: #00000067;
+    position: relative;
+    text-align: center;
+    padding: 50px 0;
+}
+#gellury > ul > li:hover a {
+    display: none;
+
+}
+
+#footer {
+    height: 120px;
+    width: 100%;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.left {
+    height: 120px;
+    width: 160px;
+    color: #2a3500;
+    font-size: 30px;
+    padding: 40px 0;
+    font-weight: bold;
+    
+}
+
+.right {
+    height: 120px;
+    width: calc(100% - 200px);
+}
+
+.right .right_footer01 {
+    height: 60px;
+    width: 100%;
+}
+.right_footer01 > ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+
+}
+.right_footer01 > ul > li {
+}
+.right .right_footer02 {
+    height: 60px;
+    width: 100%;
+    padding: 20px 0;
+}
+.modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-color: #ddfdfd;
+    display: none;
+    z-index: 1000;
+}

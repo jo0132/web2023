@@ -1,3 +1,7 @@
+main {
+    width: 100%;
+    overflow: hidden;
+}
 #header {
     position: absolute;
     left: 20px;
@@ -112,6 +116,7 @@
     z-index: -1;
     overflow: hidden;
 }
+
 .parallax__item__img {
     position: absolute;
     left: -5%;
@@ -125,8 +130,12 @@
     background-repeat: no-repeat;
     background-position: center center;
     transition: filter 1s;
-
 }
+.parallax__item:hover .parallax__item__img{
+    filter: saturate(100%);
+    transform: scale(1.025);
+}
+
 .parallax__item:nth-child(1) .parallax__item__img {
     background-image: url(../img/Effect_bg01-min.jpg);
 }
