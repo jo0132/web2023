@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div id="wrap">
@@ -95,17 +95,482 @@
         </div>
         <div class="b_header">
           <div class="logo">
-            <img src="image/top_logo.png" alt="" />
+            <img src="image/top_logo.png" alt="울산관광" />
           </div>
-          <nav class="nav"></nav>
-          <div class="search"></div>
+          <nav class="nav">
+            <ul class="menu">
+              <li>
+                <a href="#">추천</a>
+                <div class="sub_menu">
+                  <div class="sub_menu_box">
+                    <p class="sub_menu_title">추천</p>
+                    <ul>
+                      <li>
+                        <a href="#">월별추천</a>
+                      </li>
+                      <li>
+                        <a href="#">여행추천코스</a>
+                      </li>
+                      <li>
+                        <a href="#">테마여행</a>
+                      </li>
+                      <li>
+                        <a href="#">네티즌 추천</a>
+                      </li>
+                      <li>
+                        <a href="#">울산12경</a>
+                      </li>
+                      <li>
+                        <a href="#">영남알프스</a>
+                      </li>
+                      <li>
+                        <a href="#">축제행사</a>
+                      </li>
+                      <li>
+                        <a href="#">문화공연</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">여행지</a>
+                <div class="sub_menu">
+                  <div class="sub_menu_box">
+                    <p class="dsub_menu_title">여행지</p>
+                    <ul>
+                      <li>
+                        <a href="#">자연</a>
+                      </li>
+                      <li>
+                        <a href="#">레저</a>
+                      </li>
+                      <li>
+                        <a href="#">체험</a>
+                      </li>
+                      <li>
+                        <a href="#">문화/유적</a>
+                      </li>
+                      <li>
+                        <a href="#">먹거리</a>
+                      </li>
+                      <li>
+                        <a href="#">숙박</a>
+                      </li>
+                      <li>
+                        <a href="#">쇼핑</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">여행정보</a>
+                <div class="sub_menu">
+                  <div class="sub_menu_box">
+                    <p class="dsub_menu_title">여행정보</p>
+                    <ul>
+                      <li>
+                        <a href="#">가이드북&amp;지도</a>
+                      </li>
+                      <li>
+                        <a href="#">안내서비스</a>
+                      </li>
+                      <li>
+                        <a href="#">교통</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank">울산시티투어</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank">관광택시서비스</a>
+                      </li>
+                      <li>
+                        <a href="#">응급의료서비스</a>
+                      </li>
+                      <li>
+                        <a href="#">문화관광해설사</a>
+                      </li>
+                      <li>
+                        <a href="#">공지사항</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <a href="#">여행이야기</a>
+                <div class="sub_menu">
+                  <div class="sub_menu_box">
+                    <p class="sub_menu_title">여행이야기</p>
+                    <ul>
+                      <li>
+                        <a href="#" target="_blank">나만의 여행일정 만들기</a>
+                      </li>
+                      <li>
+                        <a href="#" target="_blank">내주변</a>
+                      </li>
+                      <li>
+                        <a href="#">여행영상</a>
+                      </li>
+                      <li>
+                        <a href="#">여행사진</a>
+                      </li>
+                      <li>
+                        <a href="#">관련사이트</a>
+                      </li>
+                      <li>
+                        <a href="#">사이트맵</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <div class="search__wrap">
+            <div class="search__wrap_box">
+              <a href="#" class="search"><span class="blind">검색</span></a>
+              <div class="search_layer_wrap" style="display: none">
+                <!--  style="display: none" -->
+                <div class="search_layer">
+                  <div class="search_box">
+                    <div class="search_box_inner">
+                      <div class="blind">검색어 입력</div>
+                      <div class="search_txt">
+                        <label for="tourSearchTxt">
+                          <span class="blind">검색어 입력</span>
+                        </label>
+                        <input
+                          type="text"
+                          name="tourSearchTxt"
+                          id="tourSearchTxt"
+                          value=""
+                          class="layer_Txt"
+                          title="검색어"
+                          placeholder="검색어 입력하세요"
+                        />
+                      </div>
+                      <div class="search_btn">
+                        <button
+                          type="submit"
+                          onclick="fn_tourSearch();return false;"
+                          class="layer_btn"
+                          title="검색"
+                        >
+                          <span>검색</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="search_closebox">
+                      <p class="search_closebtn">
+                        <a href="#searchclose" id="searchclose"
+                          ><span class="blind">검색닫기</span></a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- //search__wrap -->
+            </div>
+            <div class="tlang_box">
+              <button
+                type="button"
+                onclick="MLanguage.toggle();"
+                class="lang_select"
+                title="언어선택 열기"
+              >
+                LANGUAGE
+              </button>
+              <div class="lang_listbox">
+                <ul>
+                  <li><a href="/eng">ENGLISH</a></li>
+                  <li><a href="/jpn">JAPANESE</a></li>
+                  <li><a href="/chn">CHINESE</a></li>
+                </ul>
+                <p class="lang_close">
+                  <a href="#" onclick="MLanguage.toggle();"
+                    ><img
+                      src="image/btn_language_close.png"
+                      alt="언어선택 닫기"
+                  /></a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="all_menu">
+            <a href="#" class="gnbbtn" id="gnbpull"
+              ><span class="blind">전체메뉴</span></a
+            >
+            <div class="layer-wrap">
+              <div class="menu-layer">
+                <h2 class="blind">전체메뉴보기</h2>
+                <div class="menu-panel">
+                  <h3 class="lnb-home"><a href="/kor">울산관광 홈</a></h3>
+                  <h3 class="lnb-title"><a href="#">추천</a></h3>
+                  <ul class="lnb-menu">
+                    <li>
+                      <a href="#">월별추천</a>
+                    </li>
+                    <li>
+                      <a href="#">여행추천코스</a>
+                    </li>
+                    <li>
+                      <a href="#">테마여행</a>
+                    </li>
+                    <li>
+                      <a href="#">네티즌 추천</a>
+                    </li>
+                    <li>
+                      <a href="#">울산12경</a>
+                    </li>
+                    <li>
+                      <a href="#">영남알프스</a>
+                    </li>
+                    <li>
+                      <a href="#">축제행사</a>
+                    </li>
+                    <li>
+                      <a href="#">문화공연</a>
+                    </li>
+                  </ul>
+                  <h3 class="lnb-title"><a href="#">여행지</a></h3>
+                  <ul class="lnb-menu">
+                    <li>
+                      <a href="#">자연</a>
+                    </li>
+                    <li>
+                      <a href="#">레저</a>
+                    </li>
+                    <li>
+                      <a href="#">체험</a>
+                    </li>
+                    <li>
+                      <a href="#">문화/유적</a>
+                    </li>
+                    <li>
+                      <a href="#">먹거리</a>
+                    </li>
+                    <li>
+                      <a href="#">숙박</a>
+                    </li>
+                    <li>
+                      <a href="#">쇼핑</a>
+                    </li>
+                  </ul>
+                  <h3 class="lnb-title"><a href="#">여행정보</a></h3>
+                  <ul class="lnb-menu">
+                    <li>
+                      <a href="#">가이드북&amp;지도</a>
+                    </li>
+                    <li>
+                      <a href="#">안내서비스</a>
+                    </li>
+                    <li>
+                      <a href="#">교통</a>
+                    </li>
+                    <li>
+                      <a href="#">울산시티투어</a>
+                    </li>
+                    <li>
+                      <a href="#">관광택시서비스</a>
+                    </li>
+                    <li>
+                      <a href="#">응급의료서비스</a>
+                    </li>
+                    <li>
+                      <a href="#">문화관광해설사</a>
+                    </li>
+                    <li>
+                      <a href="#">공지사항</a>
+                    </li>
+                  </ul>
+                  <h3 class="lnb-title"><a href="#">여행이야기</a></h3>
+                  <ul class="lnb-menu">
+                    <li>
+                      <a href="#">나만의 여행일정 만들기</a>
+                    </li>
+                    <li>
+                      <a href="#">내주변</a>
+                    </li>
+                    <li>
+                      <a href="#">여행영상</a>
+                    </li>
+                    <li>
+                      <a href="#">여행사진</a>
+                    </li>
+                    <li>
+                      <a href="#">관련사이트</a>
+                    </li>
+                    <li>
+                      <a href="#">사이트맵</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="closebox">
+                  <p class="closebtn">
+                    <a href="#menu-close" id="gnbclose">메뉴닫기</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
       <main id="main">
         <div id="slider">
           <div class="slider_wrap">
             <div class="slider_inner">
-              <div class="slider"></div>
+              <div class="slider">
+                <img
+                  src="image/main_img01.jpg"
+                  alt="형형색색의 잎사귀가 그려낸 한폭의 수채화같은 태화강국가정원"
+                />
+                <div class="slider_txtbox">
+                  <div class="slider_txt">
+                    <span class="txt1"
+                      >태화강 겨울철새, 떼까마귀 군무를 볼 수 있는
+                      생태정원</span
+                    >
+                    <span class="txt2"
+                      >태화강국가정원
+                      <a href="#"
+                        ><em class="pin"
+                          ><img
+                            src="image/pin.png"
+                            alt="태화강국가정원 자세히보기" /></em></a
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="slider">
+                <img
+                  src="image/main_img02.jpg"
+                  alt="울산의 전경을 한눈에 볼 수 있는 ‘달을 품은 누각’ 함월루"
+                />
+                <div class="slider_txtbox">
+                  <div class="slider_txt">
+                    <span class="txt1"
+                      >울산의 전경을 한눈에 볼 수 있는 ‘달을 품은 누각’</span
+                    >
+                    <span class="txt2"
+                      >함월루
+                      <a href="#"
+                        ><em class="pin"
+                          ><img
+                            src="image/pin.png"
+                            alt="함월루 자세히보기" /></em></a
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="slider">
+                <img
+                  src="image/main_img03.jpg"
+                  alt="이색적인 어촌 마을의 모습을 볼 수 있는 신명몽돌해변"
+                />
+                <div class="slider_txtbox">
+                  <div class="slider_txt">
+                    <span class="txt1"
+                      >이색적인 어촌 마을의 모습을 볼 수 있는</span
+                    >
+                    <span class="txt2"
+                      >신명몽돌해변
+                      <a href="#"
+                        ><em class="pin"
+                          ><img
+                            src="image/pin.png"
+                            alt="신명몽돌해변 자세히보기" /></em></a
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="slider">
+                <img
+                  src="image/main_img04.jpg"
+                  alt="100년 세월의 1만5천 아름드리 해송가득한 대왕암공원"
+                />
+                <div class="slider_txtbox">
+                  <div class="slider_txt">
+                    <span class="txt1"
+                      >100년 세월의 1만5천 아름드리 해송가득한</span
+                    >
+                    <span class="txt2"
+                      >대왕암공원
+                      <a href="#"
+                        ><em class="pin"
+                          ><img
+                            src="image/pin.png"
+                            alt="대왕암공원 자세히보기" /></em></a
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="slider">
+                <img
+                  src="image/main_img05.jpg"
+                  alt="과거 장생포 어민들의 실제생활을 그대로 재현, 옛놀이를 즐길 수 있는 장생포 옛마을"
+                />
+                <div class="slider_txtbox">
+                  <div class="slider_txt">
+                    <span class="txt1"
+                      >과거 장생포 어민들의 실제생활을 그대로 재현, 옛놀이를
+                      즐길 수 있는</span
+                    >
+                    <span class="txt2"
+                      >장생포 옛마을
+                      <a href="#"
+                        ><em class="pin"
+                          ><img
+                            src="image/pin.png"
+                            alt="장생포 옛마을 자세히보기" /></em></a
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="slider">
+                <img
+                  src="image/main_img06_02.jpg"
+                  alt="수천년동안 신성한 공간에 새겨진 바위그림 대곡리 반구대암각화"
+                />
+                <div class="slider_txtbox">
+                  <div class="slider_txt">
+                    <span class="txt1"
+                      >수천년동안 신성한 공간에 새겨진 바위그림</span
+                    >
+                    <span class="txt2"
+                      >대곡리 반구대암각화
+                      <a href="#"
+                        ><em class="pin"
+                          ><img
+                            src="image/pin.png"
+                            alt="반구대암각화 자세히보기" /></em></a
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="slider">
+                <img
+                  src="image/main_img07.jpg"
+                  alt="한반도에서 아침해가 가장 먼저 뜨는 곳 간절곶"
+                />
+                <div class="slider_txtbox">
+                  <div class="slider_txt">
+                    <span class="txt1"
+                      >한반도에서 아침해가 가장 먼저 뜨는 곳</span
+                    >
+                    <span class="txt2"
+                      >간절곶
+                      <a href="#"
+                        ><em class="pin"
+                          ><img
+                            src="image/pin.png"
+                            alt="간절곶 자세히보기" /></em></a
+                    ></span>
+                  </div>
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
